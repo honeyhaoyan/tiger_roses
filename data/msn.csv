@@ -1,4 +1,4 @@
-MSN,Description,Unit,Energy type,sector,source,Cleanliness,categories,renewability
+MSN,Description,Unit,Energy type,sector,source,cleanliness,categories,renewability
 ABICB,Aviation gasoline blending components consumed by the industrial sector.,Billion Btu,aviation gasoline,industrial,secondary energy,unclean energy,fossil fuel energy,
 ABICP,Aviation gasoline blending components consumed by the industrial sector.,Thousand barrels,aviation gasoline,industrial,secondary energy,unclean energy,fossil fuel energy,
 ARICB,Asphalt and road oil consumed by the industrial sector.,Billion Btu,asphalt and road oil,industrial,secondary energy,unclean energy,fossil fuel energy,
