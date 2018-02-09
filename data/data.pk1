@@ -1,0 +1,4237 @@
+(lp0
+(lp1
+S'ABICB'
+p2
+aS'Aviation gasoline blending components consumed by the industrial sector.'
+p3
+aS'Billion Btu'
+p4
+aa(lp5
+S'ABICP'
+p6
+aS'Aviation gasoline blending components consumed by the industrial sector.'
+p7
+aS'Thousand barrels'
+p8
+aa(lp9
+S'ARICB'
+p10
+aS'Asphalt and road oil consumed by the industrial sector.'
+p11
+aS'Billion Btu'
+p12
+aa(lp13
+S'ARICD'
+p14
+aS'Asphalt and road oil price in the industrial sector.'
+p15
+aS'Dollars per million Btu'
+p16
+aa(lp17
+S'ARICP'
+p18
+aS'Asphalt and road oil consumed by the industrial sector.'
+p19
+aS'Thousand barrels'
+p20
+aa(lp21
+S'ARICV'
+p22
+aS'Asphalt and road oil expenditures in the industrial sector.'
+p23
+aS'Million dollars'
+p24
+aa(lp25
+S'ARTCB'
+p26
+aS'Asphalt and road oil total consumption.'
+p27
+aS'Billion Btu'
+p28
+aa(lp29
+S'ARTCD'
+p30
+aS'Asphalt and road oil average price, all sectors.'
+p31
+aS'Dollars per million Btu'
+p32
+aa(lp33
+S'ARTCP'
+p34
+aS'Asphalt and road oil total consumption.'
+p35
+aS'Thousand barrels'
+p36
+aa(lp37
+S'ARTCV'
+p38
+aS'Asphalt and road oil total expenditures.'
+p39
+aS'Million dollars'
+p40
+aa(lp41
+S'ARTXB'
+p42
+aS'Asphalt and road oil total end-use consumption.'
+p43
+aS'Billion Btu'
+p44
+aa(lp45
+S'ARTXD'
+p46
+aS'Asphalt and road oil average price, all end-use sectors.'
+p47
+aS'Dollars per million Btu'
+p48
+aa(lp49
+S'ARTXP'
+p50
+aS'Asphalt and road oil total end-use consumption.'
+p51
+aS'Thousand barrels'
+p52
+aa(lp53
+S'ARTXV'
+p54
+aS'Asphalt and road oil total end-use expenditures.'
+p55
+aS'Million dollars'
+p56
+aa(lp57
+S'AVACB'
+p58
+aS'Aviation gasoline consumed by the transportation sector.'
+p59
+aS'Billion Btu'
+p60
+aa(lp61
+S'AVACD'
+p62
+aS'Aviation gasoline price in the transportation sector.'
+p63
+aS'Dollars per million Btu'
+p64
+aa(lp65
+S'AVACP'
+p66
+aS'Aviation gasoline consumed by the transportation sector.'
+p67
+aS'Thousand barrels'
+p68
+aa(lp69
+S'AVACV'
+p70
+aS'Aviation gasoline expenditures in the transportation sector.'
+p71
+aS'Million dollars'
+p72
+aa(lp73
+S'AVTCB'
+p74
+aS'Aviation gasoline total consumption.'
+p75
+aS'Billion Btu'
+p76
+aa(lp77
+S'AVTCD'
+p78
+aS'Aviation gasoline average price, all sectors.'
+p79
+aS'Dollars per million Btu'
+p80
+aa(lp81
+S'AVTCP'
+p82
+aS'Aviation gasoline total consumption.'
+p83
+aS'Thousand barrels'
+p84
+aa(lp85
+S'AVTCV'
+p86
+aS'Aviation gasoline total expenditures.'
+p87
+aS'Million dollars'
+p88
+aa(lp89
+S'AVTXB'
+p90
+aS'Aviation gasoline total end-use consumption.'
+p91
+aS'Billion Btu'
+p92
+aa(lp93
+S'AVTXD'
+p94
+aS'Aviation gasoline average price, all end-use sectors.'
+p95
+aS'Dollars per million Btu'
+p96
+aa(lp97
+S'AVTXP'
+p98
+aS'Aviation gasoline total end-use consumption.'
+p99
+aS'Thousand barrels'
+p100
+aa(lp101
+S'AVTXV'
+p102
+aS'Aviation gasoline total end-use expenditures.'
+p103
+aS'Million dollars'
+p104
+aa(lp105
+S'BMTCB'
+p106
+aS'Biomass total consumption'
+p107
+aS'Billion Btu'
+p108
+aa(lp109
+S'CCEXB'
+p110
+aS'Coal coke exported from the United States. '
+p111
+aS'Billion Btu'
+p112
+aa(lp113
+S'CCEXD'
+p114
+aS'Coal coke exports average price, United States.'
+p115
+aS'Dollars per million Btu'
+p116
+aa(lp117
+S'CCEXP'
+p118
+aS'Coal coke exported from the United States. '
+p119
+aS'Thousand short tons'
+p120
+aa(lp121
+S'CCEXV'
+p122
+aS'Coal coke exports expenditures, United States.'
+p123
+aS'Million dollars'
+p124
+aa(lp125
+S'CCIMB'
+p126
+aS'Coal coke imported into the United States.'
+p127
+aS'Billion Btu'
+p128
+aa(lp129
+S'CCIMD'
+p130
+aS'Coal coke imports average price, United States.'
+p131
+aS'Dollars per million Btu'
+p132
+aa(lp133
+S'CCIMP'
+p134
+aS'Coal coke imported into the United States.'
+p135
+aS'Thousand short tons'
+p136
+aa(lp137
+S'CCIMV'
+p138
+aS'Coal coke imports expenditures, United States.'
+p139
+aS'Million dollars'
+p140
+aa(lp141
+S'CCNIB'
+p142
+aS'Coal coke net imports into the United States.'
+p143
+aS'Billion Btu'
+p144
+aa(lp145
+S'CCNIP'
+p146
+aS'Coal coke net imports into the United States.'
+p147
+aS'Thousand short tons'
+p148
+aa(lp149
+S'CCNIV'
+p150
+aS'Coal coke net imports expenditures, United States.'
+p151
+aS'Million dollars'
+p152
+aa(lp153
+S'CLACB'
+p154
+aS'Coal consumed by the transportation sector.'
+p155
+aS'Billion Btu'
+p156
+aa(lp157
+S'CLACD'
+p158
+aS'Coal price in the transportation sector.'
+p159
+aS'Dollars per million Btu'
+p160
+aa(lp161
+S'CLACK'
+p162
+aS'Factor for converting coal consumed by the transportation sector from physical units to Btu.'
+p163
+aS'Million Btu per short ton'
+p164
+aa(lp165
+S'CLACP'
+p166
+aS'Coal consumed by the transportation sector.'
+p167
+aS'Thousand short tons'
+p168
+aa(lp169
+S'CLACV'
+p170
+aS'Coal expenditures in the transportation sector.'
+p171
+aS'Million dollars'
+p172
+aa(lp173
+S'CLCCB'
+p174
+aS'Coal consumed by the commercial sector.'
+p175
+aS'Billion Btu'
+p176
+aa(lp177
+S'CLCCD'
+p178
+aS'Coal price in the commercial sector.'
+p179
+aS'Dollars per million Btu'
+p180
+aa(lp181
+S'CLCCP'
+p182
+aS'Coal consumed by the commercial sector.'
+p183
+aS'Thousand short tons'
+p184
+aa(lp185
+S'CLCCV'
+p186
+aS'Coal expenditures in the commercial sector.'
+p187
+aS'Million dollars'
+p188
+aa(lp189
+S'CLEIB'
+p190
+aS'Coal consumed by the electric power sector.'
+p191
+aS'Billion Btu'
+p192
+aa(lp193
+S'CLEID'
+p194
+aS'Coal price in the electric power sector.'
+p195
+aS'Dollars per million Btu'
+p196
+aa(lp197
+S'CLEIK'
+p198
+aS'Factor for converting coal consumed by the electric power sector from physical units to Btu.'
+p199
+aS'Million Btu per short ton'
+p200
+aa(lp201
+S'CLEIP'
+p202
+aS'Coal consumed by the electric power sector.'
+p203
+aS'Thousand short tons'
+p204
+aa(lp205
+S'CLEIV'
+p206
+aS'Coal expenditures in the electric power sector.'
+p207
+aS'Million dollars'
+p208
+aa(lp209
+S'CLHCK'
+p210
+aS'Factor for converting coal consumed by the residential and commercial sectors from physical units to Btu.'
+p211
+aS'Million Btu per short ton'
+p212
+aa(lp213
+S'CLICB'
+p214
+aS'Coal consumed by the industrial sector.'
+p215
+aS'Billion Btu'
+p216
+aa(lp217
+S'CLICD'
+p218
+aS'Coal price in the industrial sector.'
+p219
+aS'Million dollars'
+p220
+aa(lp221
+S'CLICP'
+p222
+aS'Coal consumed by the industrial sector.'
+p223
+aS'Thousand short tons'
+p224
+aa(lp225
+S'CLICV'
+p226
+aS'Coal expenditures in the industrial sector.'
+p227
+aS'Million dollars'
+p228
+aa(lp229
+S'CLKCB'
+p230
+aS'Coal consumed at coke plants (coking coal).'
+p231
+aS'Billion Btu'
+p232
+aa(lp233
+S'CLKCD'
+p234
+aS'Coal price at coke plants.'
+p235
+aS'Dollars per million Btu'
+p236
+aa(lp237
+S'CLKCK'
+p238
+aS'Factor for converting coal carbonized at coke plants from physical units to Btu.'
+p239
+aS'Million Btu per short ton'
+p240
+aa(lp241
+S'CLKCP'
+p242
+aS'Coal consumed at coke plants (coking coal).'
+p243
+aS'Thousand short tons'
+p244
+aa(lp245
+S'CLKCV'
+p246
+aS'Coal expenditures at coke plants.'
+p247
+aS'Million dollars'
+p248
+aa(lp249
+S'CLOCB'
+p250
+aS'Coal consumed by industrial users other than coke plants.'
+p251
+aS'Billion Btu'
+p252
+aa(lp253
+S'CLOCD'
+p254
+aS'Coal price in the industrial sector other than coke plants.'
+p255
+aS'Dollars per million Btu'
+p256
+aa(lp257
+S'CLOCK'
+p258
+aS'Factor for converting coal consumed by industrial users other than coke plants from physical units to Btu.'
+p259
+aS'Million Btu per short ton'
+p260
+aa(lp261
+S'CLOCP'
+p262
+aS'Coal consumed by industrial users other than coke plants.'
+p263
+aS'Thousand short tons'
+p264
+aa(lp265
+S'CLOCV'
+p266
+aS'Coal expenditures in the industrial sector other than coke plants.'
+p267
+aS'Million dollars'
+p268
+aa(lp269
+S'CLOSB'
+p270
+aS'Coal consumed by the industrial sector excluding refinery fuel.'
+p271
+aS'Billion Btu'
+p272
+aa(lp273
+S'CLPRB'
+p274
+aS'Coal production.'
+p275
+aS'Billion Btu'
+p276
+aa(lp277
+S'CLPRK'
+p278
+aS'Factor for converting coal production from physical units to Btu.'
+p279
+aS'Million Btu per short ton'
+p280
+aa(lp281
+S'CLPRP'
+p282
+aS'Coal production.'
+p283
+aS'Thousand short tons'
+p284
+aa(lp285
+S'CLRCB'
+p286
+aS'Coal consumed by the residential sector.'
+p287
+aS'Billion Btu'
+p288
+aa(lp289
+S'CLRCD'
+p290
+aS'Coal price in the residential sector.'
+p291
+aS'Dollars per million Btu'
+p292
+aa(lp293
+S'CLRCP'
+p294
+aS'Coal consumed by the residential sector.'
+p295
+aS'Thousand short tons'
+p296
+aa(lp297
+S'CLRCV'
+p298
+aS'Coal expenditures in the residential sector.'
+p299
+aS'Million dollars'
+p300
+aa(lp301
+S'CLRFB'
+p302
+aS'Coal consumed as refinery fuel.'
+p303
+aS'Billion Btu'
+p304
+aa(lp305
+S'CLTCB'
+p306
+aS'Coal total consumption.'
+p307
+aS'Billion Btu'
+p308
+aa(lp309
+S'CLTCD'
+p310
+aS'Coal average price, all sectors.'
+p311
+aS'Dollars per million Btu'
+p312
+aa(lp313
+S'CLTCP'
+p314
+aS'Coal total consumption.'
+p315
+aS'Thousand short tons'
+p316
+aa(lp317
+S'CLTCV'
+p318
+aS'Coal total expenditures.'
+p319
+aS'Million dollars'
+p320
+aa(lp321
+S'CLTXB'
+p322
+aS'Coal total end-use consumption.'
+p323
+aS'Billion Btu'
+p324
+aa(lp325
+S'CLTXD'
+p326
+aS'Coal average price, all end-use sectors.'
+p327
+aS'Dollars per million Btu'
+p328
+aa(lp329
+S'CLTXP'
+p330
+aS'Coal total end-use consumption.'
+p331
+aS'Thousand barrels'
+p332
+aa(lp333
+S'CLTXV'
+p334
+aS'Coal total end-use expenditures.'
+p335
+aS'Million dollars'
+p336
+aa(lp337
+S'CLXCD'
+p338
+aS'Coal average price for all sectors excluding refinery fuel.'
+p339
+aS'Dollars per million Btu'
+p340
+aa(lp341
+S'CLXCV'
+p342
+aS'Coal expenditures for all sectors excluding refinery fuel.'
+p343
+aS'Million dollars'
+p344
+aa(lp345
+S'COICB'
+p346
+aS'Crude oil consumed by the industrial sector.'
+p347
+aS'Billion Btu'
+p348
+aa(lp349
+S'COICP'
+p350
+aS'Crude oil consumed by the industrial sector.'
+p351
+aS'Thousand barrels'
+p352
+aa(lp353
+S'COPRK'
+p354
+aS'Factor for converting crude oil production from physical units to Btu.'
+p355
+aS'Million Btu per barrel'
+p356
+aa(lp357
+S'DFACB'
+p358
+aS'Distillate fuel oil consumed by the transportation sector.'
+p359
+aS'Billion Btu'
+p360
+aa(lp361
+S'DFACD'
+p362
+aS'Distillate fuel oil price in the transportation sector.'
+p363
+aS'Dollars per million Btu'
+p364
+aa(lp365
+S'DFACP'
+p366
+aS'Distillate fuel oil consumed by the transportation sector.'
+p367
+aS'Thousand barrels'
+p368
+aa(lp369
+S'DFACV'
+p370
+aS'Distillate fuel oil expenditures in the transportation sector.'
+p371
+aS'Million dollars'
+p372
+aa(lp373
+S'DFCCB'
+p374
+aS'Distillate fuel oil consumed by the commercial sector.'
+p375
+aS'Billion Btu'
+p376
+aa(lp377
+S'DFCCD'
+p378
+aS'Distillate fuel oil price in the commercial sector.'
+p379
+aS'Dollars per million Btu'
+p380
+aa(lp381
+S'DFCCP'
+p382
+aS'Distillate fuel oil consumed by the commercial sector.'
+p383
+aS'Thousand barrels'
+p384
+aa(lp385
+S'DFCCV'
+p386
+aS'Distillate fuel oil expenditures in the commercial sector.'
+p387
+aS'Million dollars'
+p388
+aa(lp389
+S'DFEID'
+p390
+aS'Distillate fuel oil price in the electric power sector.'
+p391
+aS'Dollars per million Btu'
+p392
+aa(lp393
+S'DFEIV'
+p394
+aS'Distillate fuel oil expenditures in the electric power sector.'
+p395
+aS'Million dollars'
+p396
+aa(lp397
+S'DFICB'
+p398
+aS'Distillate fuel oil consumed by the industrial sector.'
+p399
+aS'Billion Btu'
+p400
+aa(lp401
+S'DFICD'
+p402
+aS'Distillate fuel oil price in the industrial sector.'
+p403
+aS'Dollars per million Btu'
+p404
+aa(lp405
+S'DFICP'
+p406
+aS'Distillate fuel oil consumed by the industrial sector.'
+p407
+aS'Thousand barrels'
+p408
+aa(lp409
+S'DFICV'
+p410
+aS'Distillate fuel oil expenditures in the industrial sector.'
+p411
+aS'Million dollars'
+p412
+aa(lp413
+S'DFISB'
+p414
+aS'Distillate fuel oil consumed by the industrial sector excluding refinery fuel.'
+p415
+aS'Billion Btu'
+p416
+aa(lp417
+S'DFRCB'
+p418
+aS'Distillate fuel oil consumed by the residential sector.'
+p419
+aS'Billion Btu'
+p420
+aa(lp421
+S'DFRCD'
+p422
+aS'Distillate fuel oil price in the residential sector.'
+p423
+aS'Dollars per million Btu'
+p424
+aa(lp425
+S'DFRCP'
+p426
+aS'Distillate fuel oil consumed by the residential sector.'
+p427
+aS'Thousand barrels'
+p428
+aa(lp429
+S'DFRCV'
+p430
+aS'Distillate fuel oil expenditures in the residential sector.'
+p431
+aS'Million dollars'
+p432
+aa(lp433
+S'DFRFB'
+p434
+aS'Distillate fuel oil consumed as refinery fuel.'
+p435
+aS'Billion Btu'
+p436
+aa(lp437
+S'DFTCB'
+p438
+aS'Distillate fuel oil total consumption.'
+p439
+aS'Billion Btu'
+p440
+aa(lp441
+S'DFTCD'
+p442
+aS'Distillate fuel oil average price, all sectors.'
+p443
+aS'Dollars per million Btu'
+p444
+aa(lp445
+S'DFTCP'
+p446
+aS'Distillate fuel oil total consumption.'
+p447
+aS'Thousand barrels'
+p448
+aa(lp449
+S'DFTCV'
+p450
+aS'Distillate fuel oil total expenditures.'
+p451
+aS'Million dollars'
+p452
+aa(lp453
+S'DFTXB'
+p454
+aS'Distillate fuel oil total end-use consumption.'
+p455
+aS'Billion Btu'
+p456
+aa(lp457
+S'DFTXD'
+p458
+aS'Distillate fuel oil average price, all end-use sectors.'
+p459
+aS'Dollars per million Btu'
+p460
+aa(lp461
+S'DFTXP'
+p462
+aS'Distillate fuel oil total end-use consumption.'
+p463
+aS'Thousand barrels'
+p464
+aa(lp465
+S'DFTXV'
+p466
+aS'Distillate fuel oil total end-use expenditures.'
+p467
+aS'Million dollars'
+p468
+aa(lp469
+S'DKEIB'
+p470
+aS'Distillate fuel oil and kerosene-type jet fuel consumed by the electric power sector.'
+p471
+aS'Billion Btu'
+p472
+aa(lp473
+S'DKEID'
+p474
+aS'Distillate fuel oil and kerosene-type jet fuel average price in the electric power sector.'
+p475
+aS'Dollars per million Btu'
+p476
+aa(lp477
+S'DKEIP'
+p478
+aS'Distillate fuel oil and kerosene-type jet fuel consumed by the electric power sector.'
+p479
+aS'Thousand barrels'
+p480
+aa(lp481
+S'DKEIV'
+p482
+aS'Distillate fuel oil and kerosene-type jet fuel expenditures in the electric power sector.'
+p483
+aS'Million dollars'
+p484
+aa(lp485
+S'ELEXB'
+p486
+aS'Electricity exported from the United States.'
+p487
+aS'Billion Btu'
+p488
+aa(lp489
+S'ELEXD'
+p490
+aS'Electricity exports average price.'
+p491
+aS'Dollars per million Btu'
+p492
+aa(lp493
+S'ELEXP'
+p494
+aS'Electricity exported from the United States.'
+p495
+aS'Million kilowatthours'
+p496
+aa(lp497
+S'ELEXV'
+p498
+aS'Electricity exports expenditures.'
+p499
+aS'Million dollars'
+p500
+aa(lp501
+S'ELIMB'
+p502
+aS'Electricity imported into the United States.'
+p503
+aS'Billion Btu'
+p504
+aa(lp505
+S'ELIMD'
+p506
+aS'Electricity imports average price.'
+p507
+aS'Dollars per million Btu'
+p508
+aa(lp509
+S'ELIMP'
+p510
+aS'Electricity imported into the United States.'
+p511
+aS'Million kilowatthours'
+p512
+aa(lp513
+S'ELIMV'
+p514
+aS'Electricity imports expenditures.'
+p515
+aS'Million dollars'
+p516
+aa(lp517
+S'ELISB'
+p518
+aS'Net interstate sales of electricity and associated losses (negative and positive values).'
+p519
+aS'Billion Btu'
+p520
+aa(lp521
+S'ELNIB'
+p522
+aS'Net imports of electricity into the United States.'
+p523
+aS'Billion Btu'
+p524
+aa(lp525
+S'ELNIP'
+p526
+aS'Net imports of electricity into the United States.'
+p527
+aS'Million kilowatthours'
+p528
+aa(lp529
+S'EMACB'
+p530
+aS'Fuel ethanol, excluding denaturant, consumed by the transportation sector.   '
+p531
+aS'Billion Btu'
+p532
+aa(lp533
+S'EMACV'
+p534
+aS'Fuel ethanol, excluding denaturant, expenditures in the transportation sector.'
+p535
+aS'Million dollars'
+p536
+aa(lp537
+S'EMCCB'
+p538
+aS'Fuel ethanol, excluding denaturant, consumed by the commercial sector '
+p539
+aS'Billion Btu'
+p540
+aa(lp541
+S'EMCCV'
+p542
+aS'Fuel ethanol, excluding denaturant, expenditures in the commercial sector.'
+p543
+aS'Million dollars'
+p544
+aa(lp545
+S'EMFDB'
+p546
+aS'Biomass inputs (feedstock) for the production of fuel ethanol.'
+p547
+aS'Billion Btu'
+p548
+aa(lp549
+S'EMICB'
+p550
+aS'Fuel ethanol, excluding denaturant, consumed by the industrial sector. '
+p551
+aS'Billion Btu'
+p552
+aa(lp553
+S'EMICV'
+p554
+aS'Fuel ethanol, excluding denaturant, expenditures in the industrial sector.'
+p555
+aS'Million dollars'
+p556
+aa(lp557
+S'EMLCB'
+p558
+aS'Energy losses and co-products from the production of fuel ethanol.'
+p559
+aS'Billion Btu'
+p560
+aa(lp561
+S'EMTCB'
+p562
+aS'Fuel ethanol, excluding denaturant, total consumption.'
+p563
+aS'Billion Btu'
+p564
+aa(lp565
+S'EMTCP'
+p566
+aS'Fuel ethanol, excluding denaturant, total consumption.'
+p567
+aS'Thousand barrels'
+p568
+aa(lp569
+S'EMTCV'
+p570
+aS'Fuel ethanol, excluding denaturant, total expenditures.'
+p571
+aS'Million dollars'
+p572
+aa(lp573
+S'ENACP'
+p574
+aS'Fuel ethanol, including denaturant, consumed by the transportation sector.'
+p575
+aS'Thousand barrels'
+p576
+aa(lp577
+S'ENCCP'
+p578
+aS'Fuel ethanol, including denaturant, consumed by the commercial sector.'
+p579
+aS'Thousand barrels'
+p580
+aa(lp581
+S'ENICP'
+p582
+aS'Fuel ethanol, including denaturant, consumed by the industrial sector.'
+p583
+aS'Thousand barrels'
+p584
+aa(lp585
+S'ENPRP'
+p586
+aS'Fuel ethanol production, including denaturant.'
+p587
+aS'Thousand barrels'
+p588
+aa(lp589
+S'ENTCK'
+p590
+aS'Factor for converting fuel ethanol consumption from physical units to Btu.'
+p591
+aS'Million Btu per barrel'
+p592
+aa(lp593
+S'ENTCP'
+p594
+aS'Fuel ethanol, including denaturant, total consumption.'
+p595
+aS'Thousand barrels'
+p596
+aa(lp597
+S'ESACB'
+p598
+aS'Electricity consumed by (i.e., sold to) the transportation sector.'
+p599
+aS'Billion Btu'
+p600
+aa(lp601
+S'ESACD'
+p602
+aS'Electricity price in the transportation sector.'
+p603
+aS'Dollars per million Btu'
+p604
+aa(lp605
+S'ESACP'
+p606
+aS'Electricity consumed by (i.e., sold to) the transportation sector.'
+p607
+aS'Million kilowatthours'
+p608
+aa(lp609
+S'ESACV'
+p610
+aS'Electricity expenditures in the transportation sector.'
+p611
+aS'Million dollars'
+p612
+aa(lp613
+S'ESCCB'
+p614
+aS'Electricity consumed by (i.e., sold to) the commercial sector.'
+p615
+aS'Billion Btu'
+p616
+aa(lp617
+S'ESCCD'
+p618
+aS'Electricity price in the commercial sector.'
+p619
+aS'Dollars per million Btu'
+p620
+aa(lp621
+S'ESCCP'
+p622
+aS'Electricity consumed by (i.e., sold to) the commercial sector.'
+p623
+aS'Million kilowatthours'
+p624
+aa(lp625
+S'ESCCV'
+p626
+aS'Electricity expenditures in the commercial sector.'
+p627
+aS'Million dollars'
+p628
+aa(lp629
+S'ESICB'
+p630
+aS'Electricity consumed by (i.e., sold to) the industrial sector.'
+p631
+aS'Billion Btu'
+p632
+aa(lp633
+S'ESICD'
+p634
+aS'Electricity price in the industrial sector.'
+p635
+aS'Dollars per million Btu'
+p636
+aa(lp637
+S'ESICP'
+p638
+aS'Electricity consumed by (i.e., sold to) the industrial sector.'
+p639
+aS'Million kilowatthours'
+p640
+aa(lp641
+S'ESICV'
+p642
+aS'Electricity expenditures in the industrial sector.'
+p643
+aS'Million dollars'
+p644
+aa(lp645
+S'ESISB'
+p646
+aS'Electricity sales to the industrial sector excluding refinery use.'
+p647
+aS'Billion Btu'
+p648
+aa(lp649
+S'ESRCB'
+p650
+aS'Electricity consumed by (i.e., sold to) the residential sector.'
+p651
+aS'Billion Btu'
+p652
+aa(lp653
+S'ESRCD'
+p654
+aS'Electricity price in the residential sector.'
+p655
+aS'Dollars per million Btu'
+p656
+aa(lp657
+S'ESRCP'
+p658
+aS'Electricity consumed by (i.e., sold to) the residential sector.'
+p659
+aS'Million kilowatthours'
+p660
+aa(lp661
+S'ESRCV'
+p662
+aS'Electricity expenditures in the residential sector.'
+p663
+aS'Million dollars'
+p664
+aa(lp665
+S'ESRFB'
+p666
+aS'Electricity consumed by refineries.'
+p667
+aS'Billion Btu'
+p668
+aa(lp669
+S'ESTCB'
+p670
+aS'Electricity total consumption (i.e., sold).'
+p671
+aS'Billion Btu'
+p672
+aa(lp673
+S'ESTCD'
+p674
+aS'Electricity average price, all sectors.'
+p675
+aS'Dollars per million Btu'
+p676
+aa(lp677
+S'ESTCP'
+p678
+aS'Electricity total consumption (i.e., sold).'
+p679
+aS'Million kilowatthours'
+p680
+aa(lp681
+S'ESTCV'
+p682
+aS'Electricity total expenditures.'
+p683
+aS'Million dollars'
+p684
+aa(lp685
+S'ESTXB'
+p686
+aS'Electricity total end-use consumption (i.e., sold).'
+p687
+aS'Billion Btu'
+p688
+aa(lp689
+S'ESTXD'
+p690
+aS'Electricity average price, all end-use sectors.'
+p691
+aS'Dollars per million Btu'
+p692
+aa(lp693
+S'ESTXP'
+p694
+aS'Electricity total end-use consumption (i.e., sold).'
+p695
+aS'Thousand barrels'
+p696
+aa(lp697
+S'ESTXV'
+p698
+aS'Electricity total end-use expenditures.'
+p699
+aS'Million dollars'
+p700
+aa(lp701
+S'FFETK'
+p702
+aS'Fossil fueled steam-electric power plant conversion factor, United States only.'
+p703
+aS'Thousand Btu per kilowatthour'
+p704
+aa(lp705
+S'FFTCB'
+p706
+aS'Fossil fuelS, total consumption.'
+p707
+aS'Billion Btu'
+p708
+aa(lp709
+S'FNICB'
+p710
+aS'Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.'
+p711
+aS'Billion Btu'
+p712
+aa(lp713
+S'FNICD'
+p714
+aS'Petrochemical feedstocks, naphtha less than 401 F, price in the industrial sector.'
+p715
+aS'Dollars per million Btu'
+p716
+aa(lp717
+S'FNICP'
+p718
+aS'Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.'
+p719
+aS'Thousand barrels'
+p720
+aa(lp721
+S'FNICV'
+p722
+aS'Petrochemical feedstocks, naphtha less than 401 F, expenditures in the industrial sector.'
+p723
+aS'Million dollars'
+p724
+aa(lp725
+S'FOICB'
+p726
+aS'Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.'
+p727
+aS'Billion Btu'
+p728
+aa(lp729
+S'FOICD'
+p730
+aS'Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, price in the industrial sector.'
+p731
+aS'Dollars per million Btu'
+p732
+aa(lp733
+S'FOICP'
+p734
+aS'Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.'
+p735
+aS'Thousand barrels'
+p736
+aa(lp737
+S'FOICV'
+p738
+aS'Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, expenditures in the industrial sector.'
+p739
+aS'Million dollars'
+p740
+aa(lp741
+S'FSICB'
+p742
+aS'Petrochemical feedstocks, still gas, consumed by the industrial sector.'
+p743
+aS'Billion Btu'
+p744
+aa(lp745
+S'FSICD'
+p746
+aS'Petrochemical feedstocks, still gas, price in the industrial sector.'
+p747
+aS'Dollars per million Btu'
+p748
+aa(lp749
+S'FSICP'
+p750
+aS'Petrochemical feedstocks, still gas, consumed by the industrial sector.'
+p751
+aS'Thousand barrels'
+p752
+aa(lp753
+S'FSICV'
+p754
+aS'Petrochemical feedstocks, still gas, expenditures in the industrial sector.'
+p755
+aS'Million dollars'
+p756
+aa(lp757
+S'GDPRV'
+p758
+aS'Current-dollar gross domestic product.'
+p759
+aS'Million dollars'
+p760
+aa(lp761
+S'GDPRX'
+p762
+aS'Real gross domestic product.'
+p763
+aS'Million chained (2005) dollars'
+p764
+aa(lp765
+S'GECCB'
+p766
+aS'Direct use of geothermal energy and heat pumps in the commercial sector.'
+p767
+aS'Billion Btu'
+p768
+aa(lp769
+S'GEEGB'
+p770
+aS'Electricity produced from geothermal energy by the electric power sector.'
+p771
+aS'Billion Btu'
+p772
+aa(lp773
+S'GEEGP'
+p774
+aS'Electricity produced from geothermal energy by the electric power sector.'
+p775
+aS'Million kilowatthours'
+p776
+aa(lp777
+S'GEICB'
+p778
+aS'Direct use of geothermal energy and heat pumps in the industrial sector.'
+p779
+aS'Billion Btu'
+p780
+aa(lp781
+S'GERCB'
+p782
+aS'Direct use of geothermal energy and heat pumps in the residential sector.'
+p783
+aS'Billion Btu'
+p784
+aa(lp785
+S'GETCB'
+p786
+aS'Geothermal energy total consumption.'
+p787
+aS'Billion Btu'
+p788
+aa(lp789
+S'GETXB'
+p790
+aS'Geothermal total end-use consumption.'
+p791
+aS'Billion Btu'
+p792
+aa(lp793
+S'GOCCB'
+p794
+aS'Geothermal energy and hydroelectricity consumed in the commercial sector.'
+p795
+aS'Billion Btu'
+p796
+aa(lp797
+S'GORCB'
+p798
+aS'Geothermal and solar energy consumed in the residential sector.'
+p799
+aS'Billion Btu'
+p800
+aa(lp801
+S'HYCCB'
+p802
+aS'Hydroelectricity produced in the commercial sector.'
+p803
+aS'Billion Btu'
+p804
+aa(lp805
+S'HYCCP'
+p806
+aS'Hydroelectricity produced in the commercial sector.'
+p807
+aS'Million kilowatthours'
+p808
+aa(lp809
+S'HYEGB'
+p810
+aS'Hydroelectricity produced by the electric power sector.'
+p811
+aS'Billion Btu'
+p812
+aa(lp813
+S'HYEGP'
+p814
+aS'Hydroelectricity produced by the electric power sector.'
+p815
+aS'Million kilowatthours'
+p816
+aa(lp817
+S'HYICB'
+p818
+aS'Hydroelectricity produced in the industrial sector.'
+p819
+aS'Billion Btu'
+p820
+aa(lp821
+S'HYICP'
+p822
+aS'Hydroelectricity produced in the industrial sector.'
+p823
+aS'Million kilowatthours'
+p824
+aa(lp825
+S'HYTCB'
+p826
+aS'Hydroelectricity total production.'
+p827
+aS'Billion Btu'
+p828
+aa(lp829
+S'HYTCP'
+p830
+aS'Hydroelectricity total production.'
+p831
+aS'Million kilowatthours'
+p832
+aa(lp833
+S'HYTXB'
+p834
+aS'Hydroelectricity produced by the end-use sectors.'
+p835
+aS'Billion Btu'
+p836
+aa(lp837
+S'HYTXP'
+p838
+aS'Hydroelectricity produced by the end-use sectors.'
+p839
+aS'Million kilowatthours'
+p840
+aa(lp841
+S'JFACB'
+p842
+aS'Jet fuel consumed by the transportation sector.'
+p843
+aS'Billion Btu'
+p844
+aa(lp845
+S'JFACD'
+p846
+aS'Jet fuel price in the transportation sector.'
+p847
+aS'Dollars per million Btu'
+p848
+aa(lp849
+S'JFACP'
+p850
+aS'Jet fuel consumed by the transportation sector.'
+p851
+aS'Thousand barrels'
+p852
+aa(lp853
+S'JFACV'
+p854
+aS'Jet fuel expenditures in the transportation sector.'
+p855
+aS'Million dollars'
+p856
+aa(lp857
+S'JFTCB'
+p858
+aS'Jet fuel total consumption.'
+p859
+aS'Billion Btu'
+p860
+aa(lp861
+S'JFTCD'
+p862
+aS'Jet fuel average price, all sectors.'
+p863
+aS'Dollars per million Btu'
+p864
+aa(lp865
+S'JFTCP'
+p866
+aS'Jet fuel total consumption.'
+p867
+aS'Thousand barrels'
+p868
+aa(lp869
+S'JFTCV'
+p870
+aS'Jet fuel total expenditures.'
+p871
+aS'Million dollars'
+p872
+aa(lp873
+S'JFTXB'
+p874
+aS'Jet fuel total end-use consumption.'
+p875
+aS'Billion Btu'
+p876
+aa(lp877
+S'JFTXD'
+p878
+aS'Jet fuel average price, all end-use sectors.'
+p879
+aS'Dollars per million Btu'
+p880
+aa(lp881
+S'JFTXP'
+p882
+aS'Jet fuel total end-use consumption.'
+p883
+aS'Thousand barrels'
+p884
+aa(lp885
+S'JFTXV'
+p886
+aS'Jet fuel total end-use expenditures.'
+p887
+aS'Million dollars'
+p888
+aa(lp889
+S'JKACB'
+p890
+aS'Kerosene-type jet fuel consumed by the transportation sector.'
+p891
+aS'Billion Btu'
+p892
+aa(lp893
+S'JKACP'
+p894
+aS'Kerosene-type jet fuel consumed by the transportation sector.'
+p895
+aS'Thousand barrels'
+p896
+aa(lp897
+S'JKTCB'
+p898
+aS'Kerosene-type jet fuel total consumption.'
+p899
+aS'Billion Btu'
+p900
+aa(lp901
+S'JKTCP'
+p902
+aS'Kerosene-type jet fuel total consumption.'
+p903
+aS'Thousand barrels'
+p904
+aa(lp905
+S'JNACB'
+p906
+aS'Naphtha-type jet fuel consumed by the transportation sector.'
+p907
+aS'Billion Btu'
+p908
+aa(lp909
+S'JNACP'
+p910
+aS'Naphtha-type jet fuel consumed by the transportation sector.'
+p911
+aS'Thousand barrels'
+p912
+aa(lp913
+S'JNTCB'
+p914
+aS'Naphtha-type jet fuel total consumption.'
+p915
+aS'Billion Btu'
+p916
+aa(lp917
+S'JNTCP'
+p918
+aS'Naphtha-type jet fuel total consumption.'
+p919
+aS'Thousand barrels'
+p920
+aa(lp921
+S'KSCCB'
+p922
+aS'Kerosene consumed by the commercial sector.'
+p923
+aS'Billion Btu'
+p924
+aa(lp925
+S'KSCCD'
+p926
+aS'Kerosene price in the commercial sector.'
+p927
+aS'Dollars per million Btu'
+p928
+aa(lp929
+S'KSCCP'
+p930
+aS'Kerosene consumed by the commercial sector.'
+p931
+aS'Thousand barrels'
+p932
+aa(lp933
+S'KSCCV'
+p934
+aS'Kerosene expenditures in the commercial sector.'
+p935
+aS'Million dollars'
+p936
+aa(lp937
+S'KSICB'
+p938
+aS'Kerosene consumed by the industrial sector.'
+p939
+aS'Billion Btu'
+p940
+aa(lp941
+S'KSICD'
+p942
+aS'Kerosene price in the industrial sector.'
+p943
+aS'Dollars per million Btu'
+p944
+aa(lp945
+S'KSICP'
+p946
+aS'Kerosene consumed by the industrial sector.'
+p947
+aS'Thousand barrels'
+p948
+aa(lp949
+S'KSICV'
+p950
+aS'Kerosene expenditures in the industrial sector.'
+p951
+aS'Million dollars'
+p952
+aa(lp953
+S'KSRCB'
+p954
+aS'Kerosene consumed by the residential sector.'
+p955
+aS'Billion Btu'
+p956
+aa(lp957
+S'KSRCD'
+p958
+aS'Kerosene price in the residential sector.'
+p959
+aS'Dollars per million Btu'
+p960
+aa(lp961
+S'KSRCP'
+p962
+aS'Kerosene consumed by the residential sector.'
+p963
+aS'Thousand barrels'
+p964
+aa(lp965
+S'KSRCV'
+p966
+aS'Kerosene expenditures in the residential sector.'
+p967
+aS'Million dollars'
+p968
+aa(lp969
+S'KSTCB'
+p970
+aS'Kerosene total consumption.'
+p971
+aS'Billion Btu'
+p972
+aa(lp973
+S'KSTCD'
+p974
+aS'Kerosene average price, all sectors.'
+p975
+aS'Dollars per million Btu'
+p976
+aa(lp977
+S'KSTCP'
+p978
+aS'Kerosene total consumption.'
+p979
+aS'Thousand barrels'
+p980
+aa(lp981
+S'KSTCV'
+p982
+aS'Kerosene total expenditures.'
+p983
+aS'Million dollars'
+p984
+aa(lp985
+S'KSTXB'
+p986
+aS'Kerosene total end-use consumption.'
+p987
+aS'Billion Btu'
+p988
+aa(lp989
+S'KSTXD'
+p990
+aS'Kerosene average price, all end-use sectors.'
+p991
+aS'Dollars per million Btu'
+p992
+aa(lp993
+S'KSTXP'
+p994
+aS'Kerosene total end-use consumption.'
+p995
+aS'Thousand barrels'
+p996
+aa(lp997
+S'KSTXV'
+p998
+aS'Kerosene total end-use expenditures.'
+p999
+aS'Million dollars'
+p1000
+aa(lp1001
+S'LGACB'
+p1002
+aS'LPG consumed by the transportation sector.'
+p1003
+aS'Billion Btu'
+p1004
+aa(lp1005
+S'LGACD'
+p1006
+aS'LPG price in the transportation sector.'
+p1007
+aS'Dollars per million Btu'
+p1008
+aa(lp1009
+S'LGACP'
+p1010
+aS'LPG consumed by the transportation sector.'
+p1011
+aS'Thousand barrels'
+p1012
+aa(lp1013
+S'LGACV'
+p1014
+aS'LPG expenditures in the transportation sector.'
+p1015
+aS'Million dollars'
+p1016
+aa(lp1017
+S'LGCCB'
+p1018
+aS'LPG consumed by the commercial sector.'
+p1019
+aS'Billion Btu'
+p1020
+aa(lp1021
+S'LGCCD'
+p1022
+aS'LPG price in the commercial sector.'
+p1023
+aS'Dollars per million Btu'
+p1024
+aa(lp1025
+S'LGCCP'
+p1026
+aS'LPG consumed by the commercial sector.'
+p1027
+aS'Thousand barrels'
+p1028
+aa(lp1029
+S'LGCCV'
+p1030
+aS'LPG expenditures in the commercial sector.'
+p1031
+aS'Million dollars'
+p1032
+aa(lp1033
+S'LGICB'
+p1034
+aS'LPG consumed by the industrial sector.'
+p1035
+aS'Billion Btu'
+p1036
+aa(lp1037
+S'LGICD'
+p1038
+aS'LPG price in the industrial sector.'
+p1039
+aS'Dollars per million Btu'
+p1040
+aa(lp1041
+S'LGICP'
+p1042
+aS'LPG consumed by the industrial sector.'
+p1043
+aS'Thousand barrels'
+p1044
+aa(lp1045
+S'LGICV'
+p1046
+aS'LPG expenditures in the industrial sector.'
+p1047
+aS'Million dollars'
+p1048
+aa(lp1049
+S'LGISB'
+p1050
+aS'LPG consumed in the industrial sector excluding refinery fuel.'
+p1051
+aS'Billion Btu'
+p1052
+aa(lp1053
+S'LGRCB'
+p1054
+aS'LPG consumed by the residential sector.'
+p1055
+aS'Billion Btu'
+p1056
+aa(lp1057
+S'LGRCD'
+p1058
+aS'LPG price in the residential sector.'
+p1059
+aS'Dollars per million Btu'
+p1060
+aa(lp1061
+S'LGRCP'
+p1062
+aS'LPG consumed by the residential sector.'
+p1063
+aS'Thousand barrels'
+p1064
+aa(lp1065
+S'LGRCV'
+p1066
+aS'LPG expenditures in the residential sector.'
+p1067
+aS'Million dollars'
+p1068
+aa(lp1069
+S'LGRFB'
+p1070
+aS'LPG consumed as refinery fuel.'
+p1071
+aS'Billion Btu'
+p1072
+aa(lp1073
+S'LGTCB'
+p1074
+aS'LPG total consumption.'
+p1075
+aS'Billion Btu'
+p1076
+aa(lp1077
+S'LGTCD'
+p1078
+aS'LPG average price, all sectors.'
+p1079
+aS'Dollars per million Btu'
+p1080
+aa(lp1081
+S'LGTCK'
+p1082
+aS'Factor for converting LPG physical units to Btu, United States only.'
+p1083
+aS'Million Btu per barrel'
+p1084
+aa(lp1085
+S'LGTCP'
+p1086
+aS'LPG total consumption.'
+p1087
+aS'Thousand barrels'
+p1088
+aa(lp1089
+S'LGTCV'
+p1090
+aS'LPG total expenditures.'
+p1091
+aS'Million dollars'
+p1092
+aa(lp1093
+S'LGTXB'
+p1094
+aS'LPG total end-use consumption.'
+p1095
+aS'Billion Btu'
+p1096
+aa(lp1097
+S'LGTXD'
+p1098
+aS'LPG average price, all end-use sectors.'
+p1099
+aS'Dollars per million Btu'
+p1100
+aa(lp1101
+S'LGTXP'
+p1102
+aS'LPG total end-use consumption.'
+p1103
+aS'Thousand barrels'
+p1104
+aa(lp1105
+S'LGTXV'
+p1106
+aS'LPG total end-use expenditures.'
+p1107
+aS'Million dollars'
+p1108
+aa(lp1109
+S'LOACB'
+p1110
+aS"The transportation sector's share of electrical system energy losses."
+p1111
+aS'Billion Btu'
+p1112
+aa(lp1113
+S'LOCCB'
+p1114
+aS"The commercial sector's share of electrical system energy losses."
+p1115
+aS'Billion Btu'
+p1116
+aa(lp1117
+S'LOICB'
+p1118
+aS"The industrial sector's share of electrical system energy losses."
+p1119
+aS'Billion Btu'
+p1120
+aa(lp1121
+S'LORCB'
+p1122
+aS"The residential sector's share of electrical system energy losses."
+p1123
+aS'Billion Btu'
+p1124
+aa(lp1125
+S'LOTCB'
+p1126
+aS'Total electrical system energy losses.'
+p1127
+aS'Billion Btu'
+p1128
+aa(lp1129
+S'LOTXB'
+p1130
+aS'Total electrical system energy losses allocated to the end-use sectors.'
+p1131
+aS'Billion Btu'
+p1132
+aa(lp1133
+S'LUACB'
+p1134
+aS'Lubricants consumed by the transportation sector.'
+p1135
+aS'Billion Btu'
+p1136
+aa(lp1137
+S'LUACD'
+p1138
+aS'Lubricants price in the transportation sector.'
+p1139
+aS'Dollars per million Btu'
+p1140
+aa(lp1141
+S'LUACP'
+p1142
+aS'Lubricants consumed by the transportation sector.'
+p1143
+aS'Thousand barrels'
+p1144
+aa(lp1145
+S'LUACV'
+p1146
+aS'Lubricants expenditures in the transportation sector.'
+p1147
+aS'Million dollars'
+p1148
+aa(lp1149
+S'LUICB'
+p1150
+aS'Lubricants consumed by the industrial sector.'
+p1151
+aS'Billion Btu'
+p1152
+aa(lp1153
+S'LUICD'
+p1154
+aS'Lubricants price in the industrial sector.'
+p1155
+aS'Dollars per million Btu'
+p1156
+aa(lp1157
+S'LUICP'
+p1158
+aS'Lubricants consumed by the industrial sector.'
+p1159
+aS'Thousand barrels'
+p1160
+aa(lp1161
+S'LUICV'
+p1162
+aS'Lubricants expenditures in the industrial sector.'
+p1163
+aS'Million dollars'
+p1164
+aa(lp1165
+S'LUTCB'
+p1166
+aS'Lubricants total consumption.'
+p1167
+aS'Billion Btu'
+p1168
+aa(lp1169
+S'LUTCD'
+p1170
+aS'Lubricants average price, all sectors.'
+p1171
+aS'Dollars per million Btu'
+p1172
+aa(lp1173
+S'LUTCP'
+p1174
+aS'Lubricants total consumption.'
+p1175
+aS'Thousand barrels'
+p1176
+aa(lp1177
+S'LUTCV'
+p1178
+aS'Lubricants average price, all sectors.'
+p1179
+aS'Million dollars'
+p1180
+aa(lp1181
+S'LUTXB'
+p1182
+aS'Lubricants total end-use consumption.'
+p1183
+aS'Billion Btu'
+p1184
+aa(lp1185
+S'LUTXD'
+p1186
+aS'Lubricants average price, all end-use sectors.'
+p1187
+aS'Dollars per million Btu'
+p1188
+aa(lp1189
+S'LUTXP'
+p1190
+aS'Lubricants total end-use consumption.'
+p1191
+aS'Thousand barrels'
+p1192
+aa(lp1193
+S'LUTXV'
+p1194
+aS'Lubricants total end-use expenditures.'
+p1195
+aS'Million dollars'
+p1196
+aa(lp1197
+S'MBICB'
+p1198
+aS'Motor gasoline blending components consumed by the industrial sector.'
+p1199
+aS'Billion Btu'
+p1200
+aa(lp1201
+S'MBICP'
+p1202
+aS'Motor gasoline blending components consumed by the industrial sector.'
+p1203
+aS'Thousand barrels'
+p1204
+aa(lp1205
+S'MGACB'
+p1206
+aS'Motor gasoline consumed by the transportation sector.'
+p1207
+aS'Billion Btu'
+p1208
+aa(lp1209
+S'MGACD'
+p1210
+aS'Motor gasoline price in the transportation sector.'
+p1211
+aS'Dollars per million Btu'
+p1212
+aa(lp1213
+S'MGACP'
+p1214
+aS'Motor gasoline consumed by the transportation sector.'
+p1215
+aS'Thousand barrels'
+p1216
+aa(lp1217
+S'MGACV'
+p1218
+aS'Motor gasoline expenditures in the transportation sector.'
+p1219
+aS'Million dollars'
+p1220
+aa(lp1221
+S'MGCCB'
+p1222
+aS'Motor gasoline consumed by the commercial sector.'
+p1223
+aS'Billion Btu'
+p1224
+aa(lp1225
+S'MGCCD'
+p1226
+aS'Motor gasoline price in the commercial sector.'
+p1227
+aS'Dollars per million Btu'
+p1228
+aa(lp1229
+S'MGCCP'
+p1230
+aS'Motor gasoline consumed by the commercial sector.'
+p1231
+aS'Thousand barrels'
+p1232
+aa(lp1233
+S'MGCCV'
+p1234
+aS'Motor gasoline expenditures in the commercial sector.'
+p1235
+aS'Million dollars'
+p1236
+aa(lp1237
+S'MGICB'
+p1238
+aS'Motor gasoline consumed by the industrial sector.'
+p1239
+aS'Billion Btu'
+p1240
+aa(lp1241
+S'MGICD'
+p1242
+aS'Motor gasoline price in the industrial sector.'
+p1243
+aS'Dollars per million Btu'
+p1244
+aa(lp1245
+S'MGICP'
+p1246
+aS'Motor gasoline consumed by the industrial sector.'
+p1247
+aS'Thousand barrels'
+p1248
+aa(lp1249
+S'MGICV'
+p1250
+aS'Motor gasoline expenditures in the industrial sector.'
+p1251
+aS'Million dollars'
+p1252
+aa(lp1253
+S'MGTCB'
+p1254
+aS'Motor gasoline total consumption.'
+p1255
+aS'Billion Btu'
+p1256
+aa(lp1257
+S'MGTCD'
+p1258
+aS'Motor gasoline average price, all sectors.'
+p1259
+aS'Dollars per million Btu'
+p1260
+aa(lp1261
+S'MGTCK'
+p1262
+aS'Factor converting motor gasoline physical units to Btu, United States only.'
+p1263
+aS'Million Btu per barrel'
+p1264
+aa(lp1265
+S'MGTCP'
+p1266
+aS'Motor gasoline total consumption.'
+p1267
+aS'Thousand barrels'
+p1268
+aa(lp1269
+S'MGTCV'
+p1270
+aS'Motor gasoline total expenditures.'
+p1271
+aS'Million dollars'
+p1272
+aa(lp1273
+S'MGTXB'
+p1274
+aS'Motor gasoline total end-use consumption.'
+p1275
+aS'Billion Btu'
+p1276
+aa(lp1277
+S'MGTXD'
+p1278
+aS'Motor gasoline average price, all end-use sectors.'
+p1279
+aS'Dollars per million Btu'
+p1280
+aa(lp1281
+S'MGTXP'
+p1282
+aS'Motor gasoline total end-use consumption.'
+p1283
+aS'Thousand barrels'
+p1284
+aa(lp1285
+S'MGTXV'
+p1286
+aS'Motor gasoline total end-use expenditures.'
+p1287
+aS'Million dollars'
+p1288
+aa(lp1289
+S'MMTCB'
+p1290
+aS'Motor gasoline total consumption excluding fuel ethanol.'
+p1291
+aS'Billion Btu'
+p1292
+aa(lp1293
+S'MSICB'
+p1294
+aS'Miscellaneous petroleum products consumed by the industrial sector.'
+p1295
+aS'Billion Btu'
+p1296
+aa(lp1297
+S'MSICD'
+p1298
+aS'Miscellaneous petroleum products price in the industrial sector.'
+p1299
+aS'Dollars per million Btu'
+p1300
+aa(lp1301
+S'MSICP'
+p1302
+aS'Miscellaneous petroleum products consumed by the industrial sector.'
+p1303
+aS'Thousand barrels'
+p1304
+aa(lp1305
+S'MSICV'
+p1306
+aS'Miscellaneous petroleum products expenditures in the industrial sector.'
+p1307
+aS'Million dollars'
+p1308
+aa(lp1309
+S'NAICB'
+p1310
+aS'Natural gasoline consumed by the industrial sector.'
+p1311
+aS'Billion Btu'
+p1312
+aa(lp1313
+S'NAICP'
+p1314
+aS'Natural gasoline consumed by the industrial sector.'
+p1315
+aS'Thousand barrels'
+p1316
+aa(lp1317
+S'NGACB'
+p1318
+aS'Natural gas consumed by the transportation sector. '
+p1319
+aS'Billion Btu'
+p1320
+aa(lp1321
+S'NGACD'
+p1322
+aS'Natural gas price in the transportation sector.'
+p1323
+aS'Dollars per million Btu'
+p1324
+aa(lp1325
+S'NGACP'
+p1326
+aS'Natural gas consumed by the transportation sector.'
+p1327
+aS'Million cubic feet'
+p1328
+aa(lp1329
+S'NGACV'
+p1330
+aS'Natural gas expenditures in the transportation sector.'
+p1331
+aS'Million dollars'
+p1332
+aa(lp1333
+S'NGCCB'
+p1334
+aS'Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).'
+p1335
+aS'Billion Btu'
+p1336
+aa(lp1337
+S'NGCCD'
+p1338
+aS'Natural gas price in the commercial sector (including supplemental gaseous fuels).'
+p1339
+aS'Dollars per million Btu'
+p1340
+aa(lp1341
+S'NGCCP'
+p1342
+aS'Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).'
+p1343
+aS'Million cubic feet'
+p1344
+aa(lp1345
+S'NGCCV'
+p1346
+aS'Natural gas expenditures in the commercial sector (including supplemental gaseous fuels).'
+p1347
+aS'Million dollars'
+p1348
+aa(lp1349
+S'NGEIB'
+p1350
+aS'Natural gas consumed by the electric power sector (including supplemental gaseous fuels).'
+p1351
+aS'Billion Btu'
+p1352
+aa(lp1353
+S'NGEID'
+p1354
+aS'Natural gas price in the electric power sector (including supplemental gaseous fuels).'
+p1355
+aS'Dollars per million Btu'
+p1356
+aa(lp1357
+S'NGEIK'
+p1358
+aS'Factor for converting natural gas consumed by the electric power sector from physical units to Btu.'
+p1359
+aS'Thousand Btu per cubic foot'
+p1360
+aa(lp1361
+S'NGEIP'
+p1362
+aS'Natural gas consumed by the electric power sector (including supplemental gaseous fuels).'
+p1363
+aS'Million cubic feet'
+p1364
+aa(lp1365
+S'NGEIV'
+p1366
+aS'Natural gas expenditures in the electric power sector (including supplemental gaseous fuels).'
+p1367
+aS'Million dollars'
+p1368
+aa(lp1369
+S'NGICB'
+p1370
+aS'Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).'
+p1371
+aS'Billion Btu'
+p1372
+aa(lp1373
+S'NGICD'
+p1374
+aS'Natural gas price in the industrial sector (including supplemental gaseous fuels).'
+p1375
+aS'Dollars per million Btu'
+p1376
+aa(lp1377
+S'NGICP'
+p1378
+aS'Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).'
+p1379
+aS'Million cubic feet'
+p1380
+aa(lp1381
+S'NGICV'
+p1382
+aS'Natural gas expenditures in the industrial sector (including supplemental gaseous fuels).'
+p1383
+aS'Million dollars'
+p1384
+aa(lp1385
+S'NGISB'
+p1386
+aS'Natural gas consumed by the industrial sector excluding refinery fuel (including supplemental gaseous fuels).'
+p1387
+aS'Billion Btu'
+p1388
+aa(lp1389
+S'NGLPB'
+p1390
+aS'Natural gas consumed as lease and plant fuel.'
+p1391
+aS'Billion Btu'
+p1392
+aa(lp1393
+S'NGLPP'
+p1394
+aS'Natural gas consumed as lease and plant fuel.'
+p1395
+aS'Million cubic feet'
+p1396
+aa(lp1397
+S'NGMPB'
+p1398
+aS'Natural gas marketed production.'
+p1399
+aS'Billion Btu'
+p1400
+aa(lp1401
+S'NGMPK'
+p1402
+aS'Conversion factor for natural gas marketed production.'
+p1403
+aS'Thousand Btu per cubic feet'
+p1404
+aa(lp1405
+S'NGMPP'
+p1406
+aS'Natural gas marketed production.'
+p1407
+aS'Million cubic feet'
+p1408
+aa(lp1409
+S'NGPZB'
+p1410
+aS'Natural gas consumed as pipeline fuel.'
+p1411
+aS'Billion Btu'
+p1412
+aa(lp1413
+S'NGPZP'
+p1414
+aS'Natural gas consumed as pipeline fuel.'
+p1415
+aS'Million cubic feet'
+p1416
+aa(lp1417
+S'NGRCB'
+p1418
+aS'Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).'
+p1419
+aS'Billion Btu'
+p1420
+aa(lp1421
+S'NGRCD'
+p1422
+aS'Natural gas price in the residential sector (including supplemental gaseous fuels).'
+p1423
+aS'Dollars per million Btu'
+p1424
+aa(lp1425
+S'NGRCP'
+p1426
+aS'Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).'
+p1427
+aS'Million cubic feet'
+p1428
+aa(lp1429
+S'NGRCV'
+p1430
+aS'Natural gas expenditures in the residential sector (including supplemental gaseous fuels).'
+p1431
+aS'Million dollars'
+p1432
+aa(lp1433
+S'NGRFB'
+p1434
+aS'Natural gas consumed as refinery fuel (including supplemental gaseous fuels). '
+p1435
+aS'Billion Btu'
+p1436
+aa(lp1437
+S'NGTCB'
+p1438
+aS'Natural gas total consumption (including supplemental gaseous fuels).'
+p1439
+aS'Billion Btu'
+p1440
+aa(lp1441
+S'NGTCD'
+p1442
+aS'Natural gas average price, all sectors (including supplemental gaseous fuels).'
+p1443
+aS'Dollars per million Btu'
+p1444
+aa(lp1445
+S'NGTCK'
+p1446
+aS'Factor for converting natural gas total consumption from physical units to Btu.'
+p1447
+aS'Thousand Btu per cubic foot'
+p1448
+aa(lp1449
+S'NGTCP'
+p1450
+aS'Natural gas total consumption (including supplemental gaseous fuels).'
+p1451
+aS'Million cubic feet'
+p1452
+aa(lp1453
+S'NGTCV'
+p1454
+aS'Natural gas total expenditures (including supplemental gaseous fuels).'
+p1455
+aS'Million dollars'
+p1456
+aa(lp1457
+S'NGTXB'
+p1458
+aS'Natural gas total end-use consumption (including supplemental gaseous fuels).'
+p1459
+aS'Billion Btu'
+p1460
+aa(lp1461
+S'NGTXD'
+p1462
+aS'Natural gas average price, all end-use sectors (including supplemental gaseous fuels).'
+p1463
+aS'Dollars per million Btu'
+p1464
+aa(lp1465
+S'NGTXK'
+p1466
+aS'Factor for converting natural gas consumed by all sectors other than electric power from physical units to Btu.'
+p1467
+aS'Thousand Btu per cubic foot'
+p1468
+aa(lp1469
+S'NGTXP'
+p1470
+aS'Natural gas total end-use consumption (including supplemental gaseous fuels).'
+p1471
+aS'Million cubic feet'
+p1472
+aa(lp1473
+S'NGTXV'
+p1474
+aS'Natural gas total end-use expenditures (including supplemental gaseous fuels).'
+p1475
+aS'Million dollars'
+p1476
+aa(lp1477
+S'NGVHB'
+p1478
+aS'Natural gas consumed as vehicle fuel.'
+p1479
+aS'Billion Btu'
+p1480
+aa(lp1481
+S'NGVHP'
+p1482
+aS'Natural gas consumed as vehicle fuel.'
+p1483
+aS'Million cubic feet'
+p1484
+aa(lp1485
+S'NNACB'
+p1486
+aS'Natural gas consumed by the transportation sector.  (Code used in SEDS 2006.)'
+p1487
+aS'Billion Btu'
+p1488
+aa(lp1489
+S'NNCCB'
+p1490
+aS'Natural gas consumed by (delivered to) the commercial sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.)'
+p1491
+aS'Billion Btu'
+p1492
+aa(lp1493
+S'NNEIB'
+p1494
+aS'Natural gas consumed by the electric power sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.)'
+p1495
+aS'Billion Btu'
+p1496
+aa(lp1497
+S'NNICB'
+p1498
+aS'Natural gas consumed by (delivered to) the industrial sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.)'
+p1499
+aS'Billion Btu'
+p1500
+aa(lp1501
+S'NNRCB'
+p1502
+aS'Natural gas consumed by (delivered to) the residential sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.)'
+p1503
+aS'Billion Btu'
+p1504
+aa(lp1505
+S'NNTCB'
+p1506
+aS'Natural gas total consumption (excluding supplemental gaseous fuels).'
+p1507
+aS'Billion Btu'
+p1508
+aa(lp1509
+S'NUEGB'
+p1510
+aS'Electricity produced from nuclear power by the electric power sector.'
+p1511
+aS'Billion Btu'
+p1512
+aa(lp1513
+S'NUEGD'
+p1514
+aS'Nuclear fuel price in the electric power sector.'
+p1515
+aS'Dollars per million Btu'
+p1516
+aa(lp1517
+S'NUEGP'
+p1518
+aS'Electricity produced from nuclear power by the electric power sector.'
+p1519
+aS'Million kilowatthours'
+p1520
+aa(lp1521
+S'NUEGV'
+p1522
+aS'Nuclear fuel expenditures in the electric power sector.'
+p1523
+aS'Million dollars'
+p1524
+aa(lp1525
+S'NUETB'
+p1526
+aS'Electricity produced from nuclear power.'
+p1527
+aS'Billion Btu'
+p1528
+aa(lp1529
+S'NUETD'
+p1530
+aS'Nuclear fuel average price, all sectors.'
+p1531
+aS'Dollars per million Btu'
+p1532
+aa(lp1533
+S'NUETK'
+p1534
+aS'Factor for converting electricity produced from nuclear power from physical units to Btu, United States only.'
+p1535
+aS'Thousand Btu per kilowatthour'
+p1536
+aa(lp1537
+S'NUETP'
+p1538
+aS'Electricity produced from nuclear power.'
+p1539
+aS'Million kilowatthours'
+p1540
+aa(lp1541
+S'NUETV'
+p1542
+aS'Nuclear fuel total expenditures.'
+p1543
+aS'Million dollars'
+p1544
+aa(lp1545
+S'P1ICB'
+p1546
+aS'Asphalt and road oil, kerosene, lubricants, and "other petroleum products" consumed by the industrial sector.'
+p1547
+aS'Billion Btu'
+p1548
+aa(lp1549
+S'P1ICD'
+p1550
+aS'Asphalt and road oil, kerosene, lubricants, and "other petroleum products" average price in the  industrial sector.'
+p1551
+aS'Dollars per million Btu'
+p1552
+aa(lp1553
+S'P1ICP'
+p1554
+aS'Asphalt and road oil, kerosene, lubricants, and "other petroleum products" consumed by the industrial sector.'
+p1555
+aS'Thousand barrels'
+p1556
+aa(lp1557
+S'P1ICV'
+p1558
+aS'Asphalt and road oil, kerosene, lubricants, and "other petroleum products" expenditures in the  industrial sector.'
+p1559
+aS'Million dollars'
+p1560
+aa(lp1561
+S'P1TCB'
+p1562
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" total consumption.'
+p1563
+aS'Billion Btu'
+p1564
+aa(lp1565
+S'P1TCD'
+p1566
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" average price, all sectors.'
+p1567
+aS'Dollars per million Btu'
+p1568
+aa(lp1569
+S'P1TCP'
+p1570
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" total consumption.'
+p1571
+aS'Thousand barrels'
+p1572
+aa(lp1573
+S'P1TCV'
+p1574
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" total expenditures.'
+p1575
+aS'Million dollars'
+p1576
+aa(lp1577
+S'P1TXB'
+p1578
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" total end-use consumption.'
+p1579
+aS'Billion Btu'
+p1580
+aa(lp1581
+S'P1TXD'
+p1582
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" average price, all end-use sectors.'
+p1583
+aS'Dollars per million Btu'
+p1584
+aa(lp1585
+S'P1TXP'
+p1586
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" total end-use consumption.'
+p1587
+aS'Thousand barrels'
+p1588
+aa(lp1589
+S'P1TXV'
+p1590
+aS'Asphalt and road oil, aviation gasoline, kerosene, lubricants, and "other petroleum products" total end-use expenditures.'
+p1591
+aS'Million dollars'
+p1592
+aa(lp1593
+S'P5RFB'
+p1594
+aS'Other petroleum products (SG and PC consumed as process fuel and AB, MB, PP, and UO consumed as intermediate products).'
+p1595
+aS'Billion Btu'
+p1596
+aa(lp1597
+S'PAACB'
+p1598
+aS'All petroleum products consumed by the transportation sector.'
+p1599
+aS'Billion Btu'
+p1600
+aa(lp1601
+S'PAACD'
+p1602
+aS'All petroleum products average price in the transportation sector.'
+p1603
+aS'Dollars per million Btu'
+p1604
+aa(lp1605
+S'PAACK'
+p1606
+aS'Factor for converting all petroleum products consumed by the transportation sector from physical units to Btu, United States only.'
+p1607
+aS'Million Btu per barrel'
+p1608
+aa(lp1609
+S'PAACP'
+p1610
+aS'All petroleum products consumed by the transportation sector.'
+p1611
+aS'Thousand barrels'
+p1612
+aa(lp1613
+S'PAACV'
+p1614
+aS'All petroleum products total expenditures in the transportation sector.'
+p1615
+aS'Million dollars'
+p1616
+aa(lp1617
+S'PACCB'
+p1618
+aS'All petroleum products consumed by the commercial sector.'
+p1619
+aS'Billion Btu'
+p1620
+aa(lp1621
+S'PACCD'
+p1622
+aS'All petroleum products average price in the commercial sector.'
+p1623
+aS'Dollars per million Btu'
+p1624
+aa(lp1625
+S'PACCK'
+p1626
+aS'Factor for converting all petroleum products consumed by the commercial sector from physical units to Btu, United States only.'
+p1627
+aS'Million Btu per barrel'
+p1628
+aa(lp1629
+S'PACCP'
+p1630
+aS'All petroleum products consumed by the commercial sector.'
+p1631
+aS'Thousand barrels'
+p1632
+aa(lp1633
+S'PACCV'
+p1634
+aS'All petroleum products total expenditures in the commercial sector.'
+p1635
+aS'Million dollars'
+p1636
+aa(lp1637
+S'PAEIB'
+p1638
+aS'All petroleum products consumed by the electric power sector.'
+p1639
+aS'Billion Btu'
+p1640
+aa(lp1641
+S'PAEID'
+p1642
+aS'All petroleum products average price in the electric power sector.'
+p1643
+aS'Dollars per million Btu'
+p1644
+aa(lp1645
+S'PAEIK'
+p1646
+aS'Factor for converting all petroleum products consumed by the electric power sector from physical units to Btu, United States only.'
+p1647
+aS'Million Btu per barrel'
+p1648
+aa(lp1649
+S'PAEIP'
+p1650
+aS'All petroleum products consumed by the electric power sector.'
+p1651
+aS'Thousand barrels'
+p1652
+aa(lp1653
+S'PAEIV'
+p1654
+aS'All petroleum products total expenditures in the electric power sector.'
+p1655
+aS'Million dollars'
+p1656
+aa(lp1657
+S'PAHCK'
+p1658
+aS'Factor for converting all petroleum products consumed by the residential and commercial sectors from physical units to Btu, United States only.'
+p1659
+aS'Million Btu per barrel'
+p1660
+aa(lp1661
+S'PAICB'
+p1662
+aS'All petroleum products consumed by the industrial sector.'
+p1663
+aS'Billion Btu'
+p1664
+aa(lp1665
+S'PAICD'
+p1666
+aS'All petroleum products average price in the industrial sector.'
+p1667
+aS'Dollars per million Btu'
+p1668
+aa(lp1669
+S'PAICK'
+p1670
+aS'Factor for converting all petroleum products consumed by the industrial sector from physical units to Btu, United States only.'
+p1671
+aS'Million Btu per barrel'
+p1672
+aa(lp1673
+S'PAICP'
+p1674
+aS'All petroleum products consumed by the industrial sector.'
+p1675
+aS'Thousand barrels'
+p1676
+aa(lp1677
+S'PAICV'
+p1678
+aS'All petroleum products total expenditures in the industrial sector.'
+p1679
+aS'Million dollars'
+p1680
+aa(lp1681
+S'PAPRB'
+p1682
+aS'Crude oil production (including lease condensate).'
+p1683
+aS'Billion Btu'
+p1684
+aa(lp1685
+S'PAPRP'
+p1686
+aS'Crude oil production (including lease condensate).'
+p1687
+aS'Thousand barrels'
+p1688
+aa(lp1689
+S'PARCB'
+p1690
+aS'All petroleum products consumed by the residential sector.'
+p1691
+aS'Billion Btu'
+p1692
+aa(lp1693
+S'PARCD'
+p1694
+aS'All petroleum products average price in the residential sector.'
+p1695
+aS'Dollars per million Btu'
+p1696
+aa(lp1697
+S'PARCK'
+p1698
+aS'Factor for converting all petroleum products consumed by the residential sector from physical units to Btu, United States only.'
+p1699
+aS'Million Btu per barrel'
+p1700
+aa(lp1701
+S'PARCP'
+p1702
+aS'All petroleum products consumed by the residential sector.'
+p1703
+aS'Thousand barrels'
+p1704
+aa(lp1705
+S'PARCV'
+p1706
+aS'All petroleum products total expenditures in the residential sector.'
+p1707
+aS'Million dollars'
+p1708
+aa(lp1709
+S'PATCB'
+p1710
+aS'All petroleum products total consumption.'
+p1711
+aS'Billion Btu'
+p1712
+aa(lp1713
+S'PATCD'
+p1714
+aS'All petroleum products average price, all sectors.'
+p1715
+aS'Dollars per million Btu'
+p1716
+aa(lp1717
+S'PATCK'
+p1718
+aS'Factor for converting all petroleum products total consumption from physical units to Btu, United States only.'
+p1719
+aS'Million Btu per barrel'
+p1720
+aa(lp1721
+S'PATCP'
+p1722
+aS'All petroleum products total consumption.'
+p1723
+aS'Thousand barrels'
+p1724
+aa(lp1725
+S'PATCV'
+p1726
+aS'All petroleum products total expenditures.'
+p1727
+aS'Million dollars'
+p1728
+aa(lp1729
+S'PATXB'
+p1730
+aS'All petroleum products total end-use consumption.'
+p1731
+aS'Billion Btu'
+p1732
+aa(lp1733
+S'PATXD'
+p1734
+aS'All petroleum products average price, all end-use sectors.'
+p1735
+aS'Dollars per million Btu'
+p1736
+aa(lp1737
+S'PATXP'
+p1738
+aS'All petroleum products total end-use consumption.'
+p1739
+aS'Thousand barrels'
+p1740
+aa(lp1741
+S'PATXV'
+p1742
+aS'All petroleum products total end-use expenditures.'
+p1743
+aS'Million dollars'
+p1744
+aa(lp1745
+S'PCCCB'
+p1746
+aS'Petroleum coke consumed by the commercial sector.'
+p1747
+aS'Billion Btu'
+p1748
+aa(lp1749
+S'PCCCD'
+p1750
+aS'Petroleum coke price in the commercial sector.'
+p1751
+aS'Dollars per million Btu'
+p1752
+aa(lp1753
+S'PCCCP'
+p1754
+aS'Petroleum coke consumed by the commercial sector.'
+p1755
+aS'Thousand barrels'
+p1756
+aa(lp1757
+S'PCCCV'
+p1758
+aS'Petroleum coke expenditures in the commercial sector.'
+p1759
+aS'Million dollars'
+p1760
+aa(lp1761
+S'PCEIB'
+p1762
+aS'Petroleum coke consumed by the electric power sector.'
+p1763
+aS'Billion Btu'
+p1764
+aa(lp1765
+S'PCEID'
+p1766
+aS'Petroleum coke price in the electric power sector.'
+p1767
+aS'Dollars per million Btu'
+p1768
+aa(lp1769
+S'PCEIP'
+p1770
+aS'Petroleum coke consumed by the electric power sector.'
+p1771
+aS'Thousand barrels'
+p1772
+aa(lp1773
+S'PCEIV'
+p1774
+aS'Petroleum coke expenditures in the electric power sector.'
+p1775
+aS'Million dollars'
+p1776
+aa(lp1777
+S'PCICB'
+p1778
+aS'Petroleum coke consumed by the industrial sector.'
+p1779
+aS'Billion Btu'
+p1780
+aa(lp1781
+S'PCICD'
+p1782
+aS'Petroleum coke price in the industrial sector.'
+p1783
+aS'Dollars per million Btu'
+p1784
+aa(lp1785
+S'PCICP'
+p1786
+aS'Petroleum coke consumed by the industrial sector.'
+p1787
+aS'Thousand barrels'
+p1788
+aa(lp1789
+S'PCICV'
+p1790
+aS'Petroleum coke expenditures in the industrial sector.'
+p1791
+aS'Million dollars'
+p1792
+aa(lp1793
+S'PCISB'
+p1794
+aS'Petroleum coke price in the industrial sector excluding refinery fuel.'
+p1795
+aS'Billion Btu'
+p1796
+aa(lp1797
+S'PCRFB'
+p1798
+aS'Petroleum coke consumed as refinery fuel.'
+p1799
+aS'Billion Btu'
+p1800
+aa(lp1801
+S'PCTCB'
+p1802
+aS'Petroleum coke total consumption.'
+p1803
+aS'Billion Btu'
+p1804
+aa(lp1805
+S'PCTCD'
+p1806
+aS'Petroleum coke average price, all sectors.'
+p1807
+aS'Dollars per million Btu'
+p1808
+aa(lp1809
+S'PCTCP'
+p1810
+aS'Petroleum coke total consumption.'
+p1811
+aS'Thousand barrels'
+p1812
+aa(lp1813
+S'PCTCV'
+p1814
+aS'Petroleum coke total expenditures.'
+p1815
+aS'Million dollars'
+p1816
+aa(lp1817
+S'PEACD'
+p1818
+aS'Primary energy average price in the transportation sector.'
+p1819
+aS'Dollars per million Btu'
+p1820
+aa(lp1821
+S'PEACV'
+p1822
+aS'Primary energy total expenditures in the transportation sector.'
+p1823
+aS'Million dollars'
+p1824
+aa(lp1825
+S'PECCD'
+p1826
+aS'Primary energy average price in the commercial sector.'
+p1827
+aS'Dollars per million Btu'
+p1828
+aa(lp1829
+S'PECCV'
+p1830
+aS'Primary energy total expenditures in the commercial sector.'
+p1831
+aS'Million dollars'
+p1832
+aa(lp1833
+S'PEEID'
+p1834
+aS'Primary energy average price in the electric power sector.'
+p1835
+aS'Dollars per million Btu'
+p1836
+aa(lp1837
+S'PEEIV'
+p1838
+aS'Primary energy total expenditures in the electric power sector.'
+p1839
+aS'Million dollars'
+p1840
+aa(lp1841
+S'PEICD'
+p1842
+aS'Primary energy average price in the industrial sector.'
+p1843
+aS'Dollars per million Btu'
+p1844
+aa(lp1845
+S'PEICV'
+p1846
+aS'Primary energy total expenditures in the industrial sector.'
+p1847
+aS'Million dollars'
+p1848
+aa(lp1849
+S'PERCD'
+p1850
+aS'Primary energy average price in the residential sector.'
+p1851
+aS'Dollars per million Btu'
+p1852
+aa(lp1853
+S'PERCV'
+p1854
+aS'Primary energy total expenditures in the residential sector.'
+p1855
+aS'Million dollars'
+p1856
+aa(lp1857
+S'PETCD'
+p1858
+aS'Primary energy average price, all sectors.'
+p1859
+aS'Dollars per million Btu'
+p1860
+aa(lp1861
+S'PETCV'
+p1862
+aS'Primary energy total expenditures.'
+p1863
+aS'Million dollars'
+p1864
+aa(lp1865
+S'PETXD'
+p1866
+aS'Primary energy average price, all end-use sectors.'
+p1867
+aS'Dollars per million Btu'
+p1868
+aa(lp1869
+S'PETXV'
+p1870
+aS'Primary energy total end-use expenditures.'
+p1871
+aS'Million dollars'
+p1872
+aa(lp1873
+S'PLICB'
+p1874
+aS'Plant condensate consumed by the industrial sector.'
+p1875
+aS'Billion Btu'
+p1876
+aa(lp1877
+S'PLICP'
+p1878
+aS'Plant condensate consumed by the industrial sector.'
+p1879
+aS'Thousand barrels'
+p1880
+aa(lp1881
+S'PMTCB'
+p1882
+aS'All petroleum products total consumption excluding fuel ethanol.'
+p1883
+aS'Billion Btu'
+p1884
+aa(lp1885
+S'POICB'
+p1886
+aS'Other petroleum products consumed by the industrial sector.'
+p1887
+aS'Billion Btu'
+p1888
+aa(lp1889
+S'POICD'
+p1890
+aS'Other petroleum products average price in the industrial sector.'
+p1891
+aS'Dollars per million Btu'
+p1892
+aa(lp1893
+S'POICP'
+p1894
+aS'Other petroleum products consumed by the industrial sector.'
+p1895
+aS'Thousand barrels'
+p1896
+aa(lp1897
+S'POICV'
+p1898
+aS'Other petroleum products total expenditures in the industrial sector.'
+p1899
+aS'Million dollars'
+p1900
+aa(lp1901
+S'POTCB'
+p1902
+aS'Other petroleum products total consumption.'
+p1903
+aS'Billion Btu'
+p1904
+aa(lp1905
+S'POTCD'
+p1906
+aS'Other petroleum products average price, all sectors.'
+p1907
+aS'Dollars per million Btu'
+p1908
+aa(lp1909
+S'POTCP'
+p1910
+aS'Other petroleum products total consumption.'
+p1911
+aS'Thousand barrels'
+p1912
+aa(lp1913
+S'POTCV'
+p1914
+aS'Other petroleum products total expenditures.'
+p1915
+aS'Million dollars'
+p1916
+aa(lp1917
+S'POTXB'
+p1918
+aS'Other petroleum products total end-use consumption.'
+p1919
+aS'Billion Btu'
+p1920
+aa(lp1921
+S'POTXD'
+p1922
+aS'Other petroleum products average price, all end-use sectors.'
+p1923
+aS'Dollars per million Btu'
+p1924
+aa(lp1925
+S'POTXP'
+p1926
+aS'Other petroleum products total end-use consumption.'
+p1927
+aS'Thousand barrels'
+p1928
+aa(lp1929
+S'POTXV'
+p1930
+aS'Other petroleum products total end-use expenditures.'
+p1931
+aS'Million dollars'
+p1932
+aa(lp1933
+S'PPICB'
+p1934
+aS'Pentanes plus consumed by the industrial sector.'
+p1935
+aS'Billion Btu'
+p1936
+aa(lp1937
+S'PPICP'
+p1938
+aS'Pentanes plus consumed by the industrial sector.'
+p1939
+aS'Thousand barrels'
+p1940
+aa(lp1941
+S'REPRB'
+p1942
+aS'Renewable energy production.'
+p1943
+aS'Billion Btu'
+p1944
+aa(lp1945
+S'RETCB'
+p1946
+aS'Renewable energy total consumption.'
+p1947
+aS'Billion Btu'
+p1948
+aa(lp1949
+S'RFACB'
+p1950
+aS'Residual fuel oil consumed by the transportation sector.'
+p1951
+aS'Billion Btu'
+p1952
+aa(lp1953
+S'RFACD'
+p1954
+aS'Residual fuel oil price in the transportation sector.'
+p1955
+aS'Dollars per million Btu'
+p1956
+aa(lp1957
+S'RFACP'
+p1958
+aS'Residual fuel oil consumed by the transportation sector.'
+p1959
+aS'Thousand barrels'
+p1960
+aa(lp1961
+S'RFACV'
+p1962
+aS'Residual fuel oil expenditures in the transportation sector.'
+p1963
+aS'Million dollars'
+p1964
+aa(lp1965
+S'RFCCB'
+p1966
+aS'Residual fuel oil consumed by the commercial sector.'
+p1967
+aS'Billion Btu'
+p1968
+aa(lp1969
+S'RFCCD'
+p1970
+aS'Residual fuel oil price in the commercial sector.'
+p1971
+aS'Dollars per million Btu'
+p1972
+aa(lp1973
+S'RFCCP'
+p1974
+aS'Residual fuel oil consumed by the commercial sector.'
+p1975
+aS'Thousand barrels'
+p1976
+aa(lp1977
+S'RFCCV'
+p1978
+aS'Residual fuel oil expenditures in the commercial sector.'
+p1979
+aS'Million dollars'
+p1980
+aa(lp1981
+S'RFEIB'
+p1982
+aS'Residual fuel oil consumed by the electric power sector.'
+p1983
+aS'Billion Btu'
+p1984
+aa(lp1985
+S'RFEID'
+p1986
+aS'Residual fuel oil price in the electric power sector.'
+p1987
+aS'Dollars per million Btu'
+p1988
+aa(lp1989
+S'RFEIP'
+p1990
+aS'Residual fuel oil consumed by the electric power sector.'
+p1991
+aS'Thousand barrels'
+p1992
+aa(lp1993
+S'RFEIV'
+p1994
+aS'Residual fuel oil expenditures in the electric power sector.'
+p1995
+aS'Million dollars'
+p1996
+aa(lp1997
+S'RFICB'
+p1998
+aS'Residual fuel oil consumed by the industrial sector.'
+p1999
+aS'Billion Btu'
+p2000
+aa(lp2001
+S'RFICD'
+p2002
+aS'Residual fuel oil price in the industrial sector.'
+p2003
+aS'Dollars per million Btu'
+p2004
+aa(lp2005
+S'RFICP'
+p2006
+aS'Residual fuel oil consumed by the industrial sector'
+p2007
+aS'Thousand barrels'
+p2008
+aa(lp2009
+S'RFICV'
+p2010
+aS'Residual fuel oil expenditures in the industrial sector.'
+p2011
+aS'Million dollars'
+p2012
+aa(lp2013
+S'RFISB'
+p2014
+aS'Residual fuel oil consumed by the industrial sector excluding refinery fuel.'
+p2015
+aS'Billion Btu'
+p2016
+aa(lp2017
+S'RFRFB'
+p2018
+aS'Residual fuel oil consumed as refinery fuel.'
+p2019
+aS'Billion Btu'
+p2020
+aa(lp2021
+S'RFTCB'
+p2022
+aS'Residual fuel oil total consumption.'
+p2023
+aS'Billion Btu'
+p2024
+aa(lp2025
+S'RFTCD'
+p2026
+aS'Residual fuel oil average price, all sectors.'
+p2027
+aS'Dollars per million Btu'
+p2028
+aa(lp2029
+S'RFTCP'
+p2030
+aS'Residual fuel oil total consumption.'
+p2031
+aS'Thousand barrels'
+p2032
+aa(lp2033
+S'RFTCV'
+p2034
+aS'Residual fuel oil total expenditures.'
+p2035
+aS'Million dollars'
+p2036
+aa(lp2037
+S'RFTXB'
+p2038
+aS'Residual fuel oil total end-use consumption.'
+p2039
+aS'Billion Btu'
+p2040
+aa(lp2041
+S'RFTXD'
+p2042
+aS'Residual fuel oil average price, all end-use sectors.'
+p2043
+aS'Dollars per million Btu'
+p2044
+aa(lp2045
+S'RFTXP'
+p2046
+aS'Residual fuel oil total end-use consumption.'
+p2047
+aS'Thousand barrels'
+p2048
+aa(lp2049
+S'RFTXV'
+p2050
+aS'Residual fuel oil total end-use expenditures.'
+p2051
+aS'Million dollars'
+p2052
+aa(lp2053
+S'ROPRB'
+p2054
+aS'Renewable energy production, other than fuel ethanol.'
+p2055
+aS'Billion Btu'
+p2056
+aa(lp2057
+S'SFCCB'
+p2058
+aS'Supplemental gaseous fuels consumed by the commercial sector.'
+p2059
+aS'Billion Btu'
+p2060
+aa(lp2061
+S'SFEIB'
+p2062
+aS'Supplemental gaseous fuels consumed by the electric power sector.'
+p2063
+aS'Billion Btu'
+p2064
+aa(lp2065
+S'SFINB'
+p2066
+aS'Supplemental gaseous fuels consumed by the industrial sector.'
+p2067
+aS'Billion Btu'
+p2068
+aa(lp2069
+S'SFRCB'
+p2070
+aS'Supplemental gaseous fuels consumed by the residential sector.'
+p2071
+aS'Billion Btu'
+p2072
+aa(lp2073
+S'SFTCB'
+p2074
+aS'Supplemental gaseous fuels total consumption.'
+p2075
+aS'Billion Btu'
+p2076
+aa(lp2077
+S'SGICB'
+p2078
+aS'Still gas consumed by the industrial sector.'
+p2079
+aS'Billion Btu'
+p2080
+aa(lp2081
+S'SGICP'
+p2082
+aS'Still gas consumed by the industrial sector.'
+p2083
+aS'Thousand barrels'
+p2084
+aa(lp2085
+S'SNICB'
+p2086
+aS'Special naphthas consumed by the industrial sector.'
+p2087
+aS'Billion Btu'
+p2088
+aa(lp2089
+S'SNICD'
+p2090
+aS'Special naphthas price in the industrial sector.'
+p2091
+aS'Dollars per million Btu'
+p2092
+aa(lp2093
+S'SNICP'
+p2094
+aS'Special naphthas consumed by the industrial sector.'
+p2095
+aS'Thousand barrels'
+p2096
+aa(lp2097
+S'SNICV'
+p2098
+aS'Special naphthas expenditures in the industrial sector.'
+p2099
+aS'Million dollars'
+p2100
+aa(lp2101
+S'SOEGB'
+p2102
+aS'Electricity produced from photovoltaic and solar thermal energy by the electric power sector.'
+p2103
+aS'Billion Btu'
+p2104
+aa(lp2105
+S'SOEGP'
+p2106
+aS'Electricity produced from photovoltaic and solar thermal energy by the electric power sector.'
+p2107
+aS'Million kilowatthours'
+p2108
+aa(lp2109
+S'SOHCB'
+p2110
+aS'Solar thermal energy consumed by the residential and commercial sectors.'
+p2111
+aS'Billion Btu'
+p2112
+aa(lp2113
+S'SOTCB'
+p2114
+aS'Photovoltaic and solar thermal energy total consumption.'
+p2115
+aS'Billion Btu'
+p2116
+aa(lp2117
+S'SOTXB'
+p2118
+aS'Photovoltaic and solar thermal energy total end-use consumption.'
+p2119
+aS'Billion Btu'
+p2120
+aa(lp2121
+S'TEACB'
+p2122
+aS'Total energy consumed by the transportation sector.'
+p2123
+aS'Billion Btu'
+p2124
+aa(lp2125
+S'TEACD'
+p2126
+aS'Total energy average price in the transportation sector.'
+p2127
+aS'Dollars per million Btu'
+p2128
+aa(lp2129
+S'TEACV'
+p2130
+aS'Total energy expenditures in the transportation sector.'
+p2131
+aS'Million dollars'
+p2132
+aa(lp2133
+S'TECCB'
+p2134
+aS'Total energy consumed by the commercial sector.'
+p2135
+aS'Billion Btu'
+p2136
+aa(lp2137
+S'TECCD'
+p2138
+aS'Total energy average price in the commercial sector.'
+p2139
+aS'Dollars per million Btu'
+p2140
+aa(lp2141
+S'TECCV'
+p2142
+aS'Total energy expenditures in the commercial sector.'
+p2143
+aS'Million dollars'
+p2144
+aa(lp2145
+S'TEEIB'
+p2146
+aS'Total energy consumed by the electric power sector.'
+p2147
+aS'Billion Btu'
+p2148
+aa(lp2149
+S'TEGDS'
+p2150
+aS'Energy expenditures as share of current-dollar GDP.'
+p2151
+aS'Percent'
+p2152
+aa(lp2153
+S'TEICB'
+p2154
+aS'Total energy consumed by the industrial sector.'
+p2155
+aS'Billion Btu'
+p2156
+aa(lp2157
+S'TEICD'
+p2158
+aS'Total energy average price in the industrial sector.'
+p2159
+aS'Dollars per million Btu'
+p2160
+aa(lp2161
+S'TEICV'
+p2162
+aS'Total energy expenditures in the industrial sector.'
+p2163
+aS'Million dollars'
+p2164
+aa(lp2165
+S'TEPFB'
+p2166
+aS'Total energy used as process fuel.'
+p2167
+aS'Billion Btu'
+p2168
+aa(lp2169
+S'TEPRB'
+p2170
+aS'Total energy production.'
+p2171
+aS'Billion Btu'
+p2172
+aa(lp2173
+S'TERCB'
+p2174
+aS'Total energy consumed by the residential sector.'
+p2175
+aS'Billion Btu'
+p2176
+aa(lp2177
+S'TERCD'
+p2178
+aS'Total energy average price in the residential sector.'
+p2179
+aS'Dollars per million Btu'
+p2180
+aa(lp2181
+S'TERCV'
+p2182
+aS'Total energy total expenditures in the residential sector.'
+p2183
+aS'Million dollars'
+p2184
+aa(lp2185
+S'TERFB'
+p2186
+aS'Total energy used as refinery fuel.'
+p2187
+aS'Billion Btu'
+p2188
+aa(lp2189
+S'TETCB'
+p2190
+aS'Total energy consumption.'
+p2191
+aS'Billion Btu'
+p2192
+aa(lp2193
+S'TETCD'
+p2194
+aS'Total energy average price.'
+p2195
+aS'Dollars per million Btu'
+p2196
+aa(lp2197
+S'TETCV'
+p2198
+aS'Total energy expenditures.'
+p2199
+aS'Million dollars'
+p2200
+aa(lp2201
+S'TETGR'
+p2202
+aS'Total energy consumed per dollar of real gross domestic product.'
+p2203
+aS'Thousand Btu per chained (2000) dollar'
+p2204
+aa(lp2205
+S'TETPB'
+p2206
+aS'Total energy consumption per capita.'
+p2207
+aS'Million Btu'
+p2208
+aa(lp2209
+S'TETPV'
+p2210
+aS'Total energy expenditures per capita.'
+p2211
+aS' '
+p2212
+aa(lp2213
+S'TETXB'
+p2214
+aS'Total end-use energy consumption.'
+p2215
+aS'Billion Btu'
+p2216
+aa(lp2217
+S'TETXD'
+p2218
+aS'Total end-use energy average price.'
+p2219
+aS'Dollars per million Btu'
+p2220
+aa(lp2221
+S'TETXV'
+p2222
+aS'Total end-use energy expenditures.'
+p2223
+aS'Million dollars'
+p2224
+aa(lp2225
+S'TNACB'
+p2226
+aS"Total energy consumed by the transportation sector excluding the sector's share of electrical system energy losses."
+p2227
+aS'Billion Btu'
+p2228
+aa(lp2229
+S'TNCCB'
+p2230
+aS"Total energy consumed by the commercial sector excluding the sector's share of electrical system energy losses."
+p2231
+aS'Billion Btu'
+p2232
+aa(lp2233
+S'TNICB'
+p2234
+aS"Total energy consumed by the industrial sector excluding the sector's share of electrical system energy losses."
+p2235
+aS'Billion Btu'
+p2236
+aa(lp2237
+S'TNRCB'
+p2238
+aS"Total energy consumed by the residential sector excluding the sector's share of electrical system energy losses."
+p2239
+aS'Billion Btu'
+p2240
+aa(lp2241
+S'TNSCB'
+p2242
+aS'Total primary energy and electricity consumed.'
+p2243
+aS'Billion Btu'
+p2244
+aa(lp2245
+S'TNTXB'
+p2246
+aS'Total primary energy and electricity consumed by the end-use sectors.'
+p2247
+aS'Billion Btu'
+p2248
+aa(lp2249
+S'TPOPP'
+p2250
+aS'Resident population including Armed Forces.'
+p2251
+aS'Thousand'
+p2252
+aa(lp2253
+S'UOICB'
+p2254
+aS'Unfinished oils consumed by the industrial sector.'
+p2255
+aS'Billion Btu'
+p2256
+aa(lp2257
+S'UOICP'
+p2258
+aS'Unfinished oils consumed by the industrial sector.'
+p2259
+aS'Thousand barrels'
+p2260
+aa(lp2261
+S'USICB'
+p2262
+aS'Unfractionated stream consumed by the industrial sector.'
+p2263
+aS'Billion Btu'
+p2264
+aa(lp2265
+S'USICP'
+p2266
+aS'Unfractionated stream consumed by the industrial sector.'
+p2267
+aS'Thousand barrels'
+p2268
+aa(lp2269
+S'WDCCB'
+p2270
+aS'Wood consumed by the commercial sector'
+p2271
+aS'Billion Btu'
+p2272
+aa(lp2273
+S'WDEIB'
+p2274
+aS'Wood and waste consumed by the electric power sector.'
+p2275
+aS'Billion Btu'
+p2276
+aa(lp2277
+S'WDICB'
+p2278
+aS'Wood consumed by the industrial sector.'
+p2279
+aS'Billion Btu'
+p2280
+aa(lp2281
+S'WDRCB'
+p2282
+aS'Wood consumed by the residential sector.'
+p2283
+aS'Billion Btu'
+p2284
+aa(lp2285
+S'WDRCD'
+p2286
+aS'Wood price in the residential sector.'
+p2287
+aS'Dollars per million Btu'
+p2288
+aa(lp2289
+S'WDRCP'
+p2290
+aS'Wood consumed by the residential sector.'
+p2291
+aS'Thousand cords'
+p2292
+aa(lp2293
+S'WDRCV'
+p2294
+aS'Wood expenditures in the residential sector. '
+p2295
+aS'Million dollars'
+p2296
+aa(lp2297
+S'WDRSB'
+p2298
+aS'Wood consumed in the residential sector at a cost.'
+p2299
+aS'Billion Btu'
+p2300
+aa(lp2301
+S'WDRXB'
+p2302
+aS'Wood consumed in the residential sector at no cost.'
+p2303
+aS'Billion Btu'
+p2304
+aa(lp2305
+S'WSCCB'
+p2306
+aS'Waste consumed by the commercial sector'
+p2307
+aS'Billion Btu'
+p2308
+aa(lp2309
+S'WSEIB'
+p2310
+aS'Waste consumed by the electric power sector.'
+p2311
+aS'Billion Btu'
+p2312
+aa(lp2313
+S'WSICB'
+p2314
+aS'Waste consumed by the industrial sector.'
+p2315
+aS'Billion Btu'
+p2316
+aa(lp2317
+S'WWCCB'
+p2318
+aS'Wood and waste consumed by the commercial sector.'
+p2319
+aS'Billion Btu'
+p2320
+aa(lp2321
+S'WWCCD'
+p2322
+aS'Wood and waste price in the commercial sector.'
+p2323
+aS'Dollars per million Btu'
+p2324
+aa(lp2325
+S'WWCCV'
+p2326
+aS'Wood and waste expenditures in the commercial sector.'
+p2327
+aS'Million dollars'
+p2328
+aa(lp2329
+S'WWCSB'
+p2330
+aS'Wood and waste consumed in the commercial sector at a cost.'
+p2331
+aS'Billion Btu'
+p2332
+aa(lp2333
+S'WWCXB'
+p2334
+aS'Wood and waste consumed in the commercial sector at no cost.'
+p2335
+aS'Billion Btu'
+p2336
+aa(lp2337
+S'WWEIB'
+p2338
+aS'Wood and waste consumed by the electric power sector.'
+p2339
+aS'Billion Btu'
+p2340
+aa(lp2341
+S'WWEID'
+p2342
+aS'Wood and waste price in the electric power sector.'
+p2343
+aS'Dollars per million Btu'
+p2344
+aa(lp2345
+S'WWEIV'
+p2346
+aS'Wood and waste expenditures in the electric power sector.'
+p2347
+aS'Million dollars'
+p2348
+aa(lp2349
+S'WWICB'
+p2350
+aS'Wood and waste consumed by the industrial sector.'
+p2351
+aS'Billion Btu'
+p2352
+aa(lp2353
+S'WWICD'
+p2354
+aS'Wood and waste price in the industrial sector.'
+p2355
+aS'Dollars per million Btu'
+p2356
+aa(lp2357
+S'WWICV'
+p2358
+aS'Wood and waste expenditures in the industrial sector.'
+p2359
+aS'Million dollars'
+p2360
+aa(lp2361
+S'WWISB'
+p2362
+aS'Wood and waste consumed in the industrial sector at a cost.'
+p2363
+aS'Billion Btu'
+p2364
+aa(lp2365
+S'WWIXB'
+p2366
+aS'Wood and waste consumed in the industrial sector at no cost.'
+p2367
+aS'Billion Btu'
+p2368
+aa(lp2369
+S'WWTCB'
+p2370
+aS'Wood and waste total consumption.'
+p2371
+aS'Billion Btu'
+p2372
+aa(lp2373
+S'WWTCD'
+p2374
+aS'Wood and waste average price, all sectors.'
+p2375
+aS'Dollars per million Btu'
+p2376
+aa(lp2377
+S'WWTCV'
+p2378
+aS'Wood and waste total expenditures.'
+p2379
+aS'Million dollars'
+p2380
+aa(lp2381
+S'WWTXB'
+p2382
+aS'Wood and waste total end-use consumption.'
+p2383
+aS'Billion Btu'
+p2384
+aa(lp2385
+S'WWTXD'
+p2386
+aS'Wood and waste average price, all end-use sectors.'
+p2387
+aS'Dollars per million Btu'
+p2388
+aa(lp2389
+S'WWTXV'
+p2390
+aS'Wood and waste total end-use expenditures.'
+p2391
+aS'Million dollars'
+p2392
+aa(lp2393
+S'WXICB'
+p2394
+aS'Waxes consumed by the industrial sector.'
+p2395
+aS'Billion Btu'
+p2396
+aa(lp2397
+S'WXICD'
+p2398
+aS'Waxes price in the industrial sector.'
+p2399
+aS'Dollars per million Btu'
+p2400
+aa(lp2401
+S'WXICP'
+p2402
+aS'Waxes consumed by the industrial sector.'
+p2403
+aS'Thousand barrels'
+p2404
+aa(lp2405
+S'WXICV'
+p2406
+aS'Waxes expenditures in the industrial sector.'
+p2407
+aS'Million dollars'
+p2408
+aa(lp2409
+S'WYEGB'
+p2410
+aS'Electricity produced from wind energy by the electric power sector.'
+p2411
+aS'Billion Btu'
+p2412
+aa(lp2413
+S'WYEGP'
+p2414
+aS'Electricity produced from wind energy by the electric power sector.'
+p2415
+aS'Million kilowatthours'
+p2416
+aa(lp2417
+S'WYTCB'
+p2418
+aS'Electricity produced from wind energy.'
+p2419
+aS'Billion Btu'
+p2420
+aa.
