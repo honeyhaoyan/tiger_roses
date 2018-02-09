@@ -1,0 +1,7 @@
+industrial
+electric power
+transportation
+commercial
+residential
+total
+End-use
