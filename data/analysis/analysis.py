@@ -37,30 +37,37 @@ def plot_tag_unit(e_type, s_type, unit, xlabel = 'Year', ylabel = None):
 	plt.xlabel(xlabel)
 	plt.show()
 
-def plot_stacked_bar_graph(type_name, e_types, s_type = 'total', unit = 'Billion Btu', width = 0.35, xlabel = 'Year', ylabel = None, ylim='scalable'):
+def plot_stacked_bar_chart(
+	change_type, c_types, 
+	stable_type = ['sector', 'Unit'], s_type = ['total','Billion Btu'],
+	width = 0.35, xlabel='Year', ylabel=None, ylim='scalable'):
 	'''
-	X         : data array read from csv
-	type_name : type name used to plot stacked graph
-	e_types   : energy_types want to stack
-	s_type    : sector type used
-	unit      : unit used to determine which MSN
-	width     : width of bar
-	xlabel    : xlabel of graph
-	ylabel    : ylabel of graph
+	change_type : type name used to plot stacked graph
+	c_types     : energy_types want to stack
+	stable_type : type name which are same between msncodes
+	s_type      : stable_type values
+	width       : width of bar
+	xlabel      : xlabel of graph
+	ylabel      : ylabel of graph
 	'''
 	prepare()
 	global X
 	global tag
 	global state
 	fig = plt.figure()
-	num_of_types = len(e_types)
-	data = np.zeros([4, len(e_types), 50])
+	num_of_types = len(c_types)
+	data = np.zeros([4, num_of_types, 50])
 	min_v = 1e20
 	max_v = -1e20
 	for i in range(num_of_types):
 		for row in X:
 			info = tag[row['MSN']]
-			if info['Energy type'] == e_types[i] and info['sector'] == s_type and info['Unit'] == unit:
+			flag = True
+			for j in range(len(stable_type)):
+				if info[stable_type[j]] != s_type[j]:
+					flag = False
+					break
+			if info[change_type] == c_types[i] and flag == True:
 				data[state[row['StateCode']]][i][int(row['Year']) - start_year] += float(row['Data'])
 	if ylim == 'same':
 		for i in range(4):
@@ -70,22 +77,23 @@ def plot_stacked_bar_graph(type_name, e_types, s_type = 'total', unit = 'Billion
 						s = s + data[i][j][k]
 				min_v = min(min_v, s)
 				max_v = max(max_v, s)
-		
-	print (data)
 	ind = np.arange(1960, 2010, 1)
+	print data
 	legends = ['Arizona','California','New Mexico', 'Texas']
+	last = np.zeros([4, num_of_types, 50])
 	for i in range(4):
 		plt.subplot(2,2,i+1)
 		plt.bar(ind, data[i][0], width)
+		last[i][0] = data[i][0]
 		for j in range(1, num_of_types):
-			plt.bar(ind, data[i][j], bottom=data[i][j-1])
-		plt.legend(e_types)
+			plt.bar(ind, data[i][j], width,bottom=last[i][j-1])
+			last[i][j] = last[i][j-1]+data[i][j]
+		plt.legend(c_types)
 		if ylim == 'same':
 			plt.ylim((min_v, max_v))
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(legends[i], va='bottom')
 	plt.show()
-
 
 def plot_percentage_stacked_bar_chart(
 	change_type, c_types, 
@@ -120,12 +128,17 @@ def plot_percentage_stacked_bar_chart(
 	ind = np.arange(1960, 2010, 1)
 	print data
 	legends = ['Arizona','California','New Mexico', 'Texas']
+	last = np.zeros([4, num_of_types, 50])
 	for i in range(4):
 		sm = np.sum(data[i], axis=0)
 		plt.subplot(2,2,i+1)
-		plt.bar(ind, data[i][0]*100.0/sm, width)
+		if sm[:][0].any() != 0:
+			plt.bar(ind, data[i][0]*100.0/sm, width)
+			last[i][0] = data[i][0]*100.0/sm
 		for j in range(1, num_of_types):
-			plt.bar(ind, data[i][j]*100.0/sm, width,bottom=data[i][j-1]*100.0/sm)
+			if sm[:][j].any() != 0:
+				plt.bar(ind, data[i][j]*100.0/sm, width,bottom=last[i][j-1])
+				last[i][j] = last[i][j-1]+data[i][j]*100.0/sm
 		plt.legend(c_types)
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(legends[i], va='bottom')
