@@ -1,3 +1,4 @@
+%!TEX program = xelatex
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
         tcn = 73036, problem = C,
@@ -22,7 +23,8 @@
 
 \date{\today}
 	\begin{abstract}
-
+	\input{summary}
+	\iffalse
 		Located on the Zambezi River, the Kariba Dam holds back the world's largest reservoir. After so many years, despite efforts to slow its structural problems, the Kariba Dam is in great danger.
 
 To address this situation, our paper provides a detailed analysis of one option, removing the Kariba Dam and replacing it with a series of ten to twenty smaller dams along the river. We propose a model iMoDS (Integrated Model of Dams in Series) to fully analyze different aspects, such as the number, placement, and height of the new dams. In the meantime, we can set the total water management capabilities as same as the existing dam, providing protection and water management options for Lake Kariba.
@@ -44,22 +46,69 @@ To get enough data, we surveyed the literature and other sources. Using genetic 
 Another section of our paper discusses strategies for addressing several situations, including the balance between safety and costs, protection for Lake Kariba, guidances for emergency water flow situations and extreme water flows.
 
 In the end, we make sensitivity analysis and discuss strengths and weaknesses.
+\fi
 		\begin{keywords}
 			dam series; water flow; risk analysis; integrated model; dam control strategy
 		\end{keywords}
+
 	\end{abstract}
 
 \maketitle
-
+\noindent\centerline{\LARGE\bfseries Memo}
+\input{memo}
+\newpage
 \tableofcontents
 
 \newpage
 
 \section{Introduction}	
-
-%\input{Introduction}
+\input{Introduction}
+\section{Data Analysis}
+\input{Data_Analyses}
 \section{Assumptions}\label{Sec-Assume}
-%\include{Assumptions}
+\input{Assumptions}
+\section{Nomenclature}\label{Sec-Nomen}
+\input{Nomenclature}
+\section{Statement of our Model} \label{Sec-Model}
+\input{Statement_of_our_Model}
+\section{Implementation} \label{Sec-Implementation}
+\input{Implementation}
+\section{Model Analysis and Prediction}
+\input{Model_Analysis_and_Prediction}
+\section{Goals and Suggestions}
+\input{Goals_and_Suggestions}
+\section{Reference}
+\input{Reference}
+\section{Appendices}
+\newpage
+\section{Introduction}	
+\subsection{Problem Background}
+	Over fifty years ago, a giant was born on the Zambezi river, along the border between Zimbabwe and Zambia. It provides the two countries with a huge amount of hydropower. The world's largest reservoir is held by it. This giant was named as Kariba Dam.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Kariba_dam.jpg}
+    \caption{Kariba Dam~\cite{Wiki_Kariba}}
+    \label{fig:dam}
+\end{figure}
+
+Kariba Dam is a double curvature concrete arch dam with 128 metres (420 ft) tall and 579 metres (1,900 ft) long. It was designed to have six spillway gates, which have a discharge capacity of $9500m^3/s$. Total storage, or overall water management capabilities, is up to $180.6km^3$ ~\cite{WCD_Dam}.
+
+Kariba was designed as a single prupose hydropower project, but as it turned out both fishery and tourism bacame important benifits~\cite{WCD_Dam}. Since it was built, this dam is more a landmark than an actual dam for tourists. This area provides them with water sports and sufficient wildlife resources. Not to mention the fact that Kariba water helps develop the industry of agriculture and fishing. Every coin has two sides. Despite these economical benefits, there are other great environmental impacts, like population displacement and resettlement, and drowned vegetation~\cite{Wiki_Kariba}.
+
+However, such a great construction is in great danger and dire need of maintenance. Kariba is threatned by severe droughts, which has lowered the reservoir's volume to twelve percent of the capacity. What makes the situation more complicated is that if we refill the reservoir, then the dam is very likely to collapse. Due to unexpected floods and climate changes, the dam seems to be greatly dangerous.
+\subsection{Our Work}
+To address this situation, we have three different options: repairing, rebuilding, or removing the existing Kariba Dam and replacing it with a series of ten to twenty smaller dams along the Zambezi River.
+
+In this paper, we focus on the last option and provide a detailed analysis of it. We propose an integrated model of dams in series. This model not only recommends the number and placement of the dams along the Zambezi River, but also make a balacne between safety and costs. Our system have the same overall water management capabilities as the existing Kariba Dam while providing greater levels protection and water management options for Lake Kariba.
+
+In Section \ref{Sec-Assume}, we state several basic assumptions. Section \ref{Sec-Nomen} contains the nomenclature used in model statement. Section \ref{Sec-Model} provides sufficient details about our model. Section \ref{Sec-Implementation} carrys out experiment and analysis about our proposed model. Section \ref{Sec-Strategy} provides detailed strategies dealing with several conditions. At last, we further study our model in Section \ref{Sec-Analysis} and make some conclusions in Section \ref{Sec-Conclusion}.
+\section{Assumptions}\label{Sec-Assume}
+Our model makes the following assumptions:
+\begin{enumerate}
+	\item In the phase of modeling, we don't consider extreme conditions on the river, like waterfalls, water cutoff seasons. Because these conditions require extremely big data. They are  even unnecessary for in real life dams have dynamic strategies to handle them. We will discuss emergency water flow situations in another Section.
+	\item Other existing dams are ignored. They are not as big as Kariba Dam. Few data about other dams on the river are accessible, especially thier effects on runoff of the river and slope of its hydraulic grade line. This assumption is flexible because it only affects the input data of the river, but not our model.
+	\item We simplifies the water flow into an open-channel flow. Open-channel flow has a free surface. Based on this assumption, we are able to estimate the average velocity of the river's water flow.
+\end{enumerate}
 \section{Nomenclature}\label{Sec-Nomen}
 In this paper we use the nomenclature in Table \ref{tab:Nomen} to descibe our model. Other symbols that are used only once will be described later.
 \begin{table}
@@ -520,6 +569,639 @@ Figure \ref{fig:influence} shows the sensitivity analysis of $\alpha$. To avoid 
 \item Some real water conditions are omitted. We simplified the river as an open channel. However, the real condition is much more complex. It will also influence the construction cost and safety evaluation.
 \item Lacking details of the trade-off function. We paid an emphasis on the balance between cost and safety. Though we have added power supply to our model, it still lacks other benefits of dam construction.
 \end{enumerate}
+\section{Conclusion} \label{Sec-Conclusion}
+Our papaer provides a detailed analysis of removing the Kariba Dam and replacing it with a series of ten to twenty smaller dams along the river. Before introducing the model, we analyze water flow and a single dam. Then our model iMoDS is proposed. It takes safety, cost, and benefits into consideration and makes a balance of them. Three submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model, form the integrated model.
+
+We use real data to give a recommendation as to the number, placement, and height of the new dams. For this is a high dimensional problem, we implement GA to find a global optimum result.
+
+Strategies are fully discussed. Balance between safety and costs have been inlcuded in the integrated model. Protection for Lake Kariba uses Gaussian curve to give a weight of each dam. And two guidances include specific instructions of the dam group when facing these conditions.
+
+
+\newpage
+\section*{Brief Assessment Report}
+\addcontentsline{toc}{section}{Brief Assessment Report}
+The Kariba Dam, which was opened in 1959 and held back the world's largest reservoir, has been working for over 50 years and faces the possibility of callapse. Also serving as a major supply of Zambia and nearby contries' electricity, it is in dire need of maintenance. To deal with this situation, there are three major options available to the Zambezi River Authority (ZRA). For each option, we will access its potential cost nemurically and provide other aspects of information.
+
+In the literature, the rate of failure for dams has been studied. With Bayesian analysis approach, researchers~\cite{Failure} evaluated the dam failure rate uncertainty. They found universal failure rate to be steady and got the value of $3\times 10^{-4}$. However, we investigate the whole life cycle of a dam. Its failure rate~\cite{Wiki_bathtub} should be a function of time $t$, denoted as FR(T)
+\begin{equation}
+\label{eq:FR}
+FR(T) = \left\{ \begin{array}{ll}
+3\times 10^{-4} & \textrm{if $0\leq T<50$ years}\\
+1-e^{-(\frac{t+143.67}{100})^3} & \textrm{if $T\geq 50$ years}
+\end{array} \right.
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{rate.png}
+    \caption{A Dam's Failure Rate }
+    \label{fig:rate}
+\end{figure}
+Figure \ref{fig:rate} shows a dam's failure rate with the change of years.
+
+\subsection*{Option 1: Repairing the existing Kariba Dam}
+\addcontentsline{toc}{subsection}{Option 1: Repairing the existing Kariba Dam}
+Once mechanized systems supplant natural ones, they must be managed in perpetuity, or else they break down~\cite{New_Dam}. In the past fifties years, the torrents has been consistantly eroding the dam's structure. The first option is to repair this existing giant.
+\paragraph{Potential Cost}
+One report~\cite{Reu_Dam} said that expected cost will be \textbf{\$294 million} this time. However, repair can handle current situation but never eliminate the potential danger. Thus, we explore an expectation of future failure rate by modifying Equation \eqref{eq:FR}
+\begin{equation}
+\label{eq:FR2}
+FR_{repair}(t)  = 1-e^{-(\frac{t+143.67}{100})^3},
+\end{equation}
+where $t =$ how many years have passed since last repair.
+
+Thus, given a specific year $Y$ and annual cost of repair $C$, the potential costs will be:
+\begin{equation}
+\label{eq:FR3}
+294+C\times\int_0^{Y-2017} FR_{repair}(t)\mathrm{d}t
+\end{equation}
+\paragraph{Benefits}
+Repair significantly saves the construction period.It doesn't affect hydro power supply which is generated from the reservior.
+\paragraph{Shortcomings}
+Potential danger to collapse. High repair rate with high cost each time.
+\subsection*{Option 2: Rebuilding the existing Kariba Dam}
+\addcontentsline{toc}{subsection}{Option 2: Rebuilding the existing Kariba Dam}
+\paragraph{Potential Cost}
+Rebuilding such a giant dam is extremely expensive. According to Kariba Dam - Case Study~\cite{WCD_Dam}, the project was built in two stages. The total cost of two stages amounted to \$1.8 billion. To know how much it will cost now, we estimate it with The Consumer Price Index(CPI)~\cite{mankiw2014principles}. CPI for the 1950's was $27.2$ while current CPI is about $241.4$. Thus, the total cost of rebuilding is about $241.4/ 27.2 \times \$1.8 = \mathbf{\$15.975}$ \textbf{billion}.
+
+Also we calculate future cost: given a specific year $Y$ and annual cost of repair $C$, the potential costs will be:
+\begin{equation}
+\label{eq:FR4}
+7440+C\times\int_0^{Y-2017} FR(t)\mathrm{d}t
+\end{equation}
+\paragraph{Benefits}
+No severe potential danger any more. No need to repair very often.
+\paragraph{Shortcomings}
+A long period of time under construction. Lack of a Dam, affecting hydro power supply, and protection for Lake Kariba.
+\subsection*{Option 3: Removing the Kariba Dam and replacing it with a series of ten to twenty smaller dams along the Zambezi River}
+\addcontentsline{toc}{subsection}{Option 3: Removing the Kariba Dam and replacing it with a series of ten to twenty smaller dams along the Zambezi River}
+\paragraph{Potential Costs}
+The construction cost can be described as:
+\begin{align*}
+\text{Construction cost} = \text{k}*\text{capacity} + \text{basic cost}
+\end{align*}
+
+Considering that the total capacity of these small dams is equal to the capacity of Kariba Dam, the construction cost of Option 3 is close to $n$ times of basic cost plus the cost of Option 2, where $n$ is the number of these small dams. Here we suppose that the basic cost is $10\%$ of the total construction cost and the cost of removing Kariba Dam is about $15\%$ of the total construction cost, thus, the total construction cost is about $\$15.975 * (1+10\%*n+15\%) = \mathbf{\$34.363} \textbf{ to } \mathbf{\$50.321}$ \textbf{billion}.
+
+Let $n =13$, the cost of the solution we give in our model is about $\mathbf{\$39.139}$ \textbf{billion}.
+\paragraph{Benefits}
+Strengthen the ability to handle emergency water flow, protect Lake Kariba, and adjust water flow between seasons.
+\paragraph{Shortcomings}
+It costs most in these 3 options, and it brings in new problems of coordinating and control in a dam system.
+	\bibliographystyle{IEEEtran}
+	\bibliography{newrefs}
+	
+%\newpage
+%\section*{Executive Summary}
+	
+%\noindent To whom it may concern,
+	
+\newpage
+
+\begin{appendices}
+
+\section{Implemented Genetic Algorithm}
+\lstinputlisting[language=Matlab]{gene.m}
+\section{Fitness Function}
+\lstinputlisting[language=Matlab]{fitness.m}
+\end{appendices}
+\end{document}
+
+%%
+%% This work consists of these files mcmthesis.dtx,
+%%                                   figures/ and
+%%                                   code/,
+%% and the derived files             mcmthesis.cls,
+%%                                   mcmthesis-demo.tex,
+%%                                   README,
+%%                                   LICENSE,
+%%                                   mcmthesis.pdf and
+%%                                   mcmthesis-demo.pdf.
+%%
+%% End of file `mcmthesis-demo.tex'.
+
+\usepackage{mwe}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{gensymb}
+\usepackage[ruled,lined,commentsnumbered]{algorithm2e}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm} %%页边距
+
+\begin{document}
+\linespread{0.6} %%行间距
+\setlength{\parskip}{0.5\baselineskip} %%段间距
+\title{iMoDs: Energy Production}
+
+\date{\today}
+%\maketitle
+	\begin{abstract}
+	\input{summary}
+	\iffalse
+	%\input[summary]
+		Located on the Zambezi River, the Kariba Dam holds back the world's largest reservoir. After so many years, despite efforts to slow its structural problems, the Kariba Dam is in g{}reat danger.
+To address this situation, our paper provides a detailed analysis of one option, removing the Kariba Dam and replacing it with a series of ten to twenty smaller dams along the river. We propose a model iMoDS (Integrated Model of Dams in Series) to fully analyze different aspects, such as the number, placement, and height of the new dams. In the meantime, we can set the total water management capabilities as same as the existing dam, providing protection and water management options for Lake Kariba.
+We first analyze the water flow using Manning formula which helps us to analyze a single dam. After that, we simulate a dam in real life with 3ds MAX,  show the simplified dam model on it and derive its storage capacity and building cost.
+iMoDS model consists of three main submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. For explanation, there is a figure which connects all related parts together.
+Risk Cost Model aims at every single dam. It implements risk analysis, using acceptable risk ratio, $P_f$. Thus, it can make a good balance between cost and safety.
+Power Supply Ability Model also aims at every single dam, the sum of which measures the benefits our dam system can produce.
+Series Safety Model measures how safe the whole system is, based on an ideal distribution of dams along a river.
+Then we use AHP to analyze these three submodels and propose iMoDS.
+To get enough data, we surveyed the literature and other sources. Using genetic algorithm to determine the number and placement, we further solve each dam's height.
+Another section of our paper discusses strategies for addressing several situations, including the balance between safety and costs, protection for Lake Kariba, guidances for emergency water flow situations and extreme water flows.
+In the end, we make sensitivity analysis and discuss strengths and weaknesses.
+\fi
+		\begin{keywords}
+			dam series; water flow; risk analysis; integrated model; dam control strategy
+		\end{keywords}
+	
+	
+	\end{abstract}
+
+\maketitle
+\noindent\centerline{\LARGE\bfseries Memo}
+\input{memo}
+\newpage
+\tableofcontents
+
+\newpage
+
+\section{Introduction}	
+\input{Introduction}
+\section{Assumptions}\label{Sec-Assume}
+\input{Assumptions}
+\section{Data Analysis}
+\input{Data_Analyses}
+\section{Nomenclature}\label{Sec-Nomen}
+\input{Nomenclature}
+\section{Statement of our Model} \label{Sec-Model}
+
+In this paper we use the nomenclature in Table \ref{tab:Nomen} to descibe our model. Other symbols that are used only once will be described later.
+\begin{table}
+    \centering
+    \caption{Nomenclature}
+    \label{tab:Nomen}
+    \begin{tabular}{c c}
+\hline
+    	Symbol & Definition\\
+\hline
+	$i$ & the \emph{i}th dam in a series of small dams\\
+	$X_i$ & Distance from the river's beginning to dam $i$\\
+	$Series(X)$ & Value of safety evaluation under a series of dams\\
+	$Supply(X_i)$ & Value of power supply ability at dam $i$\\
+	$Risk(X_i)$ & Risk Cost of dam $i$\\
+	$P_f$ & Acceptable risk ratio\\
+	$Q(X_i;t)$ & Volumetric flow rate at time $t$ for dam $i$\\
+	$k(X_i)$ & Slope of the hydraulic grade line at dam $i$\\
+	$N$ & Planned working years for a dam\\
+	$n$ & Number of small dams\\
+	$M$ & Overall water management\\
+	$L$ & Length of the Zambezi River\\
+	$d$ & The width of the Zambezi River\\
+	$\alpha$& Extreme Condition ratio\\
+	$h(X_i)$ & The height of a dam $i$\\
+\hline
+    \end{tabular}
+\end{table}
+\section{Statement of our Model} \label{Sec-Model}
+\iffalse
+In this section, we will discuss all details about our model. This model takes several fields into consideration, ranging from liquid flow theory to economy. To begin with, we first investigate the behavior of water flow. Then we provide our integrated model of dams in series. This model makes a great balance between safety and costs.
+\subsection{Behavior of Water Flow}% Manning formula,
+In our model, we need to calculate power supply ability of each dam. One of the key variables is the average velocity of water flowing when it reaches a dam. We have assumed the water flow in the Zambezi river to be a channel flow. Thus, we can employ an empirical formula, the Manning formula, to estimate this velocity~\cite{Wiki_Manning}.
+\begin{equation}
+\label{eq:Manning}
+v=\frac{k}{n} {R_h}^{2/3} S^{1/2}
+\end{equation}
+where:
+\begin{itemize}
+\item $v$ is the cross-sectional average velocity;
+\item $n$ is the Gauckler-Manning coefficient;
+\item $R_h$ is the hydraulic radius ($L$; $f_t$, $m$);
+\item $S$ is the slope of the hydraulic grade line or the linear hydraulic head loss ($L/L$);
+\item $k$ is a conversion factor between SI and English units.
+\end{itemize}
+
+This formula can be obtained by use of dimensional analysis. With this formula, it is easy to find that when water flow reaches a dam, its average velocity only depends on the channel slope $S$ and hydraulic radius $R_h$.
+\subsection{Analysis of A single Dam}\label{Sec:single}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{simulation.png}
+    \caption{A Simulation of a dam with 3ds MAX}
+    \label{fig:3ds}
+\end{figure}
+Figure \ref{fig:3ds} is the simulation of a dam in real life. We determine a reservoir's \textbf{storage capacity} based on this model. In the literature, Cone method~\cite{Edu_Reservoir} is a common method. Its formula is:
+$$CA(X_i) = \sum_{i=0}^n\frac{1}{3}(A_i+A_{i+1}+\sqrt{A_i \times A_{i+1}})\times \bigtriangleup L_i$$
+where:
+\begin{itemize}
+\item $V$ is the capacity of reservoir;
+\item $A_i$ is the area of ith cross section;
+\item  $\bigtriangleup L_i$ is the gap between ith and i+1th cross section.
+\end{itemize}
+
+For simplicity, we further consider that a reservoir has the areas enclosed by contours in Figure \ref{fig:3ds}, which is colored in black. We use the parameter $d$ to denote the width of the river. Thus, we derive the capacity formula:
+\begin{align}
+\label{eq:volume}
+CA(X_i) &= \frac{1}{3}(\frac{1}{2}d\times h + d\times h)\times \frac{h(X_i)}{k(X_i)}\nonumber\\
+	&= \frac{h(X_i)^2}{3k(X_i)}(\frac{3}{2}d)\nonumber\\
+	&= \frac{h(X_i)^2d}{2k(X_i)}
+\end{align}
+
+The other key measurement is a dam's \textbf{building cost}.
+
+A basic function contains two parts, construction cost and other unavoidable cost. Construction cost is linear to the volume of the dam. To calculate this volume, we need the bottom width. Actually it is linear to the pressure $P_a = \rho gh$~\cite{Finite}.
+
+Note that here we calculate the volume of the \textbf{dam}, but not the volume of the \textbf{reservoir} that is calculated by Equation \eqref{eq:volume}.
+
+Finally, it is reasonable to simplify other cost to a constant $\beta$, because every construction work has its initial cost. And there is a safety factor for compressive stress $\sigma$~\cite{Finite}.
+\begin{align}
+\label{eq:Cost}
+Cost(X_i) &= \lambda \frac{\rho g h(X_i) \times d \times h(X_i)}{2\sigma} + \beta\nonumber\\
+	&= \lambda \frac{\rho g d h(X_i)^2}{2\sigma}+\beta
+\end{align}
+where $\lambda$ a is volume-to-expense coefficient.
+\subsection{iMoDS: Integrated Model of Dams in Series}
+After investigating water's behavior when it reaches a dam and a single dam, we further proposed an integrated model of dams in series. This model consists of three main parts, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. As illustrated in Figure \ref{fig:model}, our model works as an integrated machine which evaluate both a single dam and the whole group. Basically, we can regard it as a nonlinear programming method. Three main parts work as three features derived from different fields. They are also assigned with different weights according to their own contribution to the whole system.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{model.png}
+    \caption{Overview of Integrated Model of Dams in Series}
+    \label{fig:model}
+\end{figure}
+\subsubsection{Prerequisites}
+\begin{enumerate}
+	\item$Q(X_i;t)$
+
+The value of $Q(X_i;t)$ is volumetric flow rate at time $t$ for dam $i$. In our modeling phase, for simplication we replace $Q(X_i;t)$ with $Q(X_i;\overline{t})$ to denote the annual average volumetric flow rate. In our paper, $d$ remains the same, so volumetric flow rate upstream is greater than the one downstream.\\
+Later we will further discuss and provide specific guidance for extreme water flows ranging from maximum expected discharges to minimum expected discharges.
+	\item$k(X_i) = \frac{\mathrm{d}	Elevation(x)}{\mathrm{d}x}|_{x=X_i}$
+
+The placement of each dam is described by the distance from the river's starting point, $X_i$. We set the slope of the hydraulic grade line at dam $i$ as the value of $k(X_i)$.
+
+More details about $k(X_i)$ will be discussed in Section \ref{Sec:Data}.
+\end{enumerate}
+
+\subsubsection{Risk Cost Model}
+As Figure \ref{fig:model} shows, Risk Loss and Fundamental Investment determine the output of Risk Cost Model. To build a dam, there are two key factors that we should keep in mind: \textbf{cost} and \textbf{safety}. However, before we try to find an equilibrium between them, we have to change it into a math problem. Here we combine them based on risk analysis, a widely used theory in economics. Based on this theory, we numerically determine the safety loss and fundamental cost with an acceptable risk ratio. Because acceptable risk ratio measures \emph{the extent that a person focus more on safety than merely cost}.
+\paragraph{Cost - Fundamental Investment} Cost reveals how feasible a dam project is. Investors always expect to spend less money while maintaining the same water management ability. A ground truth is that investors must spend more money while paying more attention on safety. Thus, $P_f$ is negatively related to the cost. Its exponent is set by experiment. Slightly modify Equation \eqref{eq:Cost}, then it is the equation we need here:
+\begin{equation}
+\label{eq:Fund}
+\text{Fundamental Investment} = \frac{Cost(X_i)}{P_f^{1.1}}
+\end{equation}
+
+Given $P_f$, Equation \eqref{eq:Fund} can measure one dam's fundamental investment.
+
+\paragraph{Safety - Risk Loss} Safety reveals how environmental-friendly a dam project is. Projects that pay less attention on safety will result in a high possibility of collaspe. We call it \textbf{Risk Loss}. Equation \eqref{eq:RiskLoss} is the evaluation model.  $[1-(1-P_f)^N]$ is the probability distribution that measures the possibility to collapse. So, we define the loss at dam $i$ as:
+\begin{align*}
+\textbf{collapse probability *  (1+ indirect damage index)*Volumetric flow rate}
+\end{align*}
+\begin{equation}
+\label{eq:RiskLoss}
+\text{Risk Loss} = [1-(1-P_f)^N]\alpha(1+\lambda)Q(X_i;\overline{t})
+\end{equation}
+where $\alpha$ is an coefficent that reveals how likely and serious a river is to suffer from extreme conditions.
+
+This method contributes to the evolution of risk-based dam safety assessment methods.
+$$
+Risk(X_i) = \text{Risk Loss} + \text{Fundamental Investment}
+%\sum_{i=0}^{n}\frac{\frac{M}{n}\times k(X_i)+\beta}{P_f^{1.1}}
+$$
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{influence.png}
+    \caption{Given the same $X_i$, the function of \textbf{$P_f$} and \textbf{Risk Value} with different $\alpha$}
+    \label{fig:influence}
+\end{figure}
+
+Figure \ref{fig:influence} shows the function of \textbf{$P_f$} and \textbf{Risk Value}. Curves with different colors denote different value of $\alpha$. From top to bottom, each time $\alpha$ is decreased by 0.05.\\
+\paragraph{Observation 1}
+For each curve, it is strictly decreasing on the left while increasing on the right.
+\paragraph{Illustration}
+\textbf{Risk Value} is not a monotonic function because \textbf{Risk Loss} is a monotonically increasing function of $P_f$ while \textbf{Fundamental Investment} is a monotonically decreasing function of $P_f$.
+\paragraph{Observation 2}
+Compared with different curves, the larger $\alpha$ is, the higher \textbf{Risk Cost} is, with the extreme point moving left.
+\paragraph{Illustration}
+If the coefficient $\alpha$ is larger, then it reveals that for a same $P_f$ the government has to handle higher potential losses. Thus, to balance the fundamental cost and safety, the government will have a lower $P_f$. That is exactly what our function reveals.
+\subsubsection{Series Safety Model}
+Our system removes the Kariba Dam and replaces it with a series of ten to twenty smaller dams. In this model, our goal is to assess a series of dams along the river and give a mark. Researches show that if dams are built uniformly on a river, then this dam system can be operated to produce greater benefits than operating a single large dam.
+
+To quantify safety based on locations, we consider two factors involved. One is the average distance between two neighbouring dams. The other is the degree of even distribution. Here we bring in and modify Pearson Chi-Square test to represent it. The more even this distribution is, the safer we consider this system is. Thus, we get the following formula.
+\begin{equation}
+\label{eq:T}
+Series(X) = \frac{\overline{d}}{e^{\sum_{i=1}^{n-1}\frac{(d_i-\overline{d})^2}{\overline{d}^2}}}
+\end{equation}
+where $\overline{d}$ is the average distance between two neighbouring dams.
+\subsubsection{Power Supply Ability Model}
+Kariba was designed as a single-purpose hydropower project. Embarking on any hydropower generation project, it is essential to calculate its amount of hydropower. In our model, the last part is to estimate this kind of economic benefits. If we sum up the power supply of each dam, this model can numerically calculate our new system's hrdropower supply. Based on the hydropower equation~\cite{Wiki_Hydro}, intuitively we get Equation \eqref{eq:Supply} which is a function of the hydraulic head and rate of fluid flow.
+
+How much work a unit of water can do depends on its weight times the head. And the power available from a dam can be measured by the density of water, acceleration due to gravity, the flow rate, and the height of fall.
+\begin{equation}
+\label{eq:Supply}
+Supply(X_i) =\eta \rho g h(X_i)Q(X_i;\overline{t})
+\end{equation}
+where:
+\begin{itemize}
+	\item $\eta$ is the dimensionless efficiency of the turbine;
+	\item $\rho$ is the density of water in kilograms per cubic metre;
+	\item $g$ is the acceleration due to gravity.
+\end{itemize}
+\subsubsection{Integration}\label{Sec:Integration}
+Based on previous illustrations, we are able to integrate all these features together.
+\begin{itemize}
+\item $Series(X)$ \textbf{Positively} related to the safety level. The higher  $Series(X)$'s score is, the better our system is.
+\item $Risk(X_i)$ There is an equilibrium between investment and loss which reaches the lower bound of this model. We always want to save money while ensuring safety. So, the lower $Risk(X_i)$'s score is, the better our system is.
+\item $Supply(X_i)$ \textbf{Positively} related to power supply. The higher  $Supply(X_i)$'s score is, the better our system is.
+\end{itemize}
+
+To make all features equal, we need feature scaling, or data nomalization, because these features all have a broad range of values. If we don't process thier value, the result of our integrated model may be governed by one of them. In our model, we implement rescaling method. This method rescale the range of features to sacle the range in $[0, 1]$. The general formula is like this:
+\begin{equation*}
+x^{'}=\frac{x-\min(x)}{\max(x)-\min(x)}
+\end{equation*}
+where:
+\begin{itemize}
+\item $x$ is an original value;
+\item $x^{'}$ is the normalized value.
+\end{itemize}
+
+After resacling, normalized $Series(X_i)$, $Risk(X_i)$, and $Supply(X_i)$ is  $Series(X_i)^{'}$, $Risk(X_i)^{'}$, and $Supply(X_i)^{'}$ respectively. As we can see, $Risk(X_i)$ is \textbf{negatively} related. Thus we modify it to be \textbf{positively} related by a modified rescaling method.
+\begin{align*}
+Series(X)^{'} &= Series(X) \times \frac{n-1}{L}\\
+Risk(X_i)^{'} &= \min(Risk(X_i))/ Risk(X_i)\\
+Supply(X)^{'} &= Supply(X) \times \frac{n-1}{L}
+\end{align*}
+
+In our model, the goal is to minimize the \textbf{Final Value}. Thus, we scale $Supply(X_i)$ and $Series(X)$ into $[-1,0]$. Write our model into a nonlinear programming form then we get the \textbf{Integrated Model of Dams in Series}:
+\begin{equation*}
+\begin{split}
+ {\bf max}\quad &\text{Final Value}  = Series(X)^{'} + \sum_{i=1}^{n}{Risk(X_i)^{'}} + \sum_{i=1}^{n}{Supply(X_i)^{'}}\\
+  {\bf s.t}\quad  &X_i \le L, \qquad \forall X_i \in [1,n]\\
+	& \sum_{i=1}^{n}{CA(X_i)}\ge M\\
+     	& 10\le n\le 20, \qquad n \in \mathbb{Z} \\
+	& X_i \ge 0, \qquad \forall X_i \in [1,n]\\
+      %& x_i\le 100 \qquad x_i \in \mathbb{Z}\\
+\end{split}
+\end{equation*}
+where:
+\begin{align*}
+\text{Final Value} & = Series(X)^{'} + \sum_{i=1}^{n}{Risk(X_i)^{'}} + \sum_{i=1}^{n}{Supply(X_i)^{'}}\\
+& = \frac{\overline{d}}{e^{\sum_{i=1}^{n-1}\frac{(d_i-\overline{d})^2}{\overline{d}^2}}}\times \frac{n-1}{L} + \sum_{i=1}^{n}\min(Risk(X_i))/\{\frac{Cost(X_i)}{P_f^{1.1}}+ \\
+&[1-(1-P_f)^N]\alpha(1+\lambda)Q(X_i;\overline{t})\}+ \sum_{i=1}^{n}{\rho g \eta L k(X_i)Q(X_i;\overline{t})}
+\end{align*}
+\subsubsection{Ranking Submodels with AHP}
+The analytic hierarchy process (AHP) is a structured technique for organizing and analyzing complex decisions, based on mathematics and psychology. Our goal is to rank previous three submodels and assign weights to iMoDS model.
+
+\begin{table}[h]
+    \centering
+    \caption{AHP production}
+    \label{tab:AHP}
+    \begin{tabular}{c c}
+\hline
+    	Feature & Weight\\
+\hline
+	Risk Cost & 0.5403\\
+	Series Safety & 0.3478\\
+	Power Supply Ability & 0.1119\\
+\hline
+    \end{tabular}
+\end{table}
+
+Table \ref{tab:AHP} shows the result of AHP. We then assign them to the model derived in Section \ref{Sec:Integration}:
+\begin{equation*}
+\begin{split}
+ {\bf max}\quad &\text{Final Value}  = 0.35Series(X)^{'} + 0.54\sum_{i=1}^{n}{Risk(X_i)^{'}} + 0.11\sum_{i=1}^{n}{Supply(X_i)^{'}}\\
+  {\bf s.t}\quad  &X_i \le L, \qquad \forall X_i \in [1,n]\\
+	& \sum_{i=1}^{n}{CA(X_i)}\ge M\\
+     	& 10\le n\le 20, \qquad n \in \mathbb{Z} \\
+	& X_i \ge 0, \qquad \forall X_i \in [1,n]\\
+      %& x_i\le 100 \qquad x_i \in \mathbb{Z}\\
+\end{split}
+\end{equation*}
+\fi
+\input{Statement_of_our_Model}
+
+\section{Implementation} \label{Sec-Implementation}
+\iffalse
+\subsection{Data}\label{Sec:Data}
+We tried to find some existing dataset about dams, but failed. Thus, in this paper we ourselves analyzed many textual data and figures from reliable sources and experiment with them. Google Earth provide us with the elevation profile of the Zambezi River. We use Matlab to fit a curve which is shown in Figure \ref{fig:altitude}. The set of blue spots is the raw data while the red curve represents the river's elevation. This curve is fitted as an \textbf{eighth-power polynomials}.
+
+$f(X_i)$ relies on these data.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{altitude.png}
+    \caption{The red curve represents the river's elevation. X-Axis is the distance from the river's source while Y-Axis is altitude.}
+    \label{fig:altitude}
+\end{figure}
+
+Thanks for the basin analysis~\cite{WB_Basin}, we are able to analyze the river's flow data. Figure \ref{fig:flow}(a) and Figure \ref{fig:flow}(b) show the Zambezi River mean annual river flow.
+
+$Q(X_i;\overline{t})$ relies on these data.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{river2d.JPG}
+        \caption{2D version. It includes surrounding countries and cities.}
+        \label{fig:flow2d}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{river.JPG}
+        \caption{3D version. It includes the river's elevation changes.}
+        \label{fig:flow3d}
+    \end{subfigure}
+    \caption{Zambezi River's mean annual river flow. The violet, pink, and yellow bands represents the upstream, midstream, and downstream, respectively. Width of each band measures the value of mean annual river flow.}\label{fig:flow}
+\end{figure}
+%\begin{equation}
+%\label{eq:K}
+%k(X_i) = \left\{ \begin{array}{ll}
+%-0.1867 & \textrm{if $0\leq X_i <798$}\\
+%-3.1308 & \textrm{if $798\leq X_i <928$}\\
+%-0.3333 & \textrm{if $928\leq X_i <1222$}\\
+%-0.4040 & \textrm{if $1222\leq X_i <1717$}\\
+%-0.3299 & \textrm{if $1717\leq X_i <2293$}
+%\end{array} \right.
+%\end{equation}
+\subsection{Number and placement of the new dams}
+\subsubsection{Whole Procedures}
+\begin{enumerate}
+\item Set all small dams to have equal height;
+\item Use heuristic algorithm, like generic algorithm, to run iMoDS model;
+\item Based on the set $\{X_i\}$ which is found in Step 2, use Equation \eqref{eq:height} to reset each one's height.
+\item Test constraint by Equation \eqref{eq:constraint}. If it doesn't meet, tune $\{Xi\}$ and go to Step 3.
+\end{enumerate}
+\subsubsection{Determining the number and placement by genetic algorithm}
+The optimization of a dam group is high dimensional, multilevel, and nonlinear. Classical algorithm that solves linear programming problems are  impossible to find the global optimum. Heuristic algorithm, however, can solve this optimization problem. Genetic algorithm(GA), based on a antural selection process that mimics biological evolution, is one of them.
+
+In this section, we give an analysis about the number and placement of dams, and also provide a recommendation. However, if the height of each dam is dynamic, it will be a problem of over 20 dimensions. For simplification we assume that each small dam is in equal size.
+
+Because of the simplification, $h(X_i)$ is a constant. The whole evaluation is sensitive to the variables, $\{Xi\}$, $P_f$ and $n$. To find the optimal solution, we use \textbf{genetic algorithm} to simulate the evaluation process. Codes are listed in Appendices.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{chart.png}
+    \caption{Best placement of new dams with different quantity of dams}
+    \label{fig:chart}
+\end{figure}
+Weights of three key features have been provided by AHP. \textbf{Risk Cost} dominates the other two features. To maximum $\frac{\min Risk(X_i)}{Risk(X_i)}$ and meet the constraint, total water management $M$, the algorithm will select $P_f$ to an optimal value which has been introduced in Figure \ref{fig:influence}, i.e., locating dams to relatively gentle slopes. Although \textbf{Power Supply} takes a small weight, the value will greatly increase when the dam is on a steep terrain. Finally, \textbf{Series} is more likely to let these dams in a evenly distribution. Considering the interaction between three features, the final placement shows like Figure \ref{fig:chart}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{optimal.png}
+    \caption{Trend of \textbf{Final Value} with $n$ increasing}
+    \label{fig:optimal}
+\end{figure}
+
+\begin{table}
+    \centering
+    \caption{Accurate placement of dams when $n=13$ and $P_f = 0.0024$}
+    \label{tab:placement}
+    \begin{tabular}{c c c}
+\hline
+    	Order of Dam & Distance $X_i$/$m$ & Elevation/$m$\\
+\hline
+	1&288.3	&1160.2\\
+	2&494.5	&1136.3\\
+	3&664.4	&1084.55\\
+	4&810.0	&1057\\
+	5&843	&932\\
+	6&879	&790\\
+	7&954	&651\\
+	8&1160&	638\\
+	9&1323&	520\\
+	10&1552&	468\\
+	11&1729&	453\\
+	12&1924&	257\\
+	13&2098&	195\\
+\hline
+    \end{tabular}
+\end{table}
+
+Figure \ref{fig:optimal} shows that when $n=13$ and $P_f=0.0024$, the evaluation reaches the peak value, or the optimal value. It is cogent for our model.
+
+This result is convincing. If the quantity of dams $n$ increases, then:
+\begin{enumerate}
+\item $\sum \frac{\min(Risk(X_i))}{Risk(X_i)}$ \textbf{decreases}. Although the height of each dam is smaller, sum of initial cost $\beta$ increases.
+\item $\sum Supply(X_i)$ \textbf{increases and then decreases}. With $n$ increasing, the ideal hydropower supply goes higher. But when $n$ goes to large, $Series(X)$ will restrict it to goes lower.
+\item $Series(X)$ is not relevant to the quantity of $n$.
+\end{enumerate}
+
+Thus, in this decision-making process, there is an equilibrium between ten and twenty. We find that it is $\mathbf{n=13}$ with $\mathbf{P_f=0.0024}$.
+
+Table \ref{tab:placement} shows the optimal result of this new dam system. From dam $1$ to dam $13$, we recommend each dam's placement. Note that Distance$X_i$ denotes the distance from the river's source to dam $i$. Due to the restriction in this nonlinear programming, the overall water management capacities is the same as the existing Kariba Dam.
+\subsubsection{Determining the height of each dam}
+Here we eliminate the assumption that each small dam is in equal size.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{height.JPG}
+    \caption{Placement of 13 (optimal quantity) dams along the Zambezi River. Each dam is labelled with its height. The blue areas are each dam's corresponding reservoirs.}
+    \label{fig:height}
+\end{figure}
+If we refer to Section \ref{Sec:single}, the height of a dam is really a key factor to the final evaluation as it influences the system's \textbf{risk cost} and \textbf{power supply} that these dams can totally provide. It is critical to determine the height of each dam so that the system's \textbf{final value} can be optimized. Given $P_f$, a single dam's contribution to the whole system (\textbf{iMoDS model}) is a function of one variable, $h(X_i)$. So we can ignore $Series(X_i)$. To optimize the contribution, let the differential equation to be zero:
+\begin{align}
+\label{eq:height}
+Supply(X_i)'-Risk(X_i)' &= 0\nonumber\\
+\eta \rho g Q(X_i;\overline{t}) - \lambda \frac{2\rho g d h(X_i)}{2\sigma P_f^{1.1}} & = 0\nonumber\\
+h(X_i) & = \frac{\eta \sigma P_f^{1.1}}{\lambda d}Q(X_i;\overline{t})
+\end{align}
+
+We can find that with $Q(X_i;\overline{t})$ increasing, the best $h(X_i)$ increases. However, there is a constraint to $h(X_i)$.
+\begin{equation}
+\label{eq:constraint}
+	\sum_{i=1}^n CA(X_i) = \sum_{i=1}^n{\frac{h(X_i)^2d}{2k(X_i)}}\ge M
+\end{equation}
+\begin{enumerate}
+\item \textbf{If} our optimal $\{X_i\}$ meets the constraint, Equation \ref{eq:constraint}, then it is the final result.
+\item \textbf{Else}, we can slightly modify $X_i$ to meet the constraint.
+\end{enumerate}
+
+\textbf{Thus, Final Value of iMoDS model and each dam's height are both determined by $\{X_i\}$}.
+
+Figure \ref{fig:height} is our final result of placement and number.
+\section{Strategies}\label{Sec-Strategy}
+\subsection{A Balance Between Safety and Costs}
+Our new multiple dam system is modeled based on three key factors, \textbf{Risk Cost}, \textbf{Power Supply}, and \textbf{Series Safety}. \textbf{Risk Cost} fully considers the balance between safety and costs by  acceptable risk ratio $P_f$. \textbf{Series Safety} further investigates the safety of a dam group. Thus, our system is well-balanced. What's more, we also take benefits into consideration.
+
+\subsection{Protection for Lake Kariba}
+Now we take the ability of protecting Lake Kariba  into consideration. In the former section, we degenerate this factor to the total volume of the reservoirs. However, we find it is reasonable to evaluate it with the relative distance between a reservoir and the lake. We finally determined to use a gentle Gaussian curve to give a weight of each dam.
+\begin{equation}
+Protection = \sum_{i=1}^{n}CA(X_i)\mathit{N}(X_{Lake},\sigma^2)
+\end{equation}
+where $X_{Lake}$ is the location of Lake Kariba, $\sigma$ is a fitting factor.
+
+To as greatly as possible increase the total \textbf{Protection} to the River, we can build dams near the lake with more capacity,i.e., stronger ability of management of the water.
+
+When it is the period of the dry season, the lower dams near Lake Kariba should start to reserve water and higher dams start to discharge water untill this season passes. On the contrary, when it is the wet season, the behavior of dams near the lake are opposite to the former condition.
+
+We also need to consider the ecosystem of the lake, so dams near the lake need to be designed carefully to minimize the damage to the environment.
+
+\subsection{Guidance for Emergency Water Flow Situations}
+Emergency water flow situation(i.e. flooding and prolonged low water conditions) can generate catastrophe. Flood water may wash away any cities downstream and cause considerable loss of life. Extreme low water conditions could destory many fields of a country. To ensure the safety of our new dam system, we will provide the ZRA managers with specific guidance.
+
+The aim of this guidance is prevent an uncontrolled release of water from reservoirs.
+
+For flood control, our objective is to maintain as much control over flows entering the system above a critical flood-prone reach as possible~\cite{Jay_Rules}.
+\paragraph{Method} Filling the upper reserviors first and emptying the lower reservoirs first.
+
+An illustration of this method has been studied~\cite{Kelman}. Flood storage at the reservoir close to upstream provides greater flood controlability than the lower reservoirs.
+
+However, an exception is that if the lower reservoir's outflow capacity is restricted, then it is better to fill the lower reservoir first to increase head on the outlet. In this way we can increase the release capacity from the entire sistem to the downstream channel capacity. This exception is prepared for some extremely serious floods.
+
+For prolonged low water conditions, our objective is to maintain the river runoff.
+
+\paragraph{Method} Emptying the reservoirs from lower ones to higher ones
+
+In this kind of periods, the river's natural runoff is considerably smaller than annual water runoff. We must take advantage of the dam system's capability of dynamic scheduling. In other owrds, we maintain the river's minimum runoff by compensative regulation. Empty the reservoirs downstream first can avoid people's water shortage while enabling reservoirs upstream to store water.
+\subsection{Guidance for Extreme Water Flows}
+In our previous analysis, we use $Q(X_i;\overline{t})$ to denote the annual water flow. However in real life, $Q(X_i;t)$ should be a function of time $t$. Along the Zambezi River there is a dry season and a wet season.
+\begin{enumerate}
+\item Dry Season
+
+It is clear that the dam system need to discharge in dry season. First, we suppose that dry season lasts for time $T$. At the beginning of the dry season all reservoirs have reached their full capacities. Second, we introduce three parameters,$p$, $k$, and $m$. $p$ denotes the speed of discharging. $k$ denotes the rate of lost water because of evaporation and washing away. $m$ is the amount of remaining water. The problem is then simplified as an expression of discharging all reserved water during the dry season with some speed.
+\begin{align*}
+\frac{\mathrm{d}m}{\mathrm{d}t} & = -p-km\\
+\text{Solve this function, we get:}\\
+m & = \frac{ce^{-kt}-p}{k}\\
+\text{Let } m(0) &= M , m(T) = 0 \\
+\text{Then } p&=\frac{Mke^{-kT}}{1-e^{-kT}}\\
+\end{align*}
+Now we qualitatively analyze this discharging speed. Because the water in the upper reservoirs is shared by all the terrain along the river. On the contrary, the water of the reservoirs downstream is only used by relatively small terrain. It is reasonable that in the dry season, the reservoirs upstream have a larger speed than those downstream. And the average speed of the whole system is $p$.
+
+\item Wet Season
+
+It has a high rainfall in wet season, so we need to charge reservoirs to avoid great increment of the level of riverway and prepare for the next dry season. We can assume that rainfall is uniformly distributed along the whole river. The upper reservoirs must start to store water first. Because if a reservoir downstream first to start storing water, $Q(X_i;t)$ will be too large and leads to great risk and waste of water.
+
+\end{enumerate}
+\section{Model Analysis}\label{Sec-Analysis}
+
+\subsection{Sensitivity Analysis}
+Our iMoDS model contains several parameters. We determine some of the parameters through least square fitting, some of them by knowledge in the literature, and other methods. In this section, we would like to produce a sensitibity analysis to show whether our model is sensitive to different values of parameters.
+
+We will study the impact of two importnant parameters in our model.
+\subsubsection{Impact of Planned Working Years $N$ for a Dam}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{N.png}
+    \caption{Given the same $X_i$, the function of \textbf{$P_f$} and \textbf{Risk Value} with different $N$}
+    \label{fig:N}
+\end{figure}
+$N$ is set to be 50 and not changed ever since. In the literature, a dam over 50 years old is defined to be dangerous. The Kariba Dam is one of them. We vary this value from 50 to 100 by 10. Figure \ref{fig:N} proves  that the trends of \textbf{Risk Loss} remains to be the same. Therefore, we come to the conclusion that our model is not sensitive to $N$.
+\subsubsection{Impact of Extreme Condition ratio $\alpha$}
+Figure \ref{fig:influence} shows the sensitivity analysis of $\alpha$. To avoid repetition, we don't illustrate it here again.
+\subsection{Strengths and Weaknesses}
+\subsubsection{Strengths}
+\begin{enumerate}
+\item Use accurate data of the Zambezi River. From the very beginning of our analysis, we emphasize on mining useful data. Only with these dependable data, we can conclude that the model we built is appropriate.
+\item Design a novel and innovative evaluation rules of dam construction. We used methods across disciplines to give an integrated evaluation function of dams. AHP and GA are leveraged in our simulation which can provide reliable results of the model.
+\item Use fancy visualization to display our model.
+\end{enumerate}
+\subsubsection{Weaknesses}
+\begin{enumerate}
+\item Heuristic algorithm has randomness. Because of the high dimensional constraint, we used GA as our simulation algorithm. We cannot always get the optimal results for the sites selection
+\item Some real water conditions are omitted. We simplified the river as an open channel. However, the real condition is much more complex. It will also influence the construction cost and safety evaluation.
+\item Lacking details of the trade-off function. We paid an emphasis on the balance between cost and safety. Though we have added power supply to our model, it still lacks other benefits of dam construction.
+\end{enumerate}
+\fi
 \section{Conclusion} \label{Sec-Conclusion}
 Our papaer provides a detailed analysis of removing the Kariba Dam and replacing it with a series of ten to twenty smaller dams along the river. Before introducing the model, we analyze water flow and a single dam. Then our model iMoDS is proposed. It takes safety, cost, and benefits into consideration and makes a balance of them. Three submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model, form the integrated model.
 
