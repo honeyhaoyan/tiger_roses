@@ -6,6 +6,8 @@ import csv
 data_file = '../data.csv'
 tag_file = '../msn.csv'
 
+X = []
+prepared = False
 tag = dict()
 state = dict()
 state['AZ'] = 0
@@ -16,6 +18,7 @@ start_year = 1960
 # year start from 1960
 
 def plot_tag_unit(X, e_type, s_type, unit, xlabel = 'Year', ylabel = None):
+	prepare()
 	data = np.zeros([4,50])
 	for row in X:
 		info = tag[row['MSN']]
@@ -42,6 +45,9 @@ def plot_stacked_bar_graph(X, type_name, e_types, s_type = 'total', unit = 'Bill
 	xlabel    : xlabel of graph
 	ylabel    : ylabel of graph
 	'''
+	prepare()
+	global tag
+	global state
 	fig = plt.figure()
 	num_of_types = len(e_types)
 	data = np.zeros([4, len(e_types), 50])
@@ -87,7 +93,10 @@ def plot_percentage_stacked_bar_chart(X, type_name, e_types, s_type = 'total', u
 	xlabel    : xlabel of graph
 	ylabel    : ylabel of graph
 	'''
+	prepare()
 	print e_types
+	global tag
+	global state
 	fig = plt.figure()
 	num_of_types = len(e_types)
 	data = np.zeros([4, len(e_types), 50])
@@ -111,9 +120,14 @@ def plot_percentage_stacked_bar_chart(X, type_name, e_types, s_type = 'total', u
 	plt.show()
 
 
-def main():
+def prepare():
+	global prepared
+	if prepared == True:
+		return
+	else:
+		prepared = True
 	global tag
-	X = []
+	global X
 	with open(tag_file, 'rb') as f:
 		csv_reader = csv.DictReader(f)
 		for row in csv_reader:
@@ -123,12 +137,14 @@ def main():
 		print (csv_reader)
 		for row in csv_reader:
 			X.append(row)
+def main():
+	prepare()
 #			X.append([row['MSN'], row['StateCode'], int(row['Year']), float(row['Data'])])
 #		plot_tag_unit(X, 'fossil fuel', 'total', 'Billion Btu', ylabel = 'Total Fossil fuel')
 #		plot_tag_unit(X, 'aviation gasoline', 'industrial', 'Billion Btu')
-		types = ['unclean energy', 'clean energy']
+	types = ['unclean energy', 'clean energy']
 #		plot_stacked_bar_graph(X, 'Energy type', types)
-		plot_percentage_stacked_bar_chart(X, 'Cleanliness', types)
+	plot_percentage_stacked_bar_chart(X, 'Cleanliness', types)
 
 if __name__=='__main__':
 	main()
