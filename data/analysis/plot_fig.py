@@ -1,12 +1,6 @@
 from analysis import *
 
-plot_stacked_bar_chart_by_matrix(
-	get_matrix('Energy type', ['EM','GE','HY','SO','WY','BM'], stable_type=['sector','unit2'], s_type=['TC','B']),
-	['Fuel ethanol excluding denaturant', 'geothermal energy', 'hydroelectricity', 'photovoltaic and solar thermal energy', 'wind electricity', 'biomass'], title="consumption")
-
-plot_percentage_stacked_bar_chart_by_matrix(
-	get_matrix('Energy type', ['EM','GE','HY','SO','WY','BM'], stable_type=['sector','unit2'], s_type=['TC','B']),
-	['Fuel ethanol excluding denaturant', 'geothermal energy', 'hydroelectricity', 'photovoltaic and solar thermal energy', 'wind electricity', 'biomass'], title="consumption")
+plot_tag_unit('TE','TC','Billion Btu', title='Total Energy')
 #plot_stacked_bar_chart_by_matrix(
 #	get_matrix('Energy type', ['CL', 'NN', 'PM'],
 #		stable_type = ['sector', 'unit2'], s_type=['TC', 'B'],
@@ -14,6 +8,18 @@ plot_percentage_stacked_bar_chart_by_matrix(
 replot_plotted = False
 # plotted
 if replot_plotted == True:
+
+	plot_state_percentage_stacked_bar_chart(
+		['Energy type','sector','unit2'],
+		['TE','TC','B'], title = "Total Energy")
+
+	plot_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['EM','GE','HY','SO','WY','BM'], stable_type=['sector','unit2'], s_type=['TC','B']),
+		['Fuel ethanol excluding denaturant', 'geothermal energy', 'hydroelectricity', 'photovoltaic and solar thermal energy', 'wind electricity', 'biomass'], title="consumption")
+
+	plot_percentage_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['EM','GE','HY','SO','WY','BM'], stable_type=['sector','unit2'], s_type=['TC','B']),
+		['Fuel ethanol excluding denaturant', 'geothermal energy', 'hydroelectricity', 'photovoltaic and solar thermal energy', 'wind electricity', 'biomass'], title="consumption")
 
 	plot_stacked_bar_chart_by_matrix(
 		get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B']),

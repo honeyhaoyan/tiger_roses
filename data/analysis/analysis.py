@@ -18,12 +18,12 @@ state['TX'] = 3
 start_year = 1960
 # year start from 1960
 
-def plot_tag_unit(e_type, s_type, unit, xlabel = 'Year', ylabel = None, title = ""):
+def plot_tag_unit(e_type, s_type, unit, figsize = (16,10), xlabel = 'Year', ylabel = None, title = ""):
 	prepare()
 	global X
 	global tag
 	global state
-	fig = plt.figure(figsize=(16,10))
+	fig = plt.figure(figsize=figsize)
 	data = np.zeros([4,50])
 	for row in X:
 		info = tag[row['MSN']]
@@ -73,8 +73,8 @@ def get_matrix(
 
 def plot_stacked_bar_chart_by_matrix(
 	data, legends, 
-	width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
-	fig = plt.figure(figsize=(16,10))
+	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
+	fig = plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
 	ind = np.arange(plot_start_year, 2010, 1)
 	num_of_types = len(legends)
@@ -97,7 +97,7 @@ def plot_stacked_bar_chart_by_matrix(
 def plot_stacked_bar_chart(
 	change_type, c_types, 
 	stable_type = ['sector', 'Unit'], s_type = ['TC','Billion Btu'],
-	width = 0.5, xlabel='Year', ylabel=None, ylim='scalable', title = ""):
+	figsize=(16,10), width = 0.5, xlabel='Year', ylabel=None, ylim='scalable', title = ""):
 	'''
 	change_type : type name used to plot stacked graph
 	c_types     : energy_types want to stack
@@ -111,7 +111,7 @@ def plot_stacked_bar_chart(
 	global X
 	global tag
 	global state
-	fig = plt.figure(figsize=(16,10))
+	fig = plt.figure(figsize=figsize)
 	num_of_types = len(c_types)
 	data = np.zeros([4, num_of_types, 50])
 	min_v = 1e20
@@ -157,8 +157,8 @@ def plot_stacked_bar_chart(
 
 def plot_percentage_stacked_bar_chart_by_matrix(
 	data, legends, 
-	width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
-	fig=plt.figure(figsize=(16,10))
+	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
+	fig=plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
 	ind = np.arange(plot_start_year, 2010, 1)
 	num_of_types = len(legends)
@@ -183,7 +183,7 @@ def plot_percentage_stacked_bar_chart_by_matrix(
 def plot_percentage_stacked_bar_chart(
 	change_type, c_types, 
 	stable_type = ['sector', 'Unit'], s_type = ['TC','Billion Btu'],
-	width = 0.5, xlabel='Year', ylabel=None, title = ""):
+	figsize = (16,10), width = 0.5, xlabel='Year', ylabel=None, title = ""):
 	'''
 	change_type : type name used to plot stacked graph
 	c_types     : energy_types want to stack
@@ -197,7 +197,7 @@ def plot_percentage_stacked_bar_chart(
 	global X
 	global tag
 	global state
-	fig = plt.figure(figsize=(16,10))
+	fig = plt.figure(figsize=figsize)
 	num_of_types = len(c_types)
 	data = np.zeros([4, num_of_types, 50])
 	for i in range(num_of_types):
@@ -229,7 +229,36 @@ def plot_percentage_stacked_bar_chart(
 	fig.savefig(fig_path+title+"="+','.join(legends)+'-percentage.png')
 #	plt.show()
 
-
+def plot_state_percentage_stacked_bar_chart(
+	stable_type, s_type,
+	figsize = (16,10), width = 0.5, xlabel = 'Year', ylabel = None, title = ""):
+	prepare()
+	global X
+	global tag
+	global state
+	fig = plt.figure(figsize=figsize)
+	data = np.zeros([4,50])
+	for row in X:
+		info = tag[row['MSN']]
+		flag = True
+		for j in range(len(stable_type)):
+			if info[stable_type[j]] != s_type[j]:
+				flag = False
+				break
+		if flag == True:
+			data[state[row['StateCode']]][int(row['Year'])-start_year] += float(row['Data'])
+	last = np.zeros([4,50])
+	ind  = np.arange(1960,2010)
+	sm = np.sum(data, axis = 0)
+	plt.bar(ind, data[0]*100.0/sm, width)
+	last[0] = data[0]*100.0/sm
+	for j in range(1,4):
+		plt.bar(ind,data[j]*100.0/sm,width,bottom=last[j-1])
+		last[j] = last[j-1]+data[j]*100.0/sm
+	legends = ['Arizona','California','New Mexico', 'Texas']
+	plt.legend(legends)
+	plt.title(title)
+	fig.savefig(fig_path+title+','.join(s_type)+' - state_percentage.png')
 def prepare():
 	global prepared
 	if prepared == True:
