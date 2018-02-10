@@ -99,8 +99,7 @@ with open(data_file, 'r') as f:
 	for row in csv_reader:
 #		X.append([row['MSN'], row['StateCode'], int(row['Year']), float(row['Data'])])
 		energy_type = row['MSN'][0:2]
-		sector_type = row['MSN'][2]
-		consume_type = row['MSN'][3]
+		sector_type = row['MSN'][2:4]
 		unit_type = row['MSN'][4]
 		y = []
 		y.append(energy_type)
@@ -118,7 +117,6 @@ with open(data_file, 'r') as f:
 				if consume_type == 'C':
 					y.append(
 		'''
-		y.append(consume_type)
 		y.append(unit_type)
 		tags.append(','.join(y))
 

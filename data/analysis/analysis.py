@@ -18,7 +18,7 @@ state['TX'] = 3
 start_year = 1960
 # year start from 1960
 
-def plot_tag_unit(e_type, s_type, unit, xlabel = 'Year', ylabel = None):
+def plot_tag_unit(e_type, s_type, unit, xlabel = 'Year', ylabel = None, title = ""):
 	prepare()
 	global X
 	global tag
@@ -38,11 +38,14 @@ def plot_tag_unit(e_type, s_type, unit, xlabel = 'Year', ylabel = None):
 	plt.ylabel(ylabel)
 	plt.xlabel(xlabel)
 #	plt.show()
-	fig.savefig(fig_path+e_type+'--line.png')
+	if title == "":
+		title = ylabel
+	plt.suptitle(title)
+	fig.savefig(fig_path+title + "=" + e_type+'--line.png')
 
 def get_matrix(
 	change_type, c_types, 
-	stable_type = ['sector', 'Unit'], s_type = ['T','Billion Btu']):
+	stable_type = ['sector', 'Unit'], s_type = ['TC','Billion Btu']):
 	'''
 	change_type : type name used to plot stacked graph
 	c_types     : energy_types want to stack
@@ -53,6 +56,7 @@ def get_matrix(
 	global X
 	global tag
 	global state
+	global start_year
 	num_of_types = len(c_types)
 	data = np.zeros([4, num_of_types, 50])
 	for i in range(num_of_types):
@@ -69,12 +73,14 @@ def get_matrix(
 
 def plot_stacked_bar_chart_by_matrix(
 	data, legends, 
-	width=0.35, xlabel = 'Year', ylabel = None):
+	width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
 	fig = plt.figure(figsize=(16,10))
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(1960, 2010, 1)
+	ind = np.arange(plot_start_year, 2010, 1)
 	num_of_types = len(legends)
-	last = np.zeros([4, num_of_types, 50])
+	last = np.zeros([4, num_of_types, 2010-plot_start_year])
+	if plot_start_year > 1960:
+		data = data[:,:,plot_start_year - 1960:50]
 	for i in range(4):
 		plt.subplot(2,2,i+1)
 		plt.bar(ind, data[i][0], width)
@@ -85,12 +91,13 @@ def plot_stacked_bar_chart_by_matrix(
 		plt.legend(legends)
 		plt.title(titles[i], va='bottom')
 #	plt.show()
-	fig.savefig(fig_path+','.join(legends)+'-bar_chart.png')
+	plt.suptitle(title+"="+','.join(legends))
+	fig.savefig(fig_path+title+"="+','.join(legends)+'-bar_chart.png')
 
 def plot_stacked_bar_chart(
 	change_type, c_types, 
-	stable_type = ['sector', 'Unit'], s_type = ['T','Billion Btu'],
-	width = 0.35, xlabel='Year', ylabel=None, ylim='scalable'):
+	stable_type = ['sector', 'Unit'], s_type = ['TC','Billion Btu'],
+	width = 0.5, xlabel='Year', ylabel=None, ylim='scalable', title = ""):
 	'''
 	change_type : type name used to plot stacked graph
 	c_types     : energy_types want to stack
@@ -128,7 +135,8 @@ def plot_stacked_bar_chart(
 				min_v = min(min_v, s)
 				max_v = max(max_v, s)
 	ind = np.arange(1960, 2010, 1)
-	legends = ['Arizona','California','New Mexico', 'Texas']
+	titles = ['Arizona','California','New Mexico', 'Texas']
+	legends = c_types
 	last = np.zeros([4, num_of_types, 50])
 	for i in range(4):
 		plt.subplot(2,2,i+1)
@@ -137,43 +145,45 @@ def plot_stacked_bar_chart(
 		for j in range(1, num_of_types):
 			plt.bar(ind, data[i][j], width,bottom=last[i][j-1])
 			last[i][j] = last[i][j-1]+data[i][j]
-		plt.legend(c_types)
+		plt.legend(legends)
 		if ylim == 'same':
 			plt.ylim((min_v, max_v))
 #		fig.text(0.30,0.50,legends[i],ha='center')
-		plt.title(legends[i], va='bottom')
+		plt.title(titles[i], va='bottom')
 #	plt.show()
-	fig.savefig(fig_path+','.join(legends)+'-bar_chart.png')
+	plt.suptitle(title+"="+','.join(legends))
+	fig.savefig(fig_path+title+"="+','.join(legends)+'-bar_chart.png')
 
 
 def plot_percentage_stacked_bar_chart_by_matrix(
 	data, legends, 
-	width=0.35, xlabel = 'Year', ylabel = None):
+	width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
 	fig=plt.figure(figsize=(16,10))
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(1960, 2010, 1)
+	ind = np.arange(plot_start_year, 2010, 1)
 	num_of_types = len(legends)
-	last = np.zeros([4, num_of_types, 50])
+	last = np.zeros([4, num_of_types, 2010 - plot_start_year])
+	if plot_start_year != 1960:
+		data = data[:,:,plot_start_year - 1960:50]
 	for i in range(4):
 		sm = np.sum(data[i], axis=0)
 		plt.subplot(2,2,i+1)
-		if sm[:][0].any() != 0:
-			plt.bar(ind, data[i][0]*100.0/sm, width)
-			last[i][0] = data[i][0]*100.0/sm
+		plt.bar(ind, data[i][0]*100.0/sm, width)
+		last[i][0] = data[i][0]*100.0/sm
 		for j in range(1, num_of_types):
-			if sm[:][j].any() != 0:
-				plt.bar(ind, data[i][j]*100.0/sm, width,bottom=last[i][j-1])
-				last[i][j] = last[i][j-1]+data[i][j]*100.0/sm
+			plt.bar(ind, data[i][j]*100.0/sm, width,bottom=last[i][j-1])
+			last[i][j] = last[i][j-1]+data[i][j]*100.0/sm
 		plt.legend(legends)
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(titles[i], va='bottom')
-	fig.savefig(fig_path+','.join(legends)+'-percentage.png')
+	plt.suptitle(title+"="+','.join(legends))
+	fig.savefig(fig_path+title+"="+','.join(legends)+'-percentage.png')
 #	plt.show()
 
 def plot_percentage_stacked_bar_chart(
 	change_type, c_types, 
-	stable_type = ['sector', 'Unit'], s_type = ['T','Billion Btu'],
-	width = 0.35, xlabel='Year', ylabel=None):
+	stable_type = ['sector', 'Unit'], s_type = ['TC','Billion Btu'],
+	width = 0.5, xlabel='Year', ylabel=None, title = ""):
 	'''
 	change_type : type name used to plot stacked graph
 	c_types     : energy_types want to stack
@@ -201,22 +211,22 @@ def plot_percentage_stacked_bar_chart(
 			if info[change_type] == c_types[i] and flag == True:
 				data[state[row['StateCode']]][i][int(row['Year']) - start_year] += float(row['Data'])
 	ind = np.arange(1960, 2010, 1)
-	legends = ['Arizona','California','New Mexico', 'Texas']
+	titles = ['Arizona','California','New Mexico', 'Texas']
+	legends = c_types
 	last = np.zeros([4, num_of_types, 50])
 	for i in range(4):
 		sm = np.sum(data[i], axis=0)
 		plt.subplot(2,2,i+1)
-		if sm[:][0].any() != 0:
-			plt.bar(ind, data[i][0]*100.0/sm, width)
-			last[i][0] = data[i][0]*100.0/sm
+		plt.bar(ind, data[i][0]*100.0/sm, width)
+		last[i][0] = data[i][0]*100.0/sm
 		for j in range(1, num_of_types):
-			if sm[:][j].any() != 0:
-				plt.bar(ind, data[i][j]*100.0/sm, width,bottom=last[i][j-1])
-				last[i][j] = last[i][j-1]+data[i][j]*100.0/sm
-		plt.legend(c_types)
+			plt.bar(ind, data[i][j]*100.0/sm, width,bottom=last[i][j-1])
+			last[i][j] = last[i][j-1]+data[i][j]*100.0/sm
+		plt.legend(legends)
 #		fig.text(0.30,0.50,legends[i],ha='center')
-		plt.title(legends[i], va='bottom')
-	fig.savefig(fig_path+','.join(legends)+'-percentage.png')
+		plt.title(titles[i], va='bottom')
+	plt.suptitle(title+"="+','.join(legends))
+	fig.savefig(fig_path+title+"="+','.join(legends)+'-percentage.png')
 #	plt.show()
 
 
@@ -236,12 +246,13 @@ def prepare():
 		csv_reader = csv.DictReader(f)
 		for row in csv_reader:
 			X.append(row)
+'''
 def main():
 	prepare()
 #			X.append([row['MSN'], row['StateCode'], int(row['Year']), float(row['Data'])])
 #		plot_tag_unit(X, 'fossil fuel', 'total', 'Billion Btu', ylabel = 'Total Fossil fuel')
 #		plot_tag_unit(X, 'aviation gasoline', 'industrial', 'Billion Btu')
-	types = ['unclean energy total', 'clean energy']
+	types = ['unclean energy', 'clean energy']
 #	plot_percentage_stacked_bar_chart(
 #		'sector',
 #		['industrial', 'residential', 'transportation'],
@@ -249,11 +260,11 @@ def main():
 #		['coal']
 #		
 #		)
-	print get_matrix('cleanliness', types)
+#	print get_matrix('cleanliness', types)
 	plot_stacked_bar_chart_by_matrix(data=get_matrix('cleanliness', types), legends=types)
 	plot_stacked_bar_chart('cleanliness', types)
 #	plot_percentage_stacked_bar_chart('cleanliness', types)
-
+'''
 
 if __name__=='__main__':
 	main()
