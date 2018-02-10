@@ -5,6 +5,16 @@ replot_plotted = False
 # plotted
 if replot_plotted == True:
 	plot_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['RE', 'TE']) - 
+		get_matrix('Energy type', ['ABC','RE']),
+		['renewable energy', 'other'])
+
+	plot_percentage_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['RE', 'TE']) - 
+		get_matrix('Energy type', ['ABC','RE']),
+		['renewable energy', 'other'])
+
+	plot_stacked_bar_chart_by_matrix(
 		get_matrix('Energy type', ['GD'],
 		stable_type=['unit2'], s_type = ['X']),
 		['GDP--2005'])
@@ -13,9 +23,10 @@ if replot_plotted == True:
 		stable_type=['unit2'], s_type = ['V']),
 		['GDP'])
 	plot_tag_unit(
-		'TP', 'T', 'Thousand', ylabel = 'Resident population')
+		'TP', 'O', 'Thousand', ylabel = 'Resident population')
 	plot_tag_unit(
 		'TE', 'T', 'Million Btu', ylabel = 'Total energy per capita')
+
 	plot_percentage_stacked_bar_chart(
 		'cleanliness',
 		['clean energy', 'unclean energy total']

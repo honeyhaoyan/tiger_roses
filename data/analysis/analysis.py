@@ -85,7 +85,7 @@ def plot_stacked_bar_chart_by_matrix(
 		plt.legend(legends)
 		plt.title(titles[i], va='bottom')
 #	plt.show()
-	fig.savefig(fig_path+'|'.join(legends)+'-bar_chart.png')
+	fig.savefig(fig_path+','.join(legends)+'-bar_chart.png')
 
 def plot_stacked_bar_chart(
 	change_type, c_types, 
@@ -143,7 +143,7 @@ def plot_stacked_bar_chart(
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(legends[i], va='bottom')
 #	plt.show()
-	fig.savefig(fig_path+'|'.join(legends)+'-bar_chart.png')
+	fig.savefig(fig_path+','.join(legends)+'-bar_chart.png')
 
 
 def plot_percentage_stacked_bar_chart_by_matrix(
@@ -167,7 +167,7 @@ def plot_percentage_stacked_bar_chart_by_matrix(
 		plt.legend(legends)
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(titles[i], va='bottom')
-	fig.savefig(fig_path+'|'.join(legends)+'-percentage.png')
+	fig.savefig(fig_path+','.join(legends)+'-percentage.png')
 #	plt.show()
 
 def plot_percentage_stacked_bar_chart(
@@ -216,7 +216,7 @@ def plot_percentage_stacked_bar_chart(
 		plt.legend(c_types)
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(legends[i], va='bottom')
-	fig.savefig(fig_path+'|'.join(legends)+'-percentage.png')
+	fig.savefig(fig_path+','.join(legends)+'-percentage.png')
 #	plt.show()
 
 
