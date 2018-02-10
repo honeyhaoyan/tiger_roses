@@ -8,3 +8,6 @@
 *.fls
 *.pdf
 problems/*
+*.idea*
+*.~lock*
+*.swp
