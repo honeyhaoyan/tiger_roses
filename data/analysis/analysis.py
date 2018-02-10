@@ -145,7 +145,7 @@ def main():
 #		plot_tag_unit(X, 'aviation gasoline', 'industrial', 'Billion Btu')
 	types = ['unclean energy', 'clean energy']
 #		plot_stacked_bar_graph(X, 'Energy type', types)
-	plot_percentage_stacked_bar_chart(X, 'Cleanliness', types)
+	plot_percentage_stacked_bar_chart(X, 'cleanliness', types)
 
 if __name__=='__main__':
 	main()
