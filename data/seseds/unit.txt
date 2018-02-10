@@ -1,0 +1,8 @@
+B	data in British thermal units (Btu)
+K	factor for converting data from physical units to Btu
+P	data in standardized physical units
+S	share or ratio expressed as a fraction
+V	value in million dollars
+D	dollars per million Btu
+R	thousand Btu per chained (2000) dollar
+X	million chained (2005) dollars

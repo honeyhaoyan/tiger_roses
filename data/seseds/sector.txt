@@ -1,0 +1,38 @@
+AC	transportation sector consumption
+CC	commercial sector consumption
+EG	electric power sector generation (also consumption)
+EI	electric power sector consumption
+IC	industrial sector consumption
+RC	residential sector consumption
+TC	total consumption of all energy-consuming sectors
+TX	total end-use consumption
+KC	consumption at coke plants
+LP	lease and plant fuel
+IN	deliveries to the industrial sector
+VH	vehicle fuel
+EX	export
+IM	import
+NI	net import
+HC	residential and commercial sectors
+OC	the industrial sector other than coke plants
+OS	the industrial sector excluding refinery fuel
+PR	production
+RF	refinery fuel
+XC	all sectors excluding refinery fuel
+IS	?
+FD	feedstock
+CS	the commercial sector at a cost
+CX	the commercial sector at no cost
+ET	nuclear fuel/steam-electric power plant(US only)
+IX	the industrial sector at no cost
+GD	current-dollar
+LC	energy losses and co-products
+MP	marketed production
+OP	?
+PF	process fuel
+PZ	pipeline fuel
+RS	the residential sector at a cost
+RX	the residential sector at no cost
+SC	?
+TG	?
+TP	per capita
