@@ -1,0 +1,10 @@
+Determining the “Energy profile” asks the students to select and aggregate what they think is important from the data in the context of the problem and at a level useful to the decision makers, the governors, who don‘t want to deal with 605 variables in an equation. This is a basic modeling step, and essential for what follows, which is the longitudinal analysis and then the improvements through policy change. 
+
+The information collected by the United Stated Energy Information Administration is gathered from across different states and territories. Each state has its own set of regulations and has implemented those regulations at different times in the past. The result is that different states have different ways to collect information, and the data collection for different variables started at different times. Additionally, different entities within a state produce energy separate from major utilities, and some information about energy production is not collected. 
+
+More details about how the information is collected can be found at the following location:
+https://www.eia.gov/state/seds/seds-technical-notes-complete.php?sid=US#Consumption 
+
+
+For more specific information about the relationships between the variables in the data set please see the following document:
+https://www.eia.gov/state/seds/sep_use/notes/use_a.pdf 

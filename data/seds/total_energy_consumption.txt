@@ -1,0 +1,39 @@
+Energy sources can be categorized as renewable and non-renewable sources:
+Non-Renewable Sources
+Fossil fuels:
+•	 coal (CL)
+•	 net imports of coal coke (U.S. only)
+•	 natural gas excluding supplemental gaseous fuels (NN)
+•	 petroleum products excluding fuel ethanol blended into motor gasoline
+(PM)
+Nuclear electric power (NU)
+Renewable Sources
+•	 fuel ethanol minus denaturant (EM)
+•	 geothermal direct use energy and geothermal heat pumps (GE)
+•	 conventional hydroelectric power (HY)
+•	 solar thermal direct use energy and photovoltaic electricity net
+generation (SO)
+•	 electricity produced by wind (WY)
+•	 wood and wood-derived fuels (WD)
+•	 biomass waste (WS) 
+
+1. 
+FFTCBZZ = CLTCBZZ + NNTCBZZ + PMTCBZZ
+FFTCBUS = CLTCBUS + CCNIBUS + NNTCBUS + PMTCBUS
+
+fossil fuels total consumption = coal total consumption + natural gas total consumption (excluding supplemental gaseous fuels) + All petroleum products total consumption excluding fuel ethanol
+
+2. 
+NUETBZZ
+
+3.
+RETCBZZ = EMTCBZZ + GETCBZZ + HYTCBZZ + SOTCBZZ + WYTCBZZ + BMTCBZZ
+
+renewable energy total comsumption = fuel ethanol, excluding denaturant, total consumption + geothermal energy total consumption + hydroelectricity total production + photovoltaic and solar thermal energy total consumption + electricity produced from wind energy + biomass total consumption
+
+4. 
+TETCBZZ = FFTCBZZ + NUETBZZ + RETCBZZ + ELNIBZZ + ELISBZZ
+TETCBUS = FFTCBUS + NUETBUS + RETCBUS + ELNIBUS
+
+total energy = fossil fuels + nuclear power + renueable energy + net imports of electricity + Net interstate sales of electricity and associated losses (negative and positive values).
+
