@@ -174,8 +174,8 @@ ESTXB,"Electricity total end-use consumption (i.e., sold).",Billion Btu,ES,T,X,B
 ESTXD,"Electricity average price, all end-use sectors.",Dollars per million Btu,ES,T,X,D,
 ESTXP,"Electricity total end-use consumption (i.e., sold).",Thousand barrels,ES,T,X,P,
 ESTXV,Electricity total end-use expenditures.,Million dollars,ES,T,X,V,
-FFETK,"Fossil fueled steam-electric power plant conversion factor, United States only.",Thousand Btu per kilowatthour,FF,E,T,K,unclean energy total
-FFTCB,"Fossil fuelS, total consumption.",Billion Btu,FF,T,C,B,unclean energy total
+FFETK,"Fossil fueled steam-electric power plant conversion factor, United States only.",Thousand Btu per kilowatthour,FF,E,T,K,unclean energy
+FFTCB,"Fossil fuelS, total consumption.",Billion Btu,FF,T,C,B,unclean energy
 FNICB,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Billion Btu,FN,I,C,B,
 FNICD,"Petrochemical feedstocks, naphtha less than 401 F, price in the industrial sector.",Dollars per million Btu,FN,I,C,D,
 FNICP,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Thousand barrels,FN,I,C,P,

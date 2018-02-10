@@ -2,6 +2,10 @@ from analysis import *
 
 replot_plotted = False
 
+plot_percentage_stacked_bar_chart(
+	'cleanliness',
+	['clean energy', 'unclean energy']
+	)
 # plotted
 if replot_plotted == True:
 	plot_stacked_bar_chart_by_matrix(
@@ -27,10 +31,6 @@ if replot_plotted == True:
 	plot_tag_unit(
 		'TE', 'T', 'Million Btu', ylabel = 'Total energy per capita')
 
-	plot_percentage_stacked_bar_chart(
-		'cleanliness',
-		['clean energy', 'unclean energy total']
-		)
 
 	plot_stacked_bar_chart_by_matrix(
 		get_matrix('Energy type', ['TN', 'TE']) - 
