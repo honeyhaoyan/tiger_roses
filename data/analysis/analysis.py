@@ -111,14 +111,15 @@ def plot_stacked_bar_chart_by_matrix(
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	fig = plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
+	num_of_types = len(legends)
 	if np.array(_ind == None).all():
 		ind = np.arange(plot_start_year, end_year, 1)
+		last = np.zeros([4, num_of_types, end_year-plot_start_year])
+		if plot_start_year > start_year:
+			data = data[:,:,plot_start_year - start_year:50]
 	else:
 		ind = _ind
-	num_of_types = len(legends)
-	last = np.zeros([4, num_of_types, end_year-plot_start_year])
-	if plot_start_year > start_year:
-		data = data[:,:,plot_start_year - start_year:50]
+		last = np.zeros([4, num_of_types, len(_ind)])
 	for i in range(4):
 		plt.subplot(2,2,i+1)
 		plt.bar(ind, data[i][0], width)
