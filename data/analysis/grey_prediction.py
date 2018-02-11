@@ -62,7 +62,7 @@ def pred_of_np(x_0):
 	# print(eps)
 	s1 = np.var(np.array(x_0_pred[0:n]))
 	s2 = np.var(eps)
-	print(s1, s2, s2 / s1)
+	# print(s1, s2, s2 / s1)
 	# print(x_0_pred[0:n])
 	return np.array(x_0_pred[n:])
 

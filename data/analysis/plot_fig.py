@@ -1,5 +1,6 @@
 from analysis import *
 from grey_prediction import *
+import numpy as np
 
 # plot_stacked_bar_chart_by_matrix(
 # 	prediction(get_matrix('Energy type', ['EM','GE','HY','SO','WY','BM'], stable_type=['sector','unit2'], s_type=['TC','B'])),
@@ -14,13 +15,21 @@ from grey_prediction import *
 #		stable_type = ['sector', 'unit2'], s_type=['TC', 'B'],
 #		title = "")
 
+# plot_stacked_bar_chart_by_matrix(
+# 	prediction(get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B'])),
+# 	["Coal", "Natural gas", "Petroleum products"], title="consumption_prediction", _ind=np.linspace(2010,2060,50))
+
 plot_stacked_bar_chart_by_matrix(
 	prediction(get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B'])),
-	["Coal", "Natural gas", "Petroleum products"], title="consumption_prediction")
+	["Coal", "Natural gas", "Petroleum products"], title="consumption_prediction", _ind=np.arange(2010,2060,1))
+
+# plot_percentage_stacked_bar_chart_by_matrix(
+# 	prediction(get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B'])),
+# 	["Coal", "Natural gas", "Petroleum products"], title="consumption_prediction", _ind=np.linspace(2010,2060,50))
 
 plot_percentage_stacked_bar_chart_by_matrix(
 	prediction(get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B'])),
-	["Coal", "Natural gas", "Petroleum products"], title="consumption_prediction")
+	["Coal", "Natural gas", "Petroleum products"], title="consumption_prediction", _ind=np.arange(2010,2060,1))
 
 replot_plotted = False
 # plotted
