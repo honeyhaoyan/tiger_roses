@@ -15,10 +15,17 @@ state['AZ'] = 0
 state['CA'] = 1
 state['NM'] = 2
 state['TX'] = 3
-start_year = 1960
-# year start from 1960
+start_year = start_year
+end_year = 2010
+# year start from start_year
 
-def plot_tag_unit(e_type, s_type, unit, figsize = (16,10), xlabel = 'Year', ylabel = None, title = ""):
+def set_start_year(year):
+	global start_year
+	start_year = year
+def set_end_year(year):
+	global end_year
+	end_year = year
+def plot_tag_unit(e_type, s_type, unit, plot_start_year = start_year, figsize = (16,10), xlabel = 'Year', ylabel = None, title = ""):
 	prepare()
 	global X
 	global tag
@@ -30,10 +37,13 @@ def plot_tag_unit(e_type, s_type, unit, figsize = (16,10), xlabel = 'Year', ylab
 		if info['Energy type'] == e_type and info['sector'] == s_type and info['Unit'] == unit:
 			data[state[row['StateCode']]][int(row['Year']) - start_year] += float(row['Data'])
 #	print (data)
-	l0, = plt.plot(range(1960,2010), data[0])
-	l1, = plt.plot(range(1960,2010), data[1])
-	l2, = plt.plot(range(1960,2010), data[2])
-	l3, = plt.plot(range(1960,2010), data[3])
+	ind = np.arange(plot_start_year,end_year)
+	if plot_start_year > start_year:
+		data = data[:,plot_start_year-start_year:50]
+	l0, = plt.plot(ind, data[0])
+	l1, = plt.plot(ind, data[1])
+	l2, = plt.plot(ind, data[2])
+	l3, = plt.plot(ind, data[3])
 	plt.legend(['Arizona','California','New Mexico', 'Texas'])
 	plt.ylabel(ylabel)
 	plt.xlabel(xlabel)
@@ -71,16 +81,35 @@ def get_matrix(
 				data[state[row['StateCode']]][i][int(row['Year']) - start_year] += float(row['Data'])
 	return data
 
+def single_state_stacked_bar_chart_by_matrix(
+	data, legends, 
+	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
+	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
+	ind = np.arange(plot_start_year, end_year, 1)
+	num_of_types = len(legends)
+	last = np.zeros([4, num_of_types, end_year-plot_start_year])
+	if plot_start_year > start_year:
+		data = data[:,:,plot_start_year - start_year:50]
+	for i in range(4):
+		fig = plt.figure(figsize=figsize)
+		plt.bar(ind, data[i][0], width)
+		last[i][0] = data[i][0]
+		for j in range(1, num_of_types):
+			plt.bar(ind, data[i][j], width,bottom=last[i][j-1])
+			last[i][j] = last[i][j-1]+data[i][j]
+		plt.legend(legends)
+		fig.savefig(fig_path+titles[i]+"-"+title+"-"+','.join(legends)+'-bar_chart.png')
+
 def plot_stacked_bar_chart_by_matrix(
 	data, legends, 
-	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
+	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	fig = plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(plot_start_year, 2010, 1)
+	ind = np.arange(plot_start_year, end_year, 1)
 	num_of_types = len(legends)
-	last = np.zeros([4, num_of_types, 2010-plot_start_year])
-	if plot_start_year > 1960:
-		data = data[:,:,plot_start_year - 1960:50]
+	last = np.zeros([4, num_of_types, end_year-plot_start_year])
+	if plot_start_year > start_year:
+		data = data[:,:,plot_start_year - start_year:50]
 	for i in range(4):
 		plt.subplot(2,2,i+1)
 		plt.bar(ind, data[i][0], width)
@@ -134,7 +163,7 @@ def plot_stacked_bar_chart(
 						s = s + data[i][j][k]
 				min_v = min(min_v, s)
 				max_v = max(max_v, s)
-	ind = np.arange(1960, 2010, 1)
+	ind = np.arange(start_year, end_year, 1)
 	titles = ['Arizona','California','New Mexico', 'Texas']
 	legends = c_types
 	last = np.zeros([4, num_of_types, 50])
@@ -154,17 +183,36 @@ def plot_stacked_bar_chart(
 	plt.suptitle(title+"="+','.join(legends))
 	fig.savefig(fig_path+title+"="+','.join(legends)+'-bar_chart.png')
 
+def single_state_percentage_stacked_bar_chart_by_matrix(
+	data, legends, 
+	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
+	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
+	ind = np.arange(plot_start_year, end_year, 1)
+	num_of_types = len(legends)
+	last = np.zeros([4, num_of_types, end_year - plot_start_year])
+	if plot_start_year != start_year:
+		data = data[:,:,plot_start_year - start_year:50]
+	for i in range(4):
+		fig=plt.figure(figsize=figsize)
+		sm = np.sum(data[i], axis=0)
+		plt.bar(ind, data[i][0]*100.0/sm, width)
+		last[i][0] = data[i][0]*100.0/sm
+		for j in range(1, num_of_types):
+			plt.bar(ind, data[i][j]*100.0/sm, width,bottom=last[i][j-1])
+			last[i][j] = last[i][j-1]+data[i][j]*100.0/sm
+		plt.legend(legends)
+		fig.savefig(fig_path+titles[i]+"-"+title+"-"+','.join(legends)+'-percentage.png')
 
 def plot_percentage_stacked_bar_chart_by_matrix(
 	data, legends, 
-	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = 1960, title = ""):
+	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	fig=plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(plot_start_year, 2010, 1)
+	ind = np.arange(plot_start_year, end_year, 1)
 	num_of_types = len(legends)
-	last = np.zeros([4, num_of_types, 2010 - plot_start_year])
-	if plot_start_year != 1960:
-		data = data[:,:,plot_start_year - 1960:50]
+	last = np.zeros([4, num_of_types, end_year - plot_start_year])
+	if plot_start_year != start_year:
+		data = data[:,:,plot_start_year - start_year:50]
 	for i in range(4):
 		sm = np.sum(data[i], axis=0)
 		plt.subplot(2,2,i+1)
@@ -210,7 +258,7 @@ def plot_percentage_stacked_bar_chart(
 					break
 			if info[change_type] == c_types[i] and flag == True:
 				data[state[row['StateCode']]][i][int(row['Year']) - start_year] += float(row['Data'])
-	ind = np.arange(1960, 2010, 1)
+	ind = np.arange(start_year, end_year, 1)
 	titles = ['Arizona','California','New Mexico', 'Texas']
 	legends = c_types
 	last = np.zeros([4, num_of_types, 50])
@@ -248,7 +296,7 @@ def plot_state_percentage_stacked_bar_chart(
 		if flag == True:
 			data[state[row['StateCode']]][int(row['Year'])-start_year] += float(row['Data'])
 	last = np.zeros([4,50])
-	ind  = np.arange(1960,2010)
+	ind  = np.arange(start_year,end_year)
 	sm = np.sum(data, axis = 0)
 	plt.bar(ind, data[0]*100.0/sm, width)
 	last[0] = data[0]*100.0/sm
