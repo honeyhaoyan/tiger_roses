@@ -52,7 +52,6 @@ def plot_tag_unit(
 #	plt.show()
 	if title == "":
 		title = ylabel
-	plt.suptitle(title)
 	fig.savefig(fig_path+title + "=" + e_type+'--line.png')
 
 def get_matrix(
@@ -88,7 +87,7 @@ def single_state_stacked_bar_chart_by_matrix(
 	_ind = None,
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	if _ind == None:
+	if np.array(_ind == None).all():
 		ind = np.arange(plot_start_year, end_year, 1)
 	else:
 		ind = _ind
@@ -112,7 +111,7 @@ def plot_stacked_bar_chart_by_matrix(
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	fig = plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	if _ind = None:
+	if np.array(_ind == None).all():
 		ind = np.arange(plot_start_year, end_year, 1)
 	else:
 		ind = _ind
@@ -130,7 +129,6 @@ def plot_stacked_bar_chart_by_matrix(
 		plt.legend(legends)
 		plt.title(titles[i], va='bottom')
 #	plt.show()
-	plt.suptitle(title+"="+','.join(legends))
 	fig.savefig(fig_path+title+"="+','.join(legends)+'-bar_chart.png')
 
 def plot_stacked_bar_chart(
@@ -190,7 +188,6 @@ def plot_stacked_bar_chart(
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(titles[i], va='bottom')
 #	plt.show()
-	plt.suptitle(title+"="+','.join(legends))
 	fig.savefig(fig_path+title+"="+','.join(legends)+'-bar_chart.png')
 
 def single_state_percentage_stacked_bar_chart_by_matrix(
@@ -198,7 +195,7 @@ def single_state_percentage_stacked_bar_chart_by_matrix(
 	_ind = None,
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	if _ind == None:
+	if np.array(_ind == None).all():
 		ind = np.arange(plot_start_year, end_year, 1)
 	else:
 		ind = _ind
@@ -223,7 +220,7 @@ def plot_percentage_stacked_bar_chart_by_matrix(
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	fig=plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	if _ind == None:
+	if np.array(_ind == None).all():
 		ind = np.arange(plot_start_year, end_year, 1)
 	else:
 		ind = _ind
@@ -242,7 +239,6 @@ def plot_percentage_stacked_bar_chart_by_matrix(
 		plt.legend(legends)
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(titles[i], va='bottom')
-	plt.suptitle(title+"="+','.join(legends))
 	fig.savefig(fig_path+title+"="+','.join(legends)+'-percentage.png')
 #	plt.show()
 
@@ -291,7 +287,6 @@ def plot_percentage_stacked_bar_chart(
 		plt.legend(legends)
 #		fig.text(0.30,0.50,legends[i],ha='center')
 		plt.title(titles[i], va='bottom')
-	plt.suptitle(title+"="+','.join(legends))
 	fig.savefig(fig_path+title+"="+','.join(legends)+'-percentage.png')
 #	plt.show()
 
