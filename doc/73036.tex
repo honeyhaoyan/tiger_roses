@@ -15,6 +15,7 @@
 \usepackage{gensymb}
 \usepackage[ruled,lined,commentsnumbered]{algorithm2e}
 \usepackage{geometry}
+\usepackage{url}
 \geometry{left=2cm,right=2cm,top=2cm,bottom=2cm} %%页边距
 
 \begin{document}
@@ -63,24 +64,227 @@ In the end, we make sensitivity analysis and discuss strengths and weaknesses.
 \newpage
 
 \section{Introduction}	
-\input{Introduction}
-\section{Data Analysis}
-\input{Data_Analyses}
+\subsection{Background}
+  Efficient and renewable energy production and scientific cooperation strategy of energy usage are significant for American economy and environment. As \textbf{figure 1 }\cite{Energy} shows, the total energy consumption in American has been increasing fast. But the main constributors are petroleum, natrural gas, coal and nuclear power, which are non-renewable and put great pressure on the environment. Consequently, efficient and renewable energy production is in demand to meet with the increasing energy demand and care for the environment. At the same time, scientific cooperation strategy is important between states to develop newable energy together.
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures//figure1.jpg}
+    \caption{US energy consumption of 1776 - 2016.}
+  \end{figure}
+
+  Forming Interstate Compact among states is an efficient strategy under this circumstance. The varying geographies and industries of different states affect energy usage and production.If states can unit and complement one another, the extra energy produced by some states can solve the energy shortage of other states. And they can set scientific goals together. For instance, the Western Interstate Energy Compact (WIEC) formed in 1970 has done a lot ,including cooperation in deployment of solar thermal in the West and regionalization of electricity markets\cite{WIEC}.
+
+
+\subsection{Our Work}
+Taking the background into consideration, our work concentrates on  three dimentions to solve the problem.
+\begin{itemize}
+	\item Analyse all the data provied, 605 variables and 105744 datas in total. 
+	\item Build a Description Model. Select 13 variables from the 605 variables, and characrize the energy profile in pictures using 13 variebles. 
+	\item Build a Analytic Hierarchy Model. Judge how each state has done in energy management using this model.
+	\item Build a predicting Model. Caculate a fitting function using the historical datas. Then predict how the Discrebtion Model in 2025 and 2050.
+	\item
+	\item
+\end{itemize}
+
+
+
+
+
+
+
+
+%\input{Introduction}
+%\section{Data Analysis}
+%\input{Data_Analyses}
 \section{Assumptions}\label{Sec-Assume}
-\input{Assumptions}
+%\input{Assumptions}
+The models are built under these assumptions.
+\begin{itemize}
+	\item We assume that nuclear electric power is not clean energy. \\  \\ Because the waste of nuclear fisson is radioactive and harmful for creatures. But it can not be removed under current technology. The solution is commonly burying the waste deeply, which leaves potential hazards for the future.
+	\item We assume that there will not be new type of energy invented before 2050. \\  \\ Because this period of time is not long enough for a new type of energy to be applied widespreadly and have significant influence.
+	\item We assume that the energy which is not listed in the sheets provided can not influence our model.
+\end{itemize}
+
+
 \section{Nomenclature}\label{Sec-Nomen}
 \input{Nomenclature}
-\section{Statement of our Model} \label{Sec-Model}
-\input{Statement_of_our_Model}
+\section{Model Statement} \label{Sec-Model}
+%\input{Statement_of_our_Model}
+\subsection{Description Model of Energy Profile}
+We uses 13 variebles to describe the energy profile. Relationships of 13 variebles in figure 2.\\
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{tree.jpg}
+    \caption{Energy classification tree.\\There are 15 variebles in total in this figure. The total consumption of "Non-Renewable Sources" and "Renewable Sources" are not included in the 13 variebles we discuss.}
+\end{figure}
+We can describe the energy profile in three equations.
+
+In the equations below, the name of energy type means the consumption of that type of energy.
+
+\begin{itemize}
+\item fossil fuels = coal + natural gas(excluding supplemental gaseous fuels) + petroleum products  (excluding fuel ethanol)
+\item renewable energy = fuel ethanol + geothermal energy + hydroelectricity power + solar thermal energy + electricity produced by wind + biomass
+\item total energy = fossil fuels + nuclear power + renewable energy
+\end{itemize} 
+
+\subsection{Analytic Hierarchy Model}
+
+\subsection{Grey Forecasting Model}
+The goal of this article is constructing a model to characterize how the energy profile of each of the four states has evolved from 1960 to 2009 and predict the energy profile of the four states in 2025 and 2050. Here we choose Grey Forecasting Model to do the analyses and prediction. We will start with the most traditional model GM(1,1) and gradually advance it to obtain more accurate results.
+\subsubsection{Origin Grey Model GM(1,1)}
+	\begin{itemize}
+		\item Step 1: Denote the original data sequence.
+		$$
+			X^{(0)} = \left\{x^{(0)}_1, x^{(0)}_2, x^{(0)}_3..., x^{(0)}_n\right\} \quad n \ge 4
+		$$
+		\item Step 2: Use accumulated generating operations (AGO) to form a new data series.
+		$$
+			X^{(1)} = \left\{x^{(1)}_1, x^{(1)}_2, x^{(1)}_3..., x^{(1)}_n\right\} 
+		$$
+		where $x^{(1)}_1=x^{(0)}_1$
+		$$
+			x^{(1)}_k = \ \sum_{i=1}^k x^{(0)}_i \quad k=2,3,4...,n
+		$$
+		\item Step 3: Calculate background values Z.
+		$$
+			Z = \left\{z_2,z_3,z_4,...,z_n\right\}
+		$$
+		$$
+			z_k = (1-\alpha)x^{(0)}_{k} - \alpha x^{(0)}_{k-1} \quad k=2,3,4,...,n 
+		$$
+		$$
+		 0<\alpha <1,\quad \mbox{here\ we\ assume\ } \alpha = 0.5
+		$$
+		\item Step 4: Establish the grey differential equation.
+		$$
+			\frac {dx^{(1)}_k}{dt} +  ax^{(1)}_k = b.\quad (\uppercase\expandafter{\romannumeral1})
+		$$
+		 (\uppercase\expandafter{\romannumeral1}) can also be written as 
+		 $$
+		 	x^{(0)}_k + ax^{(1)}_k = b
+		 $$
+		 We can caculate a and b in Step 5.
+		\item Step 5:
+		Define vector B, Y as
+		$$
+			B = 
+			\begin{vmatrix}
+			-z_2 & 1\\
+			-z_3 & 1\\
+			\vdots & \vdots\\
+			-z_n & 1
+			\end{vmatrix}
+		$$
+		$$
+		Y = [x^{(0)}_2,x^{(0)}_3,...,x^{(0)}_n]^T
+		$$
+		Caculate a and b.
+		$$
+			[a,b]^T = (B^TB)^{-1}B^TY
+		$$
+		 Solve (\uppercase\expandafter{\romannumeral1}) by using the least square method and the forecasting values can be obtained as
+		$$
+			\left\{  
+             \begin{array}{lr}  
+             \overline x^{(1)}_k = \left(x^{(0)}_1 - \frac{b}{a}\right)e^{-a(k-1)} + \frac{b}{a} &\\
+             \overline x^{(0)}_k = x^{(1)}_k - x^{(1)}_{k-1}
+             \end{array}  
+			\right.  
+		$$
+		\item Step 6: $\overline X$ are the resultes we predict.
+		$$
+		\overline X = \left\{\overline x_1,\overline x_2,\overline x_3,...,\overline x_n \right\}
+		$$
+		
+	\end{itemize}
+\subsubsection{Second Derivative Grey Model GM(2,1)}
+The origin Grey Model GM(1,1) only takes the first derivative of $X^{(0)}$ into consideration. We assume that the function is smooth enough. To make the model more accurate, we take both the first derivative and the second derivative into account. That is why we build GM(2,1).
+
+GM(2,1) is simmilar to GM(1,1).Actually, the Step 1, Step 2 and Step 3 of GM(2,1) are the same as GM(1,1). Our discussion starts with Step 4.
+	\begin{itemize}
+		\item Step 4: 
+			Define $\beta X^{(0)}$ as
+			$$
+				\beta X^{(0)} = \left\{\beta x^{(0)}_2,\beta x^{(0)}_3,\beta x^{(0)}_4,...,\beta x^{(0)}_n \right\}
+			$$
+			$$
+				\beta x^{(0)}_k = x^{(0)}_k - x^{(0)}_{k-1}
+			$$
+			Establish the grey differential equation.
+			$$
+			\frac{d^2x^{(1)}_k}{dt^2}+ a_1\frac{dx^{(1)}_k}{dt} + a_2x^{(1)}_k = b\quad (\uppercase\expandafter{\romannumeral2})
+			$$
+		 (\uppercase\expandafter{\romannumeral2}) can also be written as 
+		 $$
+		 	\beta x^{(0)}_k+a_1x^{(0)}_k + a_2x^{(1)}_k = b
+		 $$
+		\item Step 5: Define vector B, Y as
+		$$B = 
+			\begin{vmatrix}
+				-x^{(0)}_2 & -z_2 & 1\\
+				-x^{(0)}_3 & -z_3 & 1\\
+				\vdots & \vdots & \vdots\\
+				-x^{(0)}_n & -z_n & 1\\
+			\end{vmatrix}
+		$$
+		$$
+		 	Y = [\beta x^{(0)}_2,\beta x^{(0)}_3,...,\beta x^{(0)}_n ]^T = [(x^{(0)}_2 - x^{(0)}_1), (x^{(0)}_3 - x^{(0)}_2),...,(x^{(0)}_n - x^{(0)}_{n-1})]
+		$$
+		$$
+			[a_1,a_2,b]^T = (B^TB)^{-1}B^TY
+		$$
+		\item Step 6: We can get the value of $a_1,a_2,b$ in Step 5. Because we have already known the value of $x^{(0)}_1$, we can caculate the prediction value of $x^{(0)}_k$ using Recursive Algorithms.
+	\end{itemize}
+
+\subsubsection{Residual Modification Grey Model RGM(2,1)}
+	Both the GM(1,1) and GM(2,1) have tolerances that can not be neglected in the analysis. If we could predict the tolerances and add (or subtract) them, the prediction will be more accurate. That is, we reduce first-order error to second-order error.
+
+	We build RGM(2,1) (the Residual Modification Grey Model) to predict the errors as the following.
+
+	Define the absolute values of the residual series $\epsilon$
+	$$
+		\epsilon = \left(\epsilon_2,\epsilon_3,\epsilon_4,...,\epsilon_n, \right)
+	$$
+	$$
+		\epsilon_k = \left|x^{(0)}_k - \overline x^{(0)}_k \right|
+	$$
+	$\qquad$ Execute the Step1 to Step6 in GM(2,1). The forecasting model is
+	$$
+		123
+	$$
+
+%\subsection{Adaptive Forecasting Grey Model AGM(2,1)}
+
+
+
+
+
 \section{Implementation} \label{Sec-Implementation}
 \input{Implementation}
 \section{Model Analysis and Prediction}
 \input{Model_Analysis_and_Prediction}
 \section{Goals and Suggestions}
 \input{Goals_and_Suggestions}
+123 \cite{Carp}
 \section{Reference}
-\input{Reference}
+%\input{Reference}
+\begin{thebibliography}{99}
+
+\bibitem{Energy}
+Wikipedia. 2017. US energy consumption of 1770 to 2016.\\
+\url{https://en.wikipedia.org/wiki/Energy_in_the_United_States}
+
+\bibitem{WIEC}
+Maury Galbraith. \textsl{Western Interstate Energy Board Current Activities.} October 20, 2017.\\ 
+\url{http://wrpinfo.org/media/1296/galbraith_wieb.pdf}
+
+\end{thebibliography}
+
+\
+
 \section{Appendices}
+
+
 \newpage
 \section{Introduction}	
 \subsection{Problem Background}
