@@ -15,7 +15,7 @@ state['AZ'] = 0
 state['CA'] = 1
 state['NM'] = 2
 state['TX'] = 3
-start_year = start_year
+start_year = 1960
 end_year = 2010
 # year start from start_year
 
@@ -25,7 +25,9 @@ def set_start_year(year):
 def set_end_year(year):
 	global end_year
 	end_year = year
-def plot_tag_unit(e_type, s_type, unit, plot_start_year = start_year, figsize = (16,10), xlabel = 'Year', ylabel = None, title = ""):
+def plot_tag_unit(
+	e_type, s_type, unit,
+	plot_start_year = start_year, figsize = (16,10), xlabel = 'Year', ylabel = None, title = ""):
 	prepare()
 	global X
 	global tag
@@ -83,9 +85,13 @@ def get_matrix(
 
 def single_state_stacked_bar_chart_by_matrix(
 	data, legends, 
+	_ind = None,
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(plot_start_year, end_year, 1)
+	if _ind == None:
+		ind = np.arange(plot_start_year, end_year, 1)
+	else:
+		ind = _ind
 	num_of_types = len(legends)
 	last = np.zeros([4, num_of_types, end_year-plot_start_year])
 	if plot_start_year > start_year:
@@ -102,10 +108,14 @@ def single_state_stacked_bar_chart_by_matrix(
 
 def plot_stacked_bar_chart_by_matrix(
 	data, legends, 
+	_ind = None,
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	fig = plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(plot_start_year, end_year, 1)
+	if _ind = None:
+		ind = np.arange(plot_start_year, end_year, 1)
+	else:
+		ind = _ind
 	num_of_types = len(legends)
 	last = np.zeros([4, num_of_types, end_year-plot_start_year])
 	if plot_start_year > start_year:
@@ -185,9 +195,13 @@ def plot_stacked_bar_chart(
 
 def single_state_percentage_stacked_bar_chart_by_matrix(
 	data, legends, 
+	_ind = None,
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(plot_start_year, end_year, 1)
+	if _ind == None:
+		ind = np.arange(plot_start_year, end_year, 1)
+	else:
+		ind = _ind
 	num_of_types = len(legends)
 	last = np.zeros([4, num_of_types, end_year - plot_start_year])
 	if plot_start_year != start_year:
@@ -205,10 +219,14 @@ def single_state_percentage_stacked_bar_chart_by_matrix(
 
 def plot_percentage_stacked_bar_chart_by_matrix(
 	data, legends, 
+	_ind = None,
 	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
 	fig=plt.figure(figsize=figsize)
 	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
-	ind = np.arange(plot_start_year, end_year, 1)
+	if _ind == None:
+		ind = np.arange(plot_start_year, end_year, 1)
+	else:
+		ind = _ind
 	num_of_types = len(legends)
 	last = np.zeros([4, num_of_types, end_year - plot_start_year])
 	if plot_start_year != start_year:
