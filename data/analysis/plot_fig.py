@@ -1,6 +1,7 @@
 from analysis import *
 
-plot_tag_unit('TE','TC','Billion Btu', title='Total Energy')
+plot_AHP_chart()
+#plot_tag_unit('
 #plot_stacked_bar_chart_by_matrix(
 #	get_matrix('Energy type', ['CL', 'NN', 'PM'],
 #		stable_type = ['sector', 'unit2'], s_type=['TC', 'B'],
@@ -9,6 +10,14 @@ replot_plotted = False
 # plotted
 if replot_plotted == True:
 
+	plot_single_year_percentage_bar_chart_by_matrix(
+		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['TC','B']) +
+		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['ET','B']),
+		plot_year = 2009, legends = ["Fossil fuel", "nuclear power", "renewable energy"])
+	plot_single_year_bar_chart_by_matrix(
+		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['TC','B']) +
+		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['ET','B']),
+		plot_year = 2009, legends = ["Fossil fuel", "nuclear power", "renewable energy"])
 	plot_state_percentage_stacked_bar_chart(
 		['Energy type','sector','unit2'],
 		['TE','TC','B'], title = "Total Energy")
@@ -21,23 +30,42 @@ if replot_plotted == True:
 		get_matrix('Energy type', ['EM','GE','HY','SO','WY','BM'], stable_type=['sector','unit2'], s_type=['TC','B']),
 		['Fuel ethanol excluding denaturant', 'geothermal energy', 'hydroelectricity', 'photovoltaic and solar thermal energy', 'wind electricity', 'biomass'], title="consumption")
 
-	plot_stacked_bar_chart_by_matrix(
-		get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B']),
-		["Coal", "Natural gas", "Petroleum products"], title="consumption")
-
-	plot_percentage_stacked_bar_chart_by_matrix(
-		get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B']),
-		["Coal", "Natural gas", "Petroleum products"], title="consumption")
 	plot_tag_unit('NU','ET','Billion Btu', ylabel="nuclear power")
 
+	plot_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B']),
+		["Coal", "Natural gas", "Petroleum products"], title="consumption")
+
 	plot_percentage_stacked_bar_chart_by_matrix(
-		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['TC','B']) +
-		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['ET','B']),
-		["Fossil fuel", "nuclear power", "renewable energy"], title="consumption")
+		get_matrix('Energy type', ['CL','NN','PM'], stable_type=['sector','unit2'], s_type=['TC','B']),
+		["Coal", "Natural gas", "Petroleum products"], title="consumption")
+
+	plot_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['GD'],
+		stable_type=['unit2'], s_type = ['X']),
+		legends=['GDP--2005'])
+	plot_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['GD'],
+		stable_type=['unit2'], s_type = ['V']),
+		legends=['GDP'])
+
+	plot_tag_unit('TE','TC','Billion Btu', ylabel='Total energy consumption.') # start from 1970
+	plot_tag_unit('TE','TC','Million dollars', ylabel='Total energy expenditures.') # start from 1970
+	plot_tag_unit('TE','TG', 'Thousand Btu per chained (2000) dollar',
+		ylabel = 'Total energy consumed per dollar of real gross domestic product.') # start from 1977
+	plot_tag_unit('TP','OP','Thousand', ylabel = "Resident population")
+	plot_tag_unit('TE','TP','Million Btu', ylabel = "Total energy per capita")
+
+	plot_tag_unit('TE','TG','Thousand Btu per chained (2000) dollar', ylabel="Total energy per GDP",plot_start_year = 1977)
 	plot_stacked_bar_chart_by_matrix(
 		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['TC','B']) +
 		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['ET','B']),
 		["Fossil fuel", "nuclear power", "renewable energy"], title="consumption")
+	plot_percentage_stacked_bar_chart_by_matrix(
+		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['TC','B']) +
+		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['ET','B']),
+		["Fossil fuel", "nuclear power", "renewable energy"], title="consumption")
+
 	plot_stacked_bar_chart_by_matrix(
 		get_matrix('sector',['AC','CC','IC','RC'], stable_type=['Energy type','unit2'], s_type=['TE','B']),
 		['Transportation','Commercial','Industrial','Residential'], title = "consumption")
@@ -52,6 +80,8 @@ if replot_plotted == True:
 	plot_percentage_stacked_bar_chart_by_matrix(
 		get_matrix('sector',['AC','CC','IC','RC'], stable_type=['Energy type','unit2'], s_type=['TE','V']),
 		['Transportation','Commercial','Industrial','Residential'], title = "expenditure")
+
+	plot_tag_unit('TE','TC','Billion Btu', title='Total Energy')
 
 
 	'''
@@ -127,24 +157,12 @@ if replot_plotted == True:
 		'cleanliness',
 		['clean energy', 'unclean energy']
 		)
-	plot_stacked_bar_chart_by_matrix(
-		get_matrix('Energy type', ['GD'],
-		stable_type=['unit2'], s_type = ['X']),
-		['GDP--2005'])
-	plot_stacked_bar_chart_by_matrix(
-		get_matrix('Energy type', ['GD'],
-		stable_type=['unit2'], s_type = ['V']),
-		['GDP'])
 	plot_tag_unit(
 		'TP', 'O', 'Thousand', ylabel = 'Resident population')
 	plot_tag_unit(
 		'TE', 'TC', 'Million Btu', ylabel = 'Total energy per capita')
 
 
-	plot_tag_unit('TE','TC','Billion Btu', title='Total energy consumption.') # start from 1970
-	plot_tag_unit('TE','TC','Million dollars', title='Total energy expenditures.') # start from 1970
-	plot_tag_unit('TE','TC', 'Thousand Btu per chained (2000) dollar',
-		title = 'Total energy consumed per dollar of real gross domestic product.') # start from 1977
 
 
 	plot_percentage_stacked_bar_chart(

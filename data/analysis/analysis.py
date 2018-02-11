@@ -25,6 +25,82 @@ def set_start_year(year):
 def set_end_year(year):
 	global end_year
 	end_year = year
+
+def autolabel(ax, rects, m):
+	for rect in rects:
+		height = rect.get_height()
+		ax.text(rect.get_x() + rect.get_width()/2., 1.025*height,
+				'%.2f'% float(height*m),
+				ha='center', va='bottom')
+def plot_AHP_chart():
+	figsize = (16,10)
+	fig,ax = plt.subplots(figsize = figsize)
+	c = list([None for i in range(3)])
+	c[0] = \
+	get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['TC','B']) +\
+	get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['ET','B'])
+	c[0] = c[0][:,:,49]
+	sm = np.sum(c[0], axis = 1)
+	c[0] = c[0][:,2]*100/sm
+	c[1] = get_matrix('Energy type', ['TE'], stable_type=['sector','Unit'], s_type=['TP','Million Btu'])
+	c[2] = get_matrix('Energy type', ['TE'], stable_type=['sector','Unit'], s_type=['TG','Thousand Btu per chained (2000) dollar'])
+	c[1] = c[1][:,:,49]
+	c[2] = c[2][:,:,49]
+	c[1] = c[1][:,0]
+	c[2] = c[2][:,0]
+	m = list([np.sum(c[i]) for i in range(3)])
+	for i in range(3):
+		c[i] = c[i] / m[i]
+	ind = np.arange(0.0,4.0,1.0)
+	legends = ['Renewable energy percentage', 'Total energy per capita', 'Total energy per GDP']
+	width = 0.2
+	for i in range(0,3):
+		print c[i]
+		t = plt.bar(ind, c[i], width = width)
+		ind += width
+		autolabel(ax, t, m[i])
+	ax.set_xticks(ind - 2.0*width)
+	ax.set_yticks([])
+	ax.set_xticklabels(['Arizona', 'California', 'New Mexico', 'Texas'])
+	ax.legend(legends)
+	ax.spines['top'].set_visible(False)  
+	ax.spines['right'].set_visible(False)  
+	ax.spines['left'].set_visible(False)  
+	fig.savefig(fig_path+'AHP.png')
+
+def plot_single_year_bar_chart_by_matrix(
+	data, legends, plot_year,
+	figsize=(16,10), width=0.75, xlabel = 'State', ylabel = None, plot_start_year = start_year, title = ""):
+	ind = ['Arizona', 'California', 'New Mexico', 'Texas']
+	num_of_types = len(legends)
+	last = np.zeros([4, num_of_types])
+
+	fig = plt.figure(figsize = figsize)
+	plt.bar(ind, data[:,0,plot_year-start_year])
+	last[:,0] = data[:,0,plot_year-start_year]
+	for i in range(1, num_of_types):
+		plt.bar(ind, data[:,i,plot_year-start_year], bottom=last[:,i-1])
+		last[:,i] = last[:,i-1]+data[:,i,plot_year-start_year]
+	plt.legend(legends)
+	fig.savefig(fig_path + ','.join(legends) + str(plot_year) + 'bar_chart.png')
+
+def plot_single_year_percentage_bar_chart_by_matrix(
+	data, legends, plot_year,
+	figsize=(16,10), width=0.75, xlabel = 'State', ylabel = None, plot_start_year = start_year, title = ""):
+	ind = ['Arizona', 'California', 'New Mexico', 'Texas']
+	num_of_types = len(legends)
+	last = np.zeros([4, num_of_types])
+
+	fig = plt.figure(figsize = figsize)
+	sm = np.sum(data[:,:,plot_year-start_year], axis = 1)
+	plt.bar(ind, data[:,0,plot_year-start_year]*100.0/sm)
+	last[:,0] = data[:,0,plot_year-start_year]*100.0/sm
+	for i in range(1, num_of_types):
+		plt.bar(ind, data[:,i,plot_year-start_year]*100.0/sm, bottom=last[:,i-1])
+		last[:,i] = last[:,i-1]+data[:,i,plot_year-start_year]*100.0/sm
+	plt.legend(legends)
+	fig.savefig(fig_path + ','.join(legends) + str(plot_year) + 'percentage.png')
+
 def plot_tag_unit(
 	e_type, s_type, unit,
 	plot_start_year = start_year, figsize = (16,10), xlabel = 'Year', ylabel = None, title = ""):
