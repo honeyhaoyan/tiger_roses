@@ -27,7 +27,34 @@
 \date{\today}
 	\begin{abstract}
 	\input{summary}
-	\iffalse
+	%\iffalse
+
+	The energy market of USA are facing complex circumstances. The contradiction between increasing energy cunsumption and energy shortage should be taken seriously. There are three stages we should go through and come to the final solution to achieve sustainability development of energy, especially renewable energy.
+	\begin{itemize}
+		\item Stage 1:Find a concise model to characrize current situation.
+		\item Stage 2:Predict the future of energy market using the model above.
+		\item Stage 3:Find efficient solutions to help the energy market develop better, taking former analyses as well as the physical conditions into consideration.
+	\end{itemize}
+
+		That's exactly what we have done.
+
+		Step 1:
+		\begin{itemize}
+			\item Pick up 14 variebles. There are 605 variables and 105744 datas in total, which demands simplifying. So we pick up 14 variebles that meet with 3 conditions: 1. Each varieble's amount is large enough. 2.The combination of these variebles can nearly describe all the features of our model. 3.The relationships among these variebles 
+			\item
+			\item
+		\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
 		Located on the Zambezi River, the Kariba Dam holds back the world's largest reservoir. After so many years, despite efforts to slow its structural problems, the Kariba Dam is in great danger.
 
 To address this situation, our paper provides a detailed analysis of one option, removing the Kariba Dam and replacing it with a series of ten to twenty smaller dams along the river. We propose a model iMoDS (Integrated Model of Dams in Series) to fully analyze different aspects, such as the number, placement, and height of the new dams. In the meantime, we can set the total water management capabilities as same as the existing dam, providing protection and water management options for Lake Kariba.
@@ -49,7 +76,7 @@ To get enough data, we surveyed the literature and other sources. Using genetic 
 Another section of our paper discusses strategies for addressing several situations, including the balance between safety and costs, protection for Lake Kariba, guidances for emergency water flow situations and extreme water flows.
 
 In the end, we make sensitivity analysis and discuss strengths and weaknesses.
-\fi
+%\fi
 		\begin{keywords}
 			dam series; water flow; risk analysis; integrated model; dam control strategy
 		\end{keywords}
@@ -375,8 +402,24 @@ Thanks to the work of Shin-li Lu,Ching-I Li and Shih-hung(2013)\cite{GM}. We set
 			$$
 				S_2 = \frac{\sum^n_{k=1}(\beta x^{(0)}_k - \beta \overline x^{(0)}_k)^2}{n-1}	
 			$$
-			The Variance Rario VR is
-	\end{itemize}
+			The Variance Rario VR is 
+			$$
+				VR = \frac{S_2}{S_1}
+			$$
+			Here is the standard judging the accurance of the model using Variance Ratio.
+			\begin{table}[!h]
+  			\centering
+  			\begin{tabular}{ccccc}
+			\toprule  %添加表格头部粗线
+    		VR & (0,0.35) & [0,35,0.5) & [0.5, 0.65) & [0.65,1)\\
+			\midrule  %添加表格中横线
+			Accurance Level & 1 & 2 & 3 & 4\\
+			\bottomrule %添加表格底部粗线
+			\end{tabular}
+			\caption{Judge Standard of VR}
+			\end{table}\\
+			Notice : The lower accurance level is, the more accurate the data is.
+			\end{itemize}
 
 \iffalse
 \subsubsection{Second Derivative Grey Model GM(2,1)}
@@ -441,15 +484,13 @@ GM(2,1) is simmilar to GM(1,1).Actually, the Step 1, Step 2 and Step 3 of GM(2,1
 %\input{Implementation}
 %\subsection{Description Model of Energy Profile}
 \subsection{Analytic Hierarchy Model}
- \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{figures//AHP.png}
-    \caption{US energy consumption of 1776 - 2016.}
-  \end{figure}
+ 
   \begin{itemize}
-  	
-				
   	\item Step 1: Compute the vector of criteria weights.\\
+  			We assume that the importance of P (the average amount of energy consumption per person) is the same as R (the percentage of renewable energy consumption) and four times as important as G (the average amount of energy that a unit of GPA increase takes). That is
+  			$$
+  				\frac{W_R}{W_P}=1 \qquad \frac{W_G}{W_P} = 0.25
+  			$$
 				$$
 				A = \bordermatrix{
 					& R & P & G  \cr
@@ -461,25 +502,75 @@ GM(2,1) is simmilar to GM(1,1).Actually, the Step 1, Step 2 and Step 3 of GM(2,1
 
   	\item Step 2: Caculate the largest eigenvalue $\lambda_{max}$ and corresponding eigenvector Y of A.
   	$$Y = [0.4444, 0.4444, 0.1111]$$
-  	\item Step 3: The Consistency Index (CI) for the vector of criteria weights is
+  	\item Step 3: Caculate $CI^{(1)}_0 = -7.6567e-16$\\
+  	Assume that the Consistency Index for the vector of criteria weights is $CI_0$
   	$$
-  		CI^{(1)}_0 = -7.6567e-16
+  		\mbox{At this time,} \quad m=3 \quad RI = 0.58
   	$$
-  	So the Consistency Index is small enough.
-  	\item Step 4: Assess the energy profile using each of the three criteria successively.
+  	$$
+  		CI^{(1)}_0 = \frac{CI_0}{RI}= 
+  		0
+  	$$
+
+  	So vector A is a consistent matrix.
+  	\item Step 4: Assess the energy profile using each of the three criteria successively. The datas analysed are the amount of the three criteria in 2009.
+  	\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{figures//AHP.png}
+    \caption{Normalization figure of the the four states' amount of R, P and G in 2009.
+    \\ The unit of R is "\%".
+    \\The unit of P is million Btu.
+    \\ The unit of G is Thousand Btu per chained (2000) dollar.}
+    \end{figure}\\
+    For a certain criterion, we can conclude the proportionality of the data amount between every state by judging the height of bars in figure 3.
+    Build the following three matrixes and caculate its largest eigenvalue $\lambda_{max}$ and corresponding eigenvector Y.\\
+    The matrixes built:\\
+    For R (the percentage of new- able energy consumption) 
+    			$$
+				A_R = \bordermatrix{
+					& Arizona & California & New Mexico & Texas  \cr
+				Arizona &   1 & 0.25 & 4 & 4\cr
+				California &   4 & 1 & 8 & 8\cr
+				California & 0.25  & 0.125 & 1 & 1\cr
+				Texas & 0.25 & 0.125 & 1 & 1
+					}
+				$$
+	For P (the average amount of energy consumption per person) 
+    			$$
+				A_R = \bordermatrix{
+					& Arizona & California & New Mexico & Texas  \cr
+				Arizona &   1 & 1 & 0.5 & 0.25\cr
+				California &   1 & 1 & 0.5 & 0.25\cr
+				California & 2  & 2 & 1 & 0.5\cr
+				Texas & 4 & 4 & 2 & 1
+					}
+				$$
+	For P (the average amount of energy consumption per person) 
+    			$$
+				A_R = \bordermatrix{
+					& Arizona & California & New Mexico & Texas  \cr
+				Arizona &   1 & 3 & 1/3 & 1/7\cr
+				California &   1/3 & 1/6 & 0.5 & 1/9\cr
+				California & 3  & 6 & 1 & 0.5\cr
+				Texas & 7 & 9 & 2 & 1
+					}
+				$$
+	After caculating the $\lambda_{max}$ and corresponding eigenvector Y, compute $CI^{(1)} = CI/RI$ for these three models.\\
+	The results:
     \begin{table}[!h]
   	\centering
-  	\begin{tabular}{cccc}
+	\begin{tabular}{cccc}
 	\toprule  %添加表格头部粗线
     $CI^{(1)}_R$ & $CI^{(1)}_P$ & $CI^{(1)}_G$\\
 	\midrule  %添加表格中横线
 	0.0225 & 0 & 0.0232\\
 	\bottomrule %添加表格底部粗线
 	\end{tabular}
-	\caption{123}
+	\caption{The values of $CI^{(1)}_R$ , $CI^{(1)}_P$ and $CI^{(1)}_G$}
 	\end{table}
 	\item Step 5:
  	Synthesize the three factors using weighted average method for four states.
+ 	The final scores each state get are showed in Table 5.
 	\begin{table}[!h]
   	\centering
   	\begin{tabular}{cccc}
@@ -489,7 +580,7 @@ GM(2,1) is simmilar to GM(1,1).Actually, the Step 1, Step 2 and Step 3 of GM(2,1
 	0.1674 & 0.3460 & 0.1724 & 0.3142\\
 	\bottomrule %添加表格底部粗线
 	\end{tabular}
-	\caption{123}
+	\caption{The final scores each state get.}
 	\end{table}
 	\item Step 6: Step 6: Consistency Analysis of the whole model.
 	$$
@@ -501,21 +592,97 @@ GM(2,1) is simmilar to GM(1,1).Actually, the Step 1, Step 2 and Step 3 of GM(2,1
   \end{itemize}
 
 \subsection{Grey Forecasting Model}
+
+
+\subsubsection{Prediction for Fossil Fuels}
+Predict the value of coal, natural gas and petroleum products.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures//figure5.png}
+    \caption{Prediction for Fossil Fuels.}
+  \end{figure}
+  Using the method described in Model Statement, caculate the Variance Rario.
+  \begin{table}[!h]
+  			\centering
+  			\begin{tabular}{cccc}
+			\toprule  %添加表格头部粗线
+    		 &coal & natural gas & petroleum \\
+			\midrule  %添加表格中横线
+			Arizona & 0.2623 & 2.2660 & 0.0864 \\
+			\midrule
+			California & 3.4887 & 0.8730 & 0.4457\\
+			\midrule
+			New Mexico & 0.2872 & 12.4308 & 0.1845 \\
+			\midrule
+			Texas & 0.2163 & 5.8416 & 0.0922 \\
+			\bottomrule %添加表格底部粗线
+			\end{tabular}
+			\caption{VR of Fossil Fuels Predictions}
+			\end{table}\\
+
+
+
+\subsubsection{Prediction for Renewable Energy}
+	Predict the value of fuel ethanol, geothermal energy, hydroelectricity power, photovoltaic and solar thermal energy, wind electricity,  wood and waste, energy losses and co-products.
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{figures//figure7.png}
     \caption{US energy consumption of 1776 - 2016.}
   \end{figure}
+	Using the method described in Model Statement, caculate the Variance Rario.
+			\begin{table}[!h]
+  			\centering
+  			\begin{tabular}{ccccc}
+			\toprule  %添加表格头部粗线
+			& Arizona & California & New Mexico & Texas\\
+			\midrule
+			fuel ethanol &4.5743e-12 & 0.9376 & 1.1060 & 0.0370\\
+			\midrule
+			geothermal energy & 0.5058 & 0.3457 & 1.5215 & 0.0235\\
+			\midrule
+			 hydroelectricity power &7.3594 & 14.6927 & 0.4501 &  20.9098 \\
+			 \midrule
+			 photovoltaic and solar thermal energy & 30.5735 & 1.0823 & 0.2216 & 0.1909 \\
+			 \midrule
+			 wind electricity & 0 & 0.1753 & 0.3631 & 6.6149e-5 \\
+			 \midrule
+			 wood and waste & 6.4654 & 2.1035 & 29.3199 & 0.9059\\
+			 \midrule
+			 energy losses and co-products & 4.5743e-12 & 0.9376 &  1.1060 & 0.0370 \\
+			\bottomrule %添加表格底部粗线
+			\end{tabular}
+			\caption{VR of Renewable Energy Predictions}
+			\end{table}\\
+
+
+
+\subsubsection{Prediction for Total Energy}
+Predict the value of fossil fuels, nuclear power and renewable energy.
   \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures//figure6.png}
     \caption{US energy consumption of 1776 - 2016.}
   \end{figure}
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{figures//figure7.png}
-    \caption{US energy consumption of 1776 - 2016.}
-  \end{figure}
+	Using the method described in Model Statement, caculate the Variance Rario.
+	\begin{table}[!h]
+  			\centering
+  			\begin{tabular}{cccc}
+			\toprule  %添加表格头部粗线
+    		 & fossil fuels & nuclear power & renewable energy\\
+			\midrule  %添加表格中横线
+			Arizona & 0.0428 & 0.5866 & 3.3729 \\
+			\midrule
+			California & 0.2498 & 0.2755 & 0.5194\\
+			\midrule
+			New Mexico & 0.1412 & 0 & 1.0488 \\
+			\midrule
+			Texas & 0.1385 & 0.3960 & 0.5372\\
+			\bottomrule %添加表格底部粗线
+			\end{tabular}
+			\caption{VR of Fossil Fuels Predictions}
+			\end{table}\\
+
+
 \section{Model Analysis and Prediction}
 %\input{Model_Analysis_and_Prediction}
 \subsection{Description Model of Energy Profile}
