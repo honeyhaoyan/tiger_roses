@@ -32,6 +32,33 @@ def autolabel(ax, rects, m):
 		ax.text(rect.get_x() + rect.get_width()/2., 1.025*height,
 				'%.2f'% float(height*m),
 				ha='center', va='bottom')
+
+def plot_bar_chart(
+	data, legends, 
+	_ind = None,
+	figsize=(16,10), width=0.75, xlabel = 'Year', ylabel = None, plot_start_year = start_year, title = ""):
+	fig = plt.figure(figsize=figsize)
+	titles = ['Arizona', 'California', 'New Mexico', 'Texas']
+	num_of_types = len(legends)
+	if np.array(_ind == None).all():
+		ind = np.arange(plot_start_year, end_year, 1)
+		last = np.zeros([4, num_of_types, end_year-plot_start_year])
+		if plot_start_year > start_year:
+			data = data[:,:,plot_start_year - start_year:50]
+	else:
+		ind = _ind
+		last = np.zeros([4, num_of_types, len(_ind)])
+	width = 0.9 / num_of_types
+	for i in range(4):
+		plt.subplot(2,2,i+1)
+		plt.bar(ind, data[i][0], width)
+		for j in range(1, num_of_types):
+			plt.bar(ind+j*width, data[i][j], width)
+		plt.legend(legends)
+		plt.title(titles[i], va='bottom')
+#	plt.show()
+	fig.savefig(fig_path+title+"="+','.join(legends)+'-bar_chart.png')
+
 def plot_AHP_chart():
 	figsize = (16,10)
 	fig,ax = plt.subplots(figsize = figsize)

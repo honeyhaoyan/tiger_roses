@@ -1,6 +1,20 @@
 from analysis import *
 
-plot_AHP_chart()
+plot_stacked_bar_chart_by_matrix(
+	get_matrix('Energy type', ['EM','GE','HY','SO','WY','WW','EM'],
+		stable_type=['sector','unit2'], s_type=['TC','B']) +
+	get_matrix('Energy type', ['EM','GE','HY','SO','WY','WW','EM'],
+		stable_type=['sector','unit2'], s_type=['LC','B']),
+	['fuel ethanol excluding denaturant', 'geothermal energy', 'hydroelectricity', 'photovoltaic and solar thermal energy', 'wind electricity', 'wood and waste','energy losses and co-products...'], title="consumption")
+
+plot_percentage_stacked_bar_chart_by_matrix(
+	get_matrix('Energy type', ['EM','GE','HY','SO','WY','WW','EM'],
+		stable_type=['sector','unit2'], s_type=['TC','B']) +
+	get_matrix('Energy type', ['EM','GE','HY','SO','WY','WW','EM'],
+		stable_type=['sector','unit2'], s_type=['LC','B']),
+	['fuel ethanol excluding denaturant', 'geothermal energy', 'hydroelectricity', 'photovoltaic and solar thermal energy', 'wind electricity', 'wood and waste','energy losses and co-products...'], title="consumption")
+
+
 #plot_tag_unit('
 #plot_stacked_bar_chart_by_matrix(
 #	get_matrix('Energy type', ['CL', 'NN', 'PM'],
@@ -10,6 +24,15 @@ replot_plotted = False
 # plotted
 if replot_plotted == True:
 
+	plot_bar_chart(
+		get_matrix('sector',['TC'],stable_type=['Energy type','unit2'], s_type=['TE','D']),
+		['Total energy average price'],
+		title = "total energy average price")
+	plot_bar_chart(
+		get_matrix('sector',['TC','PR'],stable_type=['Energy type','unit2'], s_type=['TE','B']),
+		['Total consumption', 'Total production'],
+		title = "consumption and production")
+	plot_AHP_chart()
 	plot_single_year_percentage_bar_chart_by_matrix(
 		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['TC','B']) +
 		get_matrix('Energy type', ['FF','NU','RE'], stable_type=['sector','unit2'], s_type=['ET','B']),
