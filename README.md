@@ -7,4 +7,4 @@
 
 ## Solution
 - The process of our approach
-![text](https://github.com/honeyhaoyan/MarkDown_image/blob/master/tiger_roses_approach.png)
+![text](https://github.com/honeyhaoyan/tiger_roses/blob/master/image/tiger_roses_approach.png)
